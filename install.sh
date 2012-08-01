@@ -14,17 +14,17 @@ dotfiles="bashrc bash_profile bash dir_colors inputrc"
 
 for dotfile in $dotfiles; do
 
-	# remove existing symlinks
-	[ -h ~/.$dotfile ] && rm ~/.$dotfile
+  # remove existing symlinks
+  [ -h ~/.$dotfile ] && rm ~/.$dotfile
 
-	# move any existing files/dirs to $backupdir
-    if [ -a ~/.$dotfile ]; then
-    	[ ! -d $backupdir ] && mkdir -p $backupdir
-    	echo "Moving existing ~/.$dotfile to $backupdir"
-    	mv ~/.$dotfile $backupdir/$dotfile
-    fi
+  # move any existing files/dirs to $backupdir
+  if [ -a ~/.$dotfile ]; then
+    [ ! -d $backupdir ] && mkdir -p $backupdir
+    echo "Moving existing ~/.$dotfile to $backupdir"
+    mv ~/.$dotfile $backupdir/$dotfile
+  fi
 
-    echo "Creating symlink to $dotfile in home directory."
-    ln -s $dotfilesdir/$dotfile ~/.$dotfile
+  echo "Creating symlink to $dotfile in home directory."
+  ln -s $dotfilesdir/$dotfile ~/.$dotfile
 done
 unset dotfile
