@@ -1,0 +1,12 @@
+# Standard PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+
+# MacPorts
+export PATH="/opt/local/libexec/gnubin:${PATH}"
+export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:${PATH}"
+
+# Add RVM to PATH for scripting
+export PATH="~/.rvm/bin:${PATH}"
+
+# Home Directory
+export PATH="~/bin:~/.bin:${PATH}"

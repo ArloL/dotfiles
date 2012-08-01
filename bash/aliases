@@ -1,0 +1,37 @@
+# Source:
+# https://github.com/ryanb/dotfiles/blob/custom-bash-zsh/zsh/aliases
+# https://github.com/ryanb/dotfiles/blob/custom-bash-zsh/bash/aliases
+# https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+
+# Reload environment
+alias reload="source ~/.bash_profile"
+
+# Easier navigation
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
+
+# List files properly
+alias l="ls -lh ${colorflag}"
+alias ll="ls -lAh ${colorflag}"
+alias ls="command ls ${colorflag}"
+
+# Enable commands starting with % for pasting from web
+alias %=" "
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "$method"="lwp-request -m '$method'"
+done

@@ -1,0 +1,8 @@
+#[ArloLOK@arlos-mbp ~]$
+#instead of
+#arlos-mbp:~ ArloLOK$
+export PS1="[\u@\h \W]$ "
+
+# Editors
+export SVN_EDITOR=nano
+export EDITOR=nano
