@@ -14,8 +14,8 @@ dotfiles="bashrc bash_profile bash dir_colors inputrc"
 
 for dotfile in $dotfiles; do
 
-  # remove existing symlinks
-  [ -h ~/.$dotfile ] && rm ~/.$dotfile
+  # skip if symlink exists
+  [ -h ~/.$dotfile ] && continue
 
   # move any existing files/dirs to $backupdir
   if [ -a ~/.$dotfile ]; then
