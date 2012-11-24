@@ -10,7 +10,7 @@ dotfilesdir=~/.dotfiles
 backupdir=~/dotfiles_backup
 
 # list of files/folders to symlink in homedir
-dotfiles="bashrc bash_profile bash dir_colors inputrc"    
+dotfiles="bashrc bash_profile bash dir_colors inputrc minttyrc"    
 
 for dotfile in $dotfiles; do
 
