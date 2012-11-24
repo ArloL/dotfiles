@@ -28,3 +28,4 @@ White=238,232,213
 BoldWhite=253,246,227
 FontHeight=12
 CopyOnSelect=no
+CtrlAltIsAltGr=yes
