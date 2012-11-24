@@ -17,3 +17,9 @@ if [ $? -eq 0 ]; then
     git diff --no-index --color-words "$@"
   }
 fi
+
+if [ -f "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
+  function edit() {
+    /cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe $1 &
+  }
+fi
