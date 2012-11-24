@@ -10,7 +10,7 @@ source ~/.bash/config
 source ~/.bash/functions
 
 if [ "$TERM" != "dumb" ]; then
-  command -v dircolors >/dev/null 2>&1
+  hash dircolors 2>/dev/null
   if [ $? -eq 0 ]; then
     export LS_OPTIONS='--color=auto'
     eval `dircolors ~/.dir_colors`
