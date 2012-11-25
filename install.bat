@@ -1,5 +1,11 @@
 @echo off
 
+NET SESSION >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 (
+    ECHO Not an admin, exiting.
+    EXIT /B 1
+)
+
 setlocal EnableDelayedExpansion
 
 :: ############################
