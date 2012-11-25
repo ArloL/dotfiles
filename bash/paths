@@ -1,5 +1,10 @@
-# Standard PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+
+if [ `uname -o` = "Cygwin" ]; then
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:${PATH}"
+else
+  # Standard PATH
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+fi
 
 # MacPorts
 export PATH="/opt/local/libexec/gnubin:${PATH}"
