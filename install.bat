@@ -45,5 +45,6 @@ for %%A in (%dotfiles%) DO (
     ) else (
       mklink "!link!" "!target!"
     )
+    attrib /L "!link!" +h
   )
 )
