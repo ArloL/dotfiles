@@ -15,5 +15,25 @@ export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:${PATH}"
 # Add RVM to PATH for scripting
 export PATH="~/.rvm/bin:${PATH}"
 
+# Add rbenv to PATH
+if [ -d ~/.rbenv ]; then
+  export PATH="~/.rbenv/bin:${PATH}"
+  export PATH="~/.rbenv/shims:${PATH}"
+  rbenv rehash 2>/dev/null
+  rbenv() {
+    local command="$1"
+    if [ "$#" -gt 0 ]; then
+      shift
+    fi
+
+    case "$command" in
+    shell)
+      eval `rbenv "sh-$command" "$@"`;;
+    *)
+      command rbenv "$command" "$@";;
+    esac
+  }
+fi
+
 # Home Directory
 export PATH="~/bin:~/.bin:${PATH}"
