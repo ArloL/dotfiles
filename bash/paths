@@ -1,10 +1,12 @@
-
-if [ `uname -o` = "Cygwin" ]; then
-  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:${PATH}"
-else
-  # Standard PATH
-  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+hash uname 2>/dev/null
+if [ $? -eq 0 ]; then
+  if [ `uname -s` != "Cygwin" ]; then
+    export PATH=""
+  fi
 fi
+  
+# standard path  
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:${PATH}"
 
 # MacPorts
 export PATH="/opt/local/libexec/gnubin:${PATH}"
