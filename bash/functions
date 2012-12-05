@@ -20,6 +20,6 @@ fi
 
 if [ -f "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
   function edit() {
-    /cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe $1 &
+    nohup /cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe $1 > /dev/null 2>&1 &
   }
 fi
