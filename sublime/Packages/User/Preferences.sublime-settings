@@ -3,5 +3,9 @@
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"remember_open_files": false
 }
