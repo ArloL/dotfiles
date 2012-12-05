@@ -48,3 +48,14 @@ for %%A in (%dotfiles%) DO (
     attrib /L "!link!" +h
   )
 )
+
+if exist "%USERPROFILE%\AppData\Roaming\Sublime Text 2" (
+  cd "%USERPROFILE%\AppData\Roaming\Sublime Text 2"
+  mkdir "Backup"
+  move "Installed Packages" "Backup"
+  move "Packages" "Backup"
+  move "Pristine Packages" "Backup"
+  mklink /D "Installed Packages" "%USERPROFILE%\.dotfiles\sublime\Installed Packages"
+  mklink /D "Packages" "%USERPROFILE%\.dotfiles\sublime\Packages"
+  mklink /D "Pristine Packages" "%USERPROFILE%\.dotfiles\sublime\Pristine Packages"
+)
