@@ -30,3 +30,8 @@ hash cygstart 2>/dev/null
 if [ $? -eq 0 ]; then
   alias open='cygstart'
 fi
+
+# Edit alias for Sublime
+if [ -d "/Applications/Sublime Text 2.app" ]; then
+  alias edit='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+fi
