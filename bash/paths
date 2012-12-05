@@ -21,8 +21,7 @@ fi
 
 # rbenv
 if [ -d ~/.rbenv ]; then
-  export PATH="~/.rbenv/bin:${PATH}"
-  export PATH="~/.rbenv/shims:${PATH}"
+  export PATH="~/.rbenv/shims:~/.rbenv/bin:${PATH}"
   rbenv rehash 2>/dev/null
   rbenv() {
     local command="$1"
