@@ -11,12 +11,6 @@ if [ -d /opt/local ]; then
   if [ -d /opt/local/libexec/gnubin ]; then
     export PATH="/opt/local/libexec/gnubin:${PATH}"
   fi
-
-fi
-
-# Add RVM to PATH for scripting
-if [ -d ~/.rvm ]; then
-  export PATH="~/.rvm/bin:${PATH}"
 fi
 
 # rbenv
