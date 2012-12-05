@@ -25,18 +25,7 @@ alias l="ls -lh ${colorflag}"
 alias ll="ls -lAh ${colorflag}"
 alias ls="command ls ${colorflag}"
 
-# Enable commands starting with % for pasting from web
-alias %=" "
-
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-# One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-  alias "$method"="lwp-request -m '$method'"
-done
-
-# Use Git’s colored diff when available
+# Open alias for Cygwin
 hash cygstart 2>/dev/null
 if [ $? -eq 0 ]; then
   alias open='cygstart'

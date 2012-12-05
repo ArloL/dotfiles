@@ -1,21 +1,28 @@
-hash uname 2>/dev/null
-if [ $? -eq 0 ]; then
-  if [ `uname -s` != "Cygwin" ]; then
-    export PATH=""
-  fi
-fi
-  
 # standard path  
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:${PATH}"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 
 # MacPorts
-export PATH="/opt/local/libexec/gnubin:${PATH}"
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:${PATH}"
+if [ -d /opt/local ]; then
+  export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
+
+  # MacPorts Apache
+  if [ -d /opt/local/apache2/bin ]; then
+    export PATH="/opt/local/apache2/bin:${PATH}"
+  fi
+
+  # MacPorts GNU binaries
+  if [ -d /opt/local/libexec/gnubin ]; then
+    export PATH="/opt/local/libexec/gnubin:${PATH}"
+  fi
+
+fi
 
 # Add RVM to PATH for scripting
-export PATH="~/.rvm/bin:${PATH}"
+if [ -d ~/.rvm ]; then
+  export PATH="~/.rvm/bin:${PATH}"
+fi
 
-# Add rbenv to PATH
+# rbenv
 if [ -d ~/.rbenv ]; then
   export PATH="~/.rbenv/bin:${PATH}"
   export PATH="~/.rbenv/shims:${PATH}"
@@ -34,6 +41,3 @@ if [ -d ~/.rbenv ]; then
     esac
   }
 fi
-
-# Home Directory
-export PATH="~/bin:~/.bin:${PATH}"
