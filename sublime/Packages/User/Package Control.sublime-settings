@@ -1,6 +1,8 @@
 {
 	"installed_packages":
 	[
-		"LineEndings"
+		"LineEndings",
+		"Package Control",
+		"SyncedSideBar"
 	]
 }
