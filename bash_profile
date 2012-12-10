@@ -16,6 +16,3 @@ if [ "$TERM" != "dumb" ]; then
     eval `dircolors ~/.dir_colors`
   fi
 fi
-
-# Load RVM into a shell session *as a function*
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
