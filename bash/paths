@@ -2,7 +2,7 @@
 if [ -d /opt/local ]; then
   export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 
-  # MacPorts Apache
+  # MacPorts Apache binaries
   if [ -d /opt/local/apache2/bin ]; then
     export PATH="/opt/local/apache2/bin:${PATH}"
   fi
@@ -10,6 +10,11 @@ if [ -d /opt/local ]; then
   # MacPorts GNU binaries
   if [ -d /opt/local/libexec/gnubin ]; then
     export PATH="/opt/local/libexec/gnubin:${PATH}"
+  fi
+
+  # MacPorts PostgreSQL binaries
+  if [ -d /opt/local/lib/postgresql92/bin ]; then
+    export PATH="/opt/local/lib/postgresql92/bin:${PATH}"
   fi
 fi
 
@@ -30,4 +35,8 @@ if [ -d ~/.rbenv ]; then
       command rbenv "$command" "$@";;
     esac
   }
+fi
+
+if [ -d ~/bin ]; then
+  export PATH="~/bin:${PATH}"
 fi
