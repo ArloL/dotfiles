@@ -9,6 +9,9 @@ source ~/.bash/completions
 source ~/.bash/config
 source ~/.bash/functions
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 if [ "$TERM" != "dumb" ]; then
   hash dircolors 2>/dev/null
   if [ $? -eq 0 ]; then
