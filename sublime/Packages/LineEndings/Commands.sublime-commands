@@ -30,21 +30,21 @@
 						"type": "cr"
 				},
 				"caption": "Line Ending to all views on window: Mac OS 9",
-				"command": "set_line_ending"
+				"command": "set_line_ending_window"
 		},
 		{
 				"args": {
 						"type": "windows"
 				},
 				"caption": "Line Ending to all views on window: Windows",
-				"command": "set_line_ending"
+				"command": "set_line_ending_window"
 		},
 		{
 				"args": {
 						"type": "unix"
 				},
 				"caption": "Line Ending to all views on window: Unix",
-				"command": "set_line_ending"
+				"command": "set_line_ending_window"
 		},
 
 		{
