@@ -32,7 +32,7 @@ for %%A in (%dotfiles%) DO (
       set linkExists="1"
     ) else (
       if not exist "%backupdir%" (
-        mkdir "%backupdir%""
+        mkdir "%backupdir%"
       )
       echo Moving existing !link! to %backupdir%
       move "!link!" "%backupdir%"
