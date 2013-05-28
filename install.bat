@@ -49,13 +49,14 @@ for %%A in (%dotfiles%) DO (
   )
 )
 
-if exist "%USERPROFILE%\AppData\Roaming\Sublime Text 2" (
-  cd "%USERPROFILE%\AppData\Roaming\Sublime Text 2"
-  mkdir "Backup"
-  move "Installed Packages" "Backup"
-  move "Packages" "Backup"
-  move "Pristine Packages" "Backup"
-  mklink /D "Installed Packages" "%USERPROFILE%\.dotfiles\sublime\Installed Packages"
-  mklink /D "Packages" "%USERPROFILE%\.dotfiles\sublime\Packages"
-  mklink /D "Pristine Packages" "%USERPROFILE%\.dotfiles\sublime\Pristine Packages"
+set sublime=%USERPROFILE%\AppData\Roaming\Sublime Text 2
+
+if exist "%sublime%" (
+  mkdir "%sublime%\Backup"
+  move "%sublime%\Installed Packages" "%sublime%\Backup"
+  move "%sublime%\Packages" "%sublime%\Backup"
+  move "%sublime%\Pristine Packages" "%sublime%\Backup"
+  mklink /D "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
+  mklink /D "%sublime%\Packages" "%~dp0sublime\Packages"
+  mklink /D "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
 )
