@@ -1,2 +1,8 @@
 # Mac OS X
 .DS_Store
+
+# Pythong
+*.pyc
+
+# General
+*.cache
