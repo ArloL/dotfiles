@@ -13,7 +13,7 @@ setlocal EnableDelayedExpansion
 :: ############################
 
 :: dotfiles directory
-set dotfilesdir=%USERPROFILE%\.dotfiles
+set dotfilesdir=%~dp0
 
 :: backup directory
 set backupdir=%USERPROFILE%\dotfiles_backup
@@ -22,7 +22,7 @@ set backupdir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig    
 
 for %%A in (%dotfiles%) DO (
-  set target=%dotfilesdir%\%%A
+  set target=%dotfilesdir%%%A
   set link=%USERPROFILE%\.%%A
   set linkExists="0"
 
@@ -56,7 +56,9 @@ if exist "%sublime%" (
   move "%sublime%\Installed Packages" "%sublime%\Backup"
   move "%sublime%\Packages" "%sublime%\Backup"
   move "%sublime%\Pristine Packages" "%sublime%\Backup"
-  mklink /D "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
-  mklink /D "%sublime%\Packages" "%~dp0sublime\Packages"
-  mklink /D "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
+  mklink /d "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
+  mklink /d "%sublime%\Packages" "%~dp0sublime\Packages"
+  mklink /d "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
 )
+
+mklink %USERPROFILE%\init.bat "%dotfilesdir%\init.bat"
