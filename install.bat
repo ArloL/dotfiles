@@ -13,7 +13,7 @@ setlocal EnableDelayedExpansion
 :: ############################
 
 :: dotfiles directory
-set dotfilesdir=%USERPROFILE%\.dotfiles
+set dotfilesdir=%~dp0
 
 :: backup directory
 set backupdir=%USERPROFILE%\dotfiles_backup
@@ -22,7 +22,7 @@ set backupdir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig    
 
 for %%A in (%dotfiles%) DO (
-  set target=%dotfilesdir%\%%A
+  set target=%dotfilesdir%%%A
   set link=%USERPROFILE%\.%%A
   set linkExists="0"
 
