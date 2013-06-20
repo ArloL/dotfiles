@@ -60,3 +60,5 @@ if exist "%sublime%" (
   mklink /D "%sublime%\Packages" "%~dp0sublime\Packages"
   mklink /D "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
 )
+
+mklink %USERPROFILE%\init.bat "%dotfilesdir%\init.bat"
