@@ -56,9 +56,9 @@ if exist "%sublime%" (
   move "%sublime%\Installed Packages" "%sublime%\Backup"
   move "%sublime%\Packages" "%sublime%\Backup"
   move "%sublime%\Pristine Packages" "%sublime%\Backup"
-  mklink /D "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
-  mklink /D "%sublime%\Packages" "%~dp0sublime\Packages"
-  mklink /D "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
+  mklink /d "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
+  mklink /d "%sublime%\Packages" "%~dp0sublime\Packages"
+  mklink /d "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
 )
 
 mklink %USERPROFILE%\init.bat "%dotfilesdir%\init.bat"
