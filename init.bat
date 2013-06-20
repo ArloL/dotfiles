@@ -16,7 +16,6 @@ doskey cp=copy $*
 doskey mv=move $*
 doskey rm=del $*
 doskey cat=type $*
-doskey pwd=echo %CD%
 
 rem Easier navigation
 
