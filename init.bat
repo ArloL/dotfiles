@@ -4,9 +4,7 @@ cls
 
 chcp 65001>nul
 
-rem old prompt: [%USERNAME%@%COMPUTERNAME% $p]
-
-prompt $$$s
+prompt [%USERNAME%@%COMPUTERNAME% $p]$_$$$s
 
 rem Fake a UNIX environment
 
