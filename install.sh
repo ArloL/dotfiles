@@ -39,16 +39,17 @@ function createSymlinks()
       continue;
     fi
 
-    # move any existing files/dirs to $backupdir
+    # move any existing files/dirs to $backupDirectory
     if [ -a "${fullpath}" ]; then
 
-      # create backupdir if it does not exist
-      if [ ! -d "${backupdir}" ]; then
-        mkdir -p "${backupdir}"
+      echo ${backupDirectory}
+      # create backupDirectory if it does not exist
+      if [ ! -d "${backupDirectory}" ]; then
+        mkdir -p "${backupDirectory}"
       fi
 
-      echo "Moving existing ${symlink} to ${backupdir}"
-      mv "${fullpath}" "${backupdir}/${symlink}"
+      echo "Moving existing ${symlink} to ${backupDirectory}"
+      mv "${fullpath}" "${backupDirectory}/${symlink}"
     fi
 
     echo "Creating symlink ${fullpath}."
