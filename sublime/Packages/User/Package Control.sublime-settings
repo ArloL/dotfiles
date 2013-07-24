@@ -1,11 +1,9 @@
 {
-	"auto_upgrade_last_run": null,
-	"http_proxy": "kev-iwss02.kevelaer.herbrand.de:3128",
 	"installed_packages":
 	[
 		"EncodingHelper",
+		"FileDiffs",
 		"LineEndings",
-		"Package Control",
 		"SyncedSideBar"
 	]
 }
