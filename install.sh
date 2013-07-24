@@ -28,19 +28,19 @@ function createSymlinks()
   for symlink in "${symlinks[@]}"; do
 
     if [ ${withDot} -eq 1 ]; then
-      local fullpath="${targetDirectory}/.${symlink}"
+      local fullLinkTarget="${targetDirectory}/.${symlink}"
     else
-      local fullpath="${targetDirectory}/${symlink}"
+      local fullLinkTarget="${targetDirectory}/${symlink}"
     fi
 
     # continue if already a symlink
-    if [ -h "${fullpath}" ]; then
+    if [ -h "${fullLinkTarget}" ]; then
       echo "Skipping ${symlink}, symlink already exists"
       continue;
     fi
 
     # move any existing files/dirs to $backupDirectory
-    if [ -a "${fullpath}" ]; then
+    if [ -a "${fullLinkTarget}" ]; then
 
       echo ${backupDirectory}
       # create backupDirectory if it does not exist
@@ -49,10 +49,11 @@ function createSymlinks()
       fi
 
       echo "Moving existing ${symlink} to ${backupDirectory}"
-      mv "${fullpath}" "${backupDirectory}/${symlink}"
+      mv "${fullLinkTarget}" "${backupDirectory}/${symlink}"
     fi
 
-    echo "Creating symlink ${fullpath}."
+    echo "Creating symlink ${fullLinkTarget}."
+    ln -s "${sourceDirectory}/${symlink}" "${fullLinkTarget}"
   done
   # unset otherwise symlink contains last iteration value
   unset symlink
@@ -76,13 +77,13 @@ function setupSublime()
 {
   local scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
+  # backup directory
+  local backupDir="${HOME}/Library/Application Support/Sublime Text 2/Backup"
+
   # the folders to symlink for Sublime
   local sublimeFolders=("Installed Packages" "Packages" "Pristine Packages")
 
   local sublimeDir="${HOME}/Library/Application Support/Sublime Text 2"
-
-  # backup directory
-  local backupDir="${HOME}/Library/Application Support/Sublime Text 2/Backup"
 
   if [ -d "${sublimeDir}" ]; then
     # setup symlinks for sublime
