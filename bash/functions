@@ -20,6 +20,11 @@ fi
 
 if [ -f "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
   function edit() {
-    cygstart /cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe $1
+    local path="`cygpath -w "$1"`"
+    if [ -d "$1" ]; then
+      path="${path%?}"
+    fi
+    path="\"${path}\""
+    cygstart "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" "${path}"
   }
 fi
