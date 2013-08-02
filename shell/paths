@@ -1,0 +1,42 @@
+# MacPorts
+if [ -d /opt/local ]; then
+  export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
+
+  # MacPorts Apache binaries
+  if [ -d /opt/local/apache2/bin ]; then
+    export PATH="/opt/local/apache2/bin:${PATH}"
+  fi
+
+  # MacPorts GNU binaries
+  if [ -d /opt/local/libexec/gnubin ]; then
+    export PATH="/opt/local/libexec/gnubin:${PATH}"
+  fi
+
+  # MacPorts PostgreSQL binaries
+  if [ -d /opt/local/lib/postgresql92/bin ]; then
+    export PATH="/opt/local/lib/postgresql92/bin:${PATH}"
+  fi
+fi
+
+# rbenv
+if [ -d ~/.rbenv ]; then
+  export PATH="~/.rbenv/shims:~/.rbenv/bin:${PATH}"
+  rbenv rehash 2>/dev/null
+  rbenv() {
+    local command="$1"
+    if [ "$#" -gt 0 ]; then
+      shift
+    fi
+
+    case "$command" in
+    shell)
+      eval `rbenv "sh-$command" "$@"`;;
+    *)
+      command rbenv "$command" "$@";;
+    esac
+  }
+fi
+
+if [ -d ~/bin ]; then
+  export PATH="~/bin:${PATH}"
+fi
