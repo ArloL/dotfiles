@@ -1,0 +1,40 @@
+# Source:
+# https://github.com/ryanb/dotfiles/blob/custom-bash-zsh/zsh/aliases
+# https://github.com/ryanb/dotfiles/blob/custom-bash-zsh/bash/aliases
+# https://github.com/mathiasbynens/dotfiles/blob/master/.aliases
+
+# Easier navigation
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias -- -="cd -"
+
+# Clear scrollback buffer
+alias cls='echo -e "\ec\e[3J"'
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
+
+# List files properly
+alias l="ls -lh ${colorflag}"
+alias ll="ls -lAh ${colorflag}"
+alias ls="command ls ${colorflag}"
+
+# Open alias for Cygwin
+hash cygstart 2>/dev/null
+if [ $? -eq 0 ]; then
+  alias open='cygstart'
+fi
+
+# Edit alias for Sublime
+if [ -d "/Applications/Sublime Text 2.app" ]; then
+  alias edit='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+fi
+
+# reload
+alias reload='source ~/.bash_profile'

@@ -19,7 +19,7 @@ set dotfilesdir=%~dp0
 set backupdir=%USERPROFILE%\dotfiles_backup
 
 :: list of files/folders to symlink in homedir
-set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig    
+set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shell zshrc zsh
 
 for %%A in (%dotfiles%) DO (
   set target=%dotfilesdir%%%A
