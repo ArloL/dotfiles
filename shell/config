@@ -1,0 +1,14 @@
+# Editors
+export SVN_EDITOR=nano
+export EDITOR=nano
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+if [ "$TERM" != "dumb" ]; then
+  hash dircolors 2>/dev/null
+  if [ $? -eq 0 ]; then
+    export LS_OPTIONS='--color=auto'
+    eval `dircolors ~/.dir_colors`
+  fi
+fi
