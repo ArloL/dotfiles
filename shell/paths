@@ -16,6 +16,11 @@ if [ -d /opt/local ]; then
   if [ -d /opt/local/lib/postgresql92/bin ]; then
     export PATH="/opt/local/lib/postgresql92/bin:${PATH}"
   fi
+
+  # MacPorts Python binaries
+  if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/Current/bin ]; then
+    export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+  fi
 fi
 
 # rbenv
