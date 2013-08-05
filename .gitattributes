@@ -5,6 +5,12 @@ bash_profile text eol=lf
 bashrc text eol=lf
 bash/* text eol=lf
 
+zprofile text eol=lf
+zshrc text eol=lf
+zsh/* text eol=lf
+
+shell/* text eol=lf
+
 # Custom for Visual Studio
 *.cs     diff=csharp
 *.sln    merge=union
