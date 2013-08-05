@@ -24,24 +24,11 @@ if [ -d /opt/local ]; then
 fi
 
 # rbenv
-if [ -d ~/.rbenv ]; then
-  export PATH="~/.rbenv/shims:~/.rbenv/bin:${PATH}"
-  rbenv rehash 2>/dev/null
-  rbenv() {
-    local command="$1"
-    if [ "$#" -gt 0 ]; then
-      shift
-    fi
-
-    case "$command" in
-    shell)
-      eval `rbenv "sh-$command" "$@"`;;
-    *)
-      command rbenv "$command" "$@";;
-    esac
-  }
+if [ -d "${HOME}/.rbenv" ]; then
+  export PATH="${HOME}/.rbenv/bin:${PATH}"
+  eval "$(rbenv init -)"
 fi
 
-if [ -d ~/bin ]; then
-  export PATH="~/bin:${PATH}"
+if [ -d "${HOME}/bin" ]; then
+  export PATH="${HOME}/bin:${PATH}"
 fi
