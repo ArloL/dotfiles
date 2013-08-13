@@ -25,8 +25,8 @@ doskey ....=cd ../../..
 
 rem List files properly
 
-doskey l=ls
-doskey ll=ls
+doskey l=dir /b $*
+doskey ll=dir /b $*
 
 rem Edit functionality
 
