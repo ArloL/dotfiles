@@ -16,14 +16,16 @@ class StatusBarLineEndings(sublime_plugin.EventListener):
 	def on_load(self, view):
 		if view.line_endings() in Pref.alert_when_line_ending_is:
 			sublime.message_dialog(u''+view.line_endings()+' line endings detected on file:\n\n'+view.file_name());
-		if Pref.auto_convert_line_endings_to != '' and view.line_endings() != Pref.auto_convert_line_endings_to:
-			view.run_command('set_line_ending', {"type":Pref.auto_convert_line_endings_to})
 		if Pref.show_line_endings_on_status_bar:
 			self.show(view)
 
 	def on_activated(self, view):
 		if Pref.show_line_endings_on_status_bar:
 			self.show(view)
+
+	def on_pre_save(self, view):
+		if Pref.auto_convert_line_endings_to != '' and view.line_endings() != Pref.auto_convert_line_endings_to:
+			view.run_command('set_line_ending', {"type":Pref.auto_convert_line_endings_to})
 
 	def on_post_save(self, view):
 		if Pref.show_line_endings_on_status_bar:

@@ -11,6 +11,7 @@ Allows to:
 * Display an alert when the line_ending is not some you expect.
 * Convert indentation to spaces or tabs for all views on current window
 * Convert line endings for all views on current window
+* Convert line endings on save
 
 # Todo
 

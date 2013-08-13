@@ -6,7 +6,7 @@
 	"alert_when_line_ending_is" : [],
 	//example: "alert_when_line_ending_is":["Windows","Unix","CR"]
 
-	// auto convert line endings onload to:
+	// auto convert line endings onsave to:
 	"auto_convert_line_endings_to" : ""
 
 }
