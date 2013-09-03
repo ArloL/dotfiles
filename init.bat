@@ -1,7 +1,5 @@
 @echo off
 
-cls
-
 chcp 65001>nul
 
 prompt [%USERNAME%@%COMPUTERNAME% $p]$_$$$s
