@@ -11,6 +11,8 @@ zsh/* text eol=lf
 
 shell/* text eol=lf
 
+*.sh text eol=lf
+
 # Custom for Visual Studio
 *.cs     diff=csharp
 *.sln    merge=union
