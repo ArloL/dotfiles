@@ -77,13 +77,13 @@ function setupSublime()
 {
   local scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
+  local sublimeDir="${HOME}/Library/Application Support/Sublime Text 2"
+
   # backup directory
-  local backupDir="${HOME}/Library/Application Support/Sublime Text 2/Backup"
+  local backupDir="${sublimeDir}/dotfiles_backup"
 
   # the folders to symlink for Sublime
   local sublimeFolders=("Installed Packages" "Packages" "Pristine Packages")
-
-  local sublimeDir="${HOME}/Library/Application Support/Sublime Text 2"
 
   if [ -d "${sublimeDir}" ]; then
     # setup symlinks for sublime
