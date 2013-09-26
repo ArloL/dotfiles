@@ -41,19 +41,19 @@ goto:EOF
                 mkdir "%~3"
             )
             echo Moving existing %2 to %3
-            echo move "%~2" "%~3"
+            move "%~2" "%~3"
         )
     )
 
     if !linkExists! == "0" (
         if exist "%~1\" (
-            echo mklink /d "%~2" "%~1"
+            mklink /d "%~2" "%~1"
         ) else (
-            echo mklink "%~2" "%~1"
+            mklink "%~2" "%~1"
         )
-        echo attrib /L "%~2" +h
+        attrib /L "%~2" +h
     ) else (
-        echo Not replacing existing link %2
+        Not replacing existing link %2
     )
 
 goto:EOF
