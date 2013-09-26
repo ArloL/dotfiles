@@ -53,7 +53,7 @@ goto:EOF
         )
         attrib /L "%~2" +h
     ) else (
-        Not replacing existing link %2
+        echo Not replacing existing link %2
     )
 
 goto:EOF
