@@ -1,4 +1,7 @@
 @echo off
+:: ############################
+:: # Install the dotfiles on Windows systems.
+:: ############################
 
 NET SESSION >nul 2>&1
 if %ERRORLEVEL% neq 0 (
@@ -8,57 +11,49 @@ if %ERRORLEVEL% neq 0 (
 
 setlocal EnableDelayedExpansion
 
-:: ############################
-:: # Create symlinks from the home directory to any desired dotfiles directory.
-:: ############################
-
-:: dotfiles directory
-set dotfilesdir=%~dp0
-
-:: backup directory
-set backupdir=%USERPROFILE%\dotfiles_backup
-
-:: list of files/folders to symlink in homedir
+set dotfilesDir=%~dp0
+set backupDir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shell zshrc zsh zprofile
 
 for %%A in (%dotfiles%) DO (
-  set target=%dotfilesdir%%%A
-  set link=%USERPROFILE%\.%%A
-  set linkExists="0"
-
-  if exist "!link!" (
-    set Z=&& for %%B in ("!link!") do set Z=%%~aB
-    if "!Z:~8,1!" == "l" (
-      set linkExists="1"
-    ) else (
-      if not exist "%backupdir%" (
-        mkdir "%backupdir%"
-      )
-      echo Moving existing !link! to %backupdir%
-      move "!link!" "%backupdir%"
-    )
-  )
-  
-  if !linkExists! == "0" (
-    if exist "!target!\" (
-      mklink /d "!link!" "!target!"
-    ) else (
-      mklink "!link!" "!target!"
-    )
-    attrib /L "!link!" +h
-  )
+    call:createSymLink "%dotfilesDir%%%A" "%USERPROFILE%\.%%A" "%backupDir%"
 )
 
-set sublime=%USERPROFILE%\AppData\Roaming\Sublime Text 2
+set sublimeDir=%USERPROFILE%\AppData\Roaming\Sublime Text 2
+set backupDir=%sublimeDir%\dotfiles_backup
 
-if exist "%sublime%" (
-  mkdir "%sublime%\Backup"
-  move "%sublime%\Installed Packages" "%sublime%\Backup"
-  move "%sublime%\Packages" "%sublime%\Backup"
-  move "%sublime%\Pristine Packages" "%sublime%\Backup"
-  mklink /d "%sublime%\Installed Packages" "%~dp0sublime\Installed Packages"
-  mklink /d "%sublime%\Packages" "%~dp0sublime\Packages"
-  mklink /d "%sublime%\Pristine Packages" "%~dp0sublime\Pristine Packages"
+if exist "%sublimeDir%" (
+    call:createSymLink "%dotfilesDir%sublime\Installed Packages" "%sublimeDir%\Installed Packages" "%backupDir%"
+    call:createSymLink "%dotfilesDir%sublime\Packages" "%sublimeDir%\Packages" "%backupDir%"
+    call:createSymLink "%dotfilesDir%sublime\Pristine Packages" "%sublimeDir%\Pristine Packages" "%backupDir%"
 )
 
-mklink %USERPROFILE%\init.bat "%dotfilesdir%\init.bat"
+goto:EOF
+
+::function
+:createSymLink - target linkName backupDirectory
+    if exist "%~2" (
+        set Z=&& for %%A in ("%~2") do set Z=%%~aA
+        if "!Z:~8,1!" == "l" (
+            set linkExists="1"
+        ) else (
+            if not exist "%~3" (
+                mkdir "%~3"
+            )
+            echo Moving existing %2 to %3
+            echo move "%~2" "%~3"
+        )
+    )
+
+    if !linkExists! == "0" (
+        if exist "%~1\" (
+            echo mklink /d "%~2" "%~1"
+        ) else (
+            echo mklink "%~2" "%~1"
+        )
+        echo attrib /L "%~2" +h
+    ) else (
+        echo Not replacing existing link %2
+    )
+
+goto:EOF
