@@ -18,7 +18,7 @@ set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shel
 call:createSymLink "%dotfilesDir%init.bat" "%USERPROFILE%\init.bat" "%backupDir%"
 
 for %%A in (%dotfiles%) DO (
-    call:createSymLink "%dotfilesDir%%%A" "%USERPROFILE%\.%%A" "%backupDir%"
+    call:createSymLink "%dotfilesDir%%%A" "%HOMEDRIVE%%HOMEPATH%\.%%A" "%backupDir%"
 )
 
 set sublimeDir=%USERPROFILE%\AppData\Roaming\Sublime Text 2
