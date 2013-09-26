@@ -2,6 +2,6 @@
 	name = Arlo O'Keeffe
 	email = mailtoarlo@gmail.com
 [push]
-	default = matching
+	default = simple
 [color]
 	ui = true
