@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ############################
-# Create symlinks from the home directory to any desired dotfiles directory.
+# Install the dotfiles on OS X systems.
 ############################
 
 function fail()
