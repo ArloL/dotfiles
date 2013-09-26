@@ -15,6 +15,8 @@ set dotfilesDir=%~dp0
 set backupDir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shell zshrc zsh zprofile
 
+call:createSymLink "%dotfilesDir%init.bat" "%USERPROFILE%\init.bat" "%backupDir%"
+
 for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%USERPROFILE%\.%%A" "%backupDir%"
 )
@@ -32,6 +34,7 @@ goto:EOF
 
 ::function
 :createSymLink - target linkName backupDirectory
+    set linkExists="0"
     if exist "%~2" (
         set Z=&& for %%A in ("%~2") do set Z=%%~aA
         if "!Z:~8,1!" == "l" (
