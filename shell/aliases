@@ -11,18 +11,17 @@ alias ....="cd ../../.."
 alias -- -="cd -"
 
 # Clear scrollback buffer
-hash clear 2>/dev/null
-if [ $? -eq 0 ]; then
-  alias cls='echo -e "\ec\e[3J" && clear'
+if [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+    alias cls=clear
 else
-  alias cls='echo -e "\ec\e[3J"'
+    alias cls='echo -e "\ec\e[3J"'
 fi
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-  colorflag="--color"
+    colorflag="--color"
 else # OS X `ls`
-  colorflag="-G"
+    colorflag="-G"
 fi
 
 # List files properly
@@ -33,10 +32,10 @@ alias ls="command ls ${colorflag}"
 # Open alias for Cygwin
 hash cygstart 2>/dev/null
 if [ $? -eq 0 ]; then
-  alias open='cygstart'
+    alias open='cygstart'
 fi
 
 # Edit alias for Sublime
 if [ -d "/Applications/Sublime Text 2.app" ]; then
-  alias edit='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+    alias edit='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 fi
