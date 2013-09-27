@@ -2,6 +2,8 @@
 	name = Arlo O'Keeffe
 	email = mailtoarlo@gmail.com
 [push]
-	default = simple
+	# use matching because cygwin git is too
+	# old to understand value 'simple'
+	default = matching
 [color]
 	ui = true
