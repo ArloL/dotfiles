@@ -5,8 +5,8 @@
 
 NET SESSION >nul 2>&1
 if %ERRORLEVEL% neq 0 (
-  echo Not an admin, exiting.
-  exit /B 1
+    echo Not an admin, exiting.
+    exit /B 1
 )
 
 setlocal EnableDelayedExpansion
