@@ -5,8 +5,8 @@
 		"EncodingHelper",
 		"FileDiffs",
 		"LineEndings",
+		"Markdown Preview",
 		"Package Control",
-		"SyncedSideBar",
-		"TrailingSpaces"
+		"SyncedSideBar"
 	]
 }
