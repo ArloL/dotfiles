@@ -15,7 +15,8 @@ set dotfilesDir=%~dp0
 set backupDir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shell zshrc zsh zprofile
 
-call:createSymLink "%dotfilesDir%init.bat" "%USERPROFILE%\init.bat" "%backupDir%"
+:: add registry key for init.bat
+reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
 
 for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%HOMEDRIVE%%HOMEPATH%\.%%A" "%backupDir%"
