@@ -18,5 +18,6 @@ fi
 # ssh-pageant
 hash ssh-pageant 2>/dev/null
 if [ $? -eq 0 ]; then
-    eval `ssh-pageant -qra ~/.ssh-pageant`
+    temp=`cygpath "${temp}"`
+    eval `ssh-pageant -qra ${temp}/.ssh-pageant`
 fi
