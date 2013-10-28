@@ -1,10 +1,12 @@
-# Editors
+# editors
 export SVN_EDITOR=nano
 export EDITOR=nano
 
+# locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# colored ls
 if [ "$TERM" != "dumb" ]; then
     hash dircolors 2>/dev/null
     if [ $? -eq 0 ]; then
@@ -13,6 +15,7 @@ if [ "$TERM" != "dumb" ]; then
     fi
 fi
 
+# ssh-pageant
 hash ssh-pageant 2>/dev/null
 if [ $? -eq 0 ]; then
     eval `ssh-pageant -qra ~/.ssh-pageant`
