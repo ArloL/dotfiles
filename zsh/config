@@ -1,23 +1,2 @@
+source ~/.shell/paths
 source ~/.shell/config
-
-#[ArloLOK@arlos-mbp ~]
-#$ 
-#instead of
-#(ArloLOK@arlos-mbp)[1] ~ %
-#export PS1="[\u@\h \w]\n$ "
-export PS1="[%n@%m %~]
-$ "
-
-# Change Terminal title to
-# ArloLOK@arlos-mbp ~
-precmd() {
-    print -Pn "\e]0;%n@%m %~\a"
-}
-
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-
-setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS

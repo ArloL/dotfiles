@@ -1,4 +1,0 @@
-source ~/.shell/aliases
-
-# reload
-alias reload='source ~/.zshrc'
