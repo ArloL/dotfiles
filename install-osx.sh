@@ -69,7 +69,7 @@ function setupHome()
     local backupDir="${HOME}/dotfiles_backup"
 
     # list of files/folders to symlink in homedir
-    local dotfiles=("bashrc" "bash_profile" "bash" "dir_colors" "inputrc" "minttyrc" "gitconfig" "zshenv" "zshrc" "shell" "zsh")
+    local dotfiles=("bashrc" "bash_profile" "bash" "dir_colors" "inputrc" "minttyrc" "gitconfig" "zshrc" "shell" "zsh")
 
     # setup symlinks in homedir
     createSymlinks "${scriptPath}" "${HOME}" "${backupDir}" 1 dotfiles[@]
