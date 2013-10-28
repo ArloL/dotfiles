@@ -1,1 +1,48 @@
 source ~/.shell/functions
+
+# git bash specific funtions
+if [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+
+    # Convert git bash paths to windows paths
+    function winpath() {
+        if [ -z "$1" ]; then
+            echo "$@"
+        elif [ -f "$1" ]; then
+            local dir=$(dirname "$1")
+            local fn=$(basename "$1")
+            echo "$(cd "$dir"; echo "$(pwd -W)/$fn")" | sed 's|/|\\|g';
+        elif [ -d "$1" ]; then
+            echo "$(cd "$1"; pwd -W)" | sed 's|/|\\|g';
+        else
+            echo "$(pwd -W)"/$1 | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g';
+        fi
+    }
+
+    # Open files and folders
+    function open() {
+        if [ -z "$1" ]; then
+            start "" .
+        elif [ -f "$1" ]; then
+            local target=$(echo $1 | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g')
+            start "" "${target}"
+        elif [ -d "$1" ]; then
+            local target="$1"
+            local lastchar="${target:${#target} - 1}"
+            if [ "${lastchar}" = '/' ]; then
+                target="${target%?}"
+            fi
+            start "" "$target"
+        else
+            local target="$1"
+            start "" "${target}"
+        fi
+    }
+
+    if [ -f "/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
+        function edit() {
+            local target=$(winpath "$1" | sed 's|\\|\\\\|g')
+            start "" "/c/Program Files/Sublime Text 2/sublime_text.exe" "${target}"
+        }
+    fi
+
+fi
