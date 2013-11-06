@@ -1,8 +1,10 @@
 source ~/.shell/functions
 
 # git bash specific funtions
-if [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
-
+if [ "$(uname)" == "Darwin" ]; then
+    # os x does not support the next expr
+    echo "test" > /dev/null
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Convert git bash paths to windows paths
     function winpath() {
         if [ -z "$1" ]; then
