@@ -11,7 +11,14 @@ alias ....="cd ../../.."
 alias -- -="cd -"
 
 # Clear scrollback buffer
-if [ "$(expr substr $(uname -s) 1 10)" = "MINGW32_NT" ]; then
+if [ "$(uname)" == "Darwin" ]; then
+    # Do something under Mac OS X platform
+    alias cls='printf "\033\143"'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    # Do something under Linux platform
+    alias cls='echo -e "\ec\e[3J"'
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    # Do something under Windows NT platform
     alias cls=clear
 else
     alias cls='echo -e "\ec\e[3J"'
