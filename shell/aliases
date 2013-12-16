@@ -11,13 +11,7 @@ alias ....="cd ../../.."
 alias -- -="cd -"
 
 # Clear scrollback buffer
-if [ "$(uname)" = "Darwin" ]; then
-    # Do something under Mac OS X platform
-    alias cls='printf "\033\143"'
-else
-    # does not reset the scrollbar in git bash
-    alias cls='echo -e "\ec\e[3J"'
-fi
+alias cls='printf "\ec\e[3J"'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
