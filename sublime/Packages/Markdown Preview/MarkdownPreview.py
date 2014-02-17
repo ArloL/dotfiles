@@ -9,7 +9,6 @@ import tempfile
 import re
 import json
 import time
-import traceback
 
 
 def is_ST3():
@@ -390,17 +389,34 @@ class MarkdownCompiler():
         
         body = self.convert_markdown(contents, parser)
 
-        html = u'<!DOCTYPE html>'
-        html += '<html><head><meta charset="utf-8">'
-        html += self.get_stylesheet(parser)
-        html += self.get_javascript()
-        html += self.get_highlight()
-        html += self.get_mathjax()
-        html += self.get_title()
-        html += '</head><body>'
-        html += body
-        html += '</body>'
-        html += '</html>'
+        html_template = self.settings.get('html_template')
+
+        # use customized html template if given
+        if html_template and os.path.exists(html_template):
+            head = u''
+            if not self.settings.get('skip_default_stylesheet'):
+                head += self.get_stylesheet(parser)
+            head += self.get_javascript()
+            head += self.get_highlight()
+            head += self.get_mathjax()
+            head += self.get_title()
+
+            html = load_utf8(html_template)
+            html = html.replace('{{ HEAD }}', head, 1)
+            html = html.replace('{{ BODY }}', body, 1)
+        else:
+            html = u'<!DOCTYPE html>'
+            html += '<html><head><meta charset="utf-8">'
+            html += self.get_stylesheet(parser)
+            html += self.get_javascript()
+            html += self.get_highlight()
+            html += self.get_mathjax()
+            html += self.get_title()
+            html += '</head><body>'
+            html += body
+            html += '</body>'
+            html += '</html>'
+
         return html, body
 
 
@@ -446,7 +462,11 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
                     sublime.status_message('Markdown preview launched in default html viewer')
         elif target == 'sublime':
             # create a new buffer and paste the output HTML
-            new_scratch_view(self.view.window(), body)
+            embed_css = settings.get('embed_css_for_sublime_output', True)
+            if embed_css:
+                new_scratch_view(self.view.window(), html)
+            else:
+                new_scratch_view(self.view.window(), body)
             sublime.status_message('Markdown preview launched in sublime')
         elif target == 'clipboard':
             # clipboard copy the full HTML
@@ -486,7 +506,10 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
 
         self.init_panel()
         
-        show_panel_on_build = sublime.load_settings("Preferences.sublime-settings").get("show_panel_on_build", True)
+        settings = sublime.load_settings('MarkdownPreview.sublime-settings')
+        parser = settings.get('parser', 'markdown')
+
+        show_panel_on_build = settings.get("show_panel_on_build", True)
         if show_panel_on_build:
             self.window.run_command("show_panel", {"panel": "output.markdown"})
         
@@ -497,7 +520,7 @@ class MarkdownBuildCommand(sublime_plugin.WindowCommand):
 
         self.puts("Compiling %s..." % mdfile)
 
-        html, body = compiler.run(view, 'markdown', True)
+        html, body = compiler.run(view, parser, True)
 
         htmlfile = os.path.splitext(mdfile)[0]+'.html'
         self.puts("        ->"+htmlfile)
