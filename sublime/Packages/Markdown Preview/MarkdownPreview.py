@@ -170,11 +170,10 @@ class MarkdownCompiler():
         css_name = self.settings.get('css', 'default')
         css_path = None
 
-        mdfile = self.view.file_name()
-        if css_name == 'default':
-            # use builtin CSS
-            css_path = get_ressource_path('github.css' if parser == 'github' else 'markdown.css')
-        elif self.isurl(css_name):
+        # use default CSS
+        css_path = get_ressource_path('github.css' if parser == 'github' else 'markdown.css')
+
+        if self.isurl(css_name):
             # link to remote URL
             return u"<link href='%s' rel='stylesheet' type='text/css'>" % css_name
         elif os.path.isfile(os.path.expanduser(css_name)):
@@ -184,6 +183,8 @@ class MarkdownCompiler():
         # local CSS are directly embedded in the doc
         if css_path is not None and os.path.isfile(css_path):
             return u"<style>%s</style>" % load_utf8(css_path)
+
+        return ''
 
     def get_override_css(self):
         ''' handls allow_css_overrides setting. '''
