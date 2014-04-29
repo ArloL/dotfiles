@@ -433,7 +433,8 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             livereload_installed = ('LiveReload' in os.listdir(sublime.packages_path()))
             # build the html
             if livereload_installed:
-                html += '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] + \':35729/livereload.js?snipver=1"></\' + \'script>\')</script>'
+                port = sublime.load_settings('LiveReload.sublime-settings').get('port')
+                html += '<script>document.write(\'<script src="http://\' + (location.host || \'localhost\').split(\':\')[0] + \':%d/livereload.js?snipver=1"></\' + \'script>\')</script>' % port
             # update output html file
             tmp_fullpath = getTempMarkdownPreviewPath(self.view)
             save_utf8(tmp_fullpath, html)
@@ -446,6 +447,8 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
                         cmd = "open -a %s" % cmd
                     elif sys.platform == 'linux2':
                         cmd += ' &'
+                    elif sys.platform == 'win32':
+                        cmd = 'start "" %s' % cmd
                     result = os.system(cmd)
                     if result != 0:
                         sublime.error_message('cannot execute "%s" Please check your Markdown Preview settings' % config_browser)
