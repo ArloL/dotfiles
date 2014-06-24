@@ -1,7 +1,12 @@
 {
-  "repo": "SublimeFileDiffs",
   "name": "FileDiffs",
-  "description": "Shows diffs - also in an external diff tool - between the current file, or selection(s) in the current file, and clipboard, another file, or unsaved changes.",
-  "author": "Colin T.A. Gray (colinta), Sebastian Pape (spape), Jiri Urban (jiriurban)",
-  "homepage": "https://github.com/spape/SublimeFileDiffs"
+  "description": "Shows diffs between the current file, or selection(s) in the current file, and clipboard, another file, or unsaved changes.  With contributions from Sebastian Pape (spape) and Jiri Urban (jiriurban)",
+  "author": "Colin T.A. Gray (colinta)",
+  "details": "https://github.com/colinta/SublimeFileDiffs",
+  "labels": ["diff/merge"],
+  "releases": [
+    {
+      "details": "https://github.com/colinta/SublimeFileDiffs/tags"
+    }
+  ]
 }
