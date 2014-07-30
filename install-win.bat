@@ -18,8 +18,18 @@ set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shel
 :: add registry key for init.bat
 reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
 
+if exist "%HOME%" (
+	set homeDir=%HOME%
+) else (
+	if exist "%HOMEDRIVE%%HOMEPATH%" (
+		set homeDir=%HOMEDRIVE%%HOMEPATH%
+	) else (
+		set homeDir=%USERPROFILE%\
+	)
+)
+
 for %%A in (%dotfiles%) DO (
-    call:createSymLink "%dotfilesDir%%%A" "%HOMEDRIVE%%HOMEPATH%\.%%A" "%backupDir%"
+    call:createSymLink "%dotfilesDir%%%A" "%homeDir%.%%A" "%backupDir%"
 )
 
 set sublimeDir=%USERPROFILE%\AppData\Roaming\Sublime Text 2
