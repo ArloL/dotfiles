@@ -60,7 +60,7 @@ goto:EOF
     )
 
     if !linkExists! == "0" (
-        if exist "%~1\NUL" (
+        if exist "%~1\" (
             mklink /d "%~2" "%~1"
         ) else (
             mklink "%~2" "%~1"
