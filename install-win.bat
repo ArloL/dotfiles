@@ -24,12 +24,14 @@ if exist "%HOME%" (
 	if exist "%HOMEDRIVE%%HOMEPATH%" (
 		set homeDir=%HOMEDRIVE%%HOMEPATH%
 	) else (
-		set homeDir=%USERPROFILE%\
+		set homeDir=%USERPROFILE%
 	)
 )
 
+IF %homeDir:~-1%==\ SET homeDir=%homeDir:~0,-1%
+
 for %%A in (%dotfiles%) DO (
-    call:createSymLink "%dotfilesDir%%%A" "%homeDir%.%%A" "%backupDir%"
+    call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%"
 )
 
 set sublimeDir=%USERPROFILE%\AppData\Roaming\Sublime Text 2
