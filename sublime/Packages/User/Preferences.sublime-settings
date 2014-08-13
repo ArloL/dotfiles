@@ -7,8 +7,7 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Markdown Preview"
+		"Vintage"
 	],
 	"remember_open_files": false,
 	"rulers":
