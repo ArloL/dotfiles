@@ -79,7 +79,7 @@ function setupSublime()
 {
     local scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
-    local sublimeDir="${HOME}/Library/Application Support/Sublime Text 2"
+    local sublimeDir="${HOME}/Library/Application Support/Sublime Text 3"
 
     # backup directory
     local backupDir="${sublimeDir}/dotfiles_backup"
