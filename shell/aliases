@@ -32,7 +32,7 @@ if [ $? -eq 0 ]; then
 fi
 
 # Edit alias for Sublime
-if [ -d "/Applications/Sublime Text 2.app" ]; then
-    export EDITOR='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-    alias edit='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+if [ -d "/Applications/Sublime Text.app" ]; then
+    export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+    alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
