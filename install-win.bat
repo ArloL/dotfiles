@@ -34,7 +34,7 @@ for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%"
 )
 
-set sublimeDir=%USERPROFILE%\AppData\Roaming\Sublime Text 2
+set sublimeDir=%APPDATA%\Sublime Text 3
 set backupDir=%sublimeDir%\dotfiles_backup
 
 if exist "%sublimeDir%" (
