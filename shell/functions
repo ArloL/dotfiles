@@ -18,7 +18,7 @@ if [ $? -eq 0 ]; then
     }
 fi
 
-if [ -f "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
+if [ -f "/cygdrive/c/Program Files/Sublime Text 3/sublime_text.exe" ]; then
     function edit() {
         local target="`cygpath -w "$1"`"
         lastchar="${target:${#target} - 1}"
@@ -26,6 +26,6 @@ if [ -f "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" ]; then
             target="${target%?}"
         fi
         target="\"${target}\""
-        cygstart "/cygdrive/c/Program Files/Sublime Text 2/sublime_text.exe" "${target}"
+        cygstart "/cygdrive/c/Program Files/Sublime Text 3/sublime_text.exe" "${target}"
     }
 fi
