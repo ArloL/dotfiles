@@ -1,6 +1,8 @@
 [user]
 	name = Arlo O'Keeffe
 	email = mailtoarlo@gmail.com
+[core]
+    excludesfile = ~/.gitignore_global
 [push]
 	# use matching because cygwin git is too
 	# old to understand value 'simple'
