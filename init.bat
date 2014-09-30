@@ -28,8 +28,8 @@ doskey ll=dir /b $*
 
 rem Edit functionality
 
-IF NOT EXIST "C:\Program Files\Sublime Text 2" GOTO NOSUBLIME
-    doskey edit="C:\Program Files\Sublime Text 2\sublime_text" $*
+IF NOT EXIST "C:\Program Files\Sublime Text 3" GOTO NOSUBLIME
+    doskey edit="C:\Program Files\Sublime Text 3\sublime_text" $*
 :NOSUBLIME
 
 rem Open functionality
