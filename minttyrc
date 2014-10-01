@@ -30,3 +30,5 @@ FontHeight=12
 CopyOnSelect=no
 CtrlAltIsAltGr=yes
 Font=Source Code Pro
+CursorType=line
+CursorBlinks=yes
