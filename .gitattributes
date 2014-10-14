@@ -13,7 +13,7 @@ shell/* text eol=lf
 
 *.sh text eol=lf
 *.bat text eol=crlf
-*.reg text eol=crlf
+*.reg text eol=crlf diff
 
 # Custom for Visual Studio
 *.cs     diff=csharp
