@@ -12,6 +12,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-puppet-lint",
 		"SyncedSideBar",
+		"Terminal",
 		"TrailingSpaces"
 	]
 }
