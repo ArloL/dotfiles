@@ -43,6 +43,8 @@ if exist "%sublimeDir%" (
     call:createSymLink "%dotfilesDir%sublime\Pristine Packages" "%sublimeDir%\Pristine Packages" "%backupDir%"
 )
 
+Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
+
 goto:EOF
 
 ::function
