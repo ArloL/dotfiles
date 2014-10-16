@@ -4,6 +4,7 @@
 	[
 		"EncodingHelper",
 		"FileDiffs",
+		"Glue",
 		"LineEndings",
 		"Markdown Preview",
 		"Package Control",
