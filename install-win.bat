@@ -45,6 +45,9 @@ if exist "%sublimeDir%" (
 
 Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
 
+cd open_here
+call install.bat
+
 goto:EOF
 
 ::function

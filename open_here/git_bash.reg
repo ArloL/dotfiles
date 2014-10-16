@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\git_bash]
+@="Git Bash"
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\git_bash\command]
+@="wscript \"C:\\Program Files (x86)\\Git\\Git Bash.vbs\" \"%V\""

@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here]
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell]
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\open_here]
+@="Open here"
+"ExtendedSubCommandsKey"="*\\\\ContextMenus\\open_here"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\open_here]
+@="Open here"
+"ExtendedSubCommandsKey"="*\\\\ContextMenus\\open_here"
+
+[HKEY_CLASSES_ROOT\Drive\shell\open_here]
+@="Open here"
+"ExtendedSubCommandsKey"="*\\\\ContextMenus\\open_here"
+
+[HKEY_CLASSES_ROOT\Drive\Background\shell\open_here]
+@="Open here"
+"ExtendedSubCommandsKey"="*\\\\ContextMenus\\open_here"
