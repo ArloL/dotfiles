@@ -32,3 +32,7 @@ CtrlAltIsAltGr=yes
 Font=Source Code Pro
 CursorType=line
 CursorBlinks=yes
+Rows=25
+ScrollbackLines=3000
+Columns=80
+Scrollbar=right
