@@ -9,6 +9,8 @@ if (Test-Path $PROFILE) {
     cmd /c mklink "$PROFILE" "$($args[0])"
 }
 
+. $PROFILE
+
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 scoop install concfg
 concfg import -n solarized-light small concfg\source-code-pro.json
