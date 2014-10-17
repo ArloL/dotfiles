@@ -3,10 +3,10 @@ if (Test-Path $PROFILE) {
     $symlink = $file.Attributes -band [IO.FileAttributes]::ReparsePoint
     if (-Not $symlink) {
         Remove-Item $PROFILE
-        cmd /c mklink $PROFILE $args[0]
+        cmd /c mklink "$PROFILE" "$($args[0])"
     }
 } else {
-    cmd /c mklink $PROFILE $args[0]
+    cmd /c mklink "$PROFILE" "$($args[0])"
 }
 
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
