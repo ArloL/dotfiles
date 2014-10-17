@@ -6,6 +6,10 @@ if (Test-Path $PROFILE) {
         cmd /c mklink "$PROFILE" "$($args[0])"
     }
 } else {
+    $profilePath = Split-Path $PROFILE
+    if (!(Test-Path -Path $profilePath)) {
+        New-Item -ItemType directory -Path $profilePath | Out-Null
+    }
     cmd /c mklink "$PROFILE" "$($args[0])"
 }
 
