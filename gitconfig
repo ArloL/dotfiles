@@ -4,8 +4,6 @@
 [core]
     excludesfile = ~/.gitignore_global
 [push]
-	# use matching because cygwin git is too
-	# old to understand value 'simple'
-	default = matching
+	default = simple
 [color]
 	ui = true
