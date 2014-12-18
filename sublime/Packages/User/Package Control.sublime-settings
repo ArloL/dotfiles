@@ -12,6 +12,7 @@
 		"Sass",
 		"SublimeLinter",
 		"SublimeLinter-contrib-puppet-lint",
+		"SublimeLinter-xmllint",
 		"SyncedSideBar",
 		"Terminal",
 		"TrailingSpaces"
