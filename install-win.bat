@@ -34,13 +34,11 @@ for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%"
 )
 
-set sublimeDir=%APPDATA%\Sublime Text 3
+set sublimeDir=%APPDATA%\Sublime Text 3\Packages
 set backupDir=%sublimeDir%\dotfiles_backup
 
 if exist "%sublimeDir%" (
-    call:createSymLink "%dotfilesDir%sublime\Installed Packages" "%sublimeDir%\Installed Packages" "%backupDir%"
-    call:createSymLink "%dotfilesDir%sublime\Packages" "%sublimeDir%\Packages" "%backupDir%"
-    call:createSymLink "%dotfilesDir%sublime\Pristine Packages" "%sublimeDir%\Pristine Packages" "%backupDir%"
+    call:createSymLink "%dotfilesDir%sublime\User" "%sublimeDir%\User" "%backupDir%"
 )
 
 Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
