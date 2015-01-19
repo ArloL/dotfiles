@@ -31,14 +31,14 @@ if exist "%HOME%" (
 IF %homeDir:~-1%==\ SET homeDir=%homeDir:~0,-1%
 
 for %%A in (%dotfiles%) DO (
-    call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%"
+    call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%" true
 )
 
 set sublimeDir=%APPDATA%\Sublime Text 3\Packages
 set backupDir=%sublimeDir%\dotfiles_backup
 
 if exist "%sublimeDir%" (
-    call:createSymLink "%dotfilesDir%sublime\User" "%sublimeDir%\User" "%backupDir%"
+    call:createSymLink "%dotfilesDir%sublime\User" "%sublimeDir%\User" "%backupDir%" false
 )
 
 Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
@@ -49,7 +49,7 @@ call install.bat
 goto:EOF
 
 ::function
-:createSymLink - target linkName backupDirectory
+:createSymLink - target linkName backupDirectory hideLink
     set linkExists="0"
     if exist "%~2" (
         set Z=&& for %%A in ("%~2") do set Z=%%~aA
@@ -70,7 +70,9 @@ goto:EOF
         ) else (
             mklink "%~2" "%~1"
         )
-        attrib /L "%~2" +h
+        if %4 == "true" (
+        	attrib /L "%~2" +h
+        )
     ) else (
         echo Not replacing existing link %2
     )
