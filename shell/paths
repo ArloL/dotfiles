@@ -2,6 +2,10 @@
 if [ -d /opt/local ]; then
     export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 
+    if [ -d /opt/local/share/java/maven3 ]; then
+        export M2_HOME="/opt/local/share/java/maven3"
+    fi
+
     # MacPorts Apache binaries
     if [ -d /opt/local/apache2/bin ]; then
         export PATH="/opt/local/apache2/bin:${PATH}"
