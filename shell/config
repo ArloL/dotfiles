@@ -26,3 +26,9 @@ hash ssh-pageant 2>/dev/null
 if [ $? -eq 0 ]; then
     eval "$(ssh-pageant -qra ~/.ssh/pageant)"
 fi
+
+# boot2docker
+hash boot2docker 2>/dev/null
+if [ $? -eq 0 ]; then
+    eval "$(boot2docker shellinit 2>/dev/null)"
+fi
