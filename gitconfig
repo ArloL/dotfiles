@@ -1,8 +1,6 @@
 [user]
 	name = Arlo O'Keeffe
 	email = mailtoarlo@gmail.com
-[core]
-    excludesfile = ~/.gitignore_global
 [push]
 	default = simple
 [color]
