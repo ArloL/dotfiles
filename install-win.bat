@@ -13,7 +13,7 @@ setlocal EnableDelayedExpansion
 
 set dotfilesDir=%~dp0
 set backupDir=%USERPROFILE%\dotfiles_backup
-set dotfiles=bashrc bash_profile bash dir_colors inputrc minttyrc gitconfig shell zshrc zsh gitignore_global puppet-lint.rc
+set dotfiles=bashrc bash_profile bash config dir_colors inputrc minttyrc gitconfig shell zshrc zsh gitignore_global puppet-lint.rc
 
 :: add registry key for init.bat
 reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
