@@ -1,6 +1,6 @@
 [user]
 	name = Arlo O'Keeffe
-	email = mailtoarlo@gmail.com
+	email = a.okeeffe@herbrand.de
 [core]
     excludesfile = ~/.gitignore_global
 [push]
