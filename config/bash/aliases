@@ -1,4 +1,4 @@
-source ~/.config/shell/aliases
+source $XDG_CONFIG_HOME/shell/aliases
 
 # reload
 alias reload='source ~/.bash_profile'

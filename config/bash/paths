@@ -1,1 +1,1 @@
-source ~/.config/shell/paths
+source $XDG_CONFIG_HOME/shell/paths

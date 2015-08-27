@@ -1,4 +1,5 @@
-source ~/.config/shell/config
+
+source $XDG_CONFIG_HOME/shell/config
 
 #[ArloLOK@arlos-mbp ~]
 #$ 

@@ -24,9 +24,9 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS
 
 # aliases
-source ~/.config/shell/aliases
+source $XDG_CONFIG_HOME/shell/aliases
 
 # reload
 alias reload='source ~/.zshrc'
 
-source ~/.config/shell/functions
+source $XDG_CONFIG_HOME/shell/functions

@@ -1,4 +1,4 @@
-source ~/.shell/functions
+source $XDG_CONFIG_HOME/shell/functions
 
 # git bash specific funtions
 if [ "$(uname)" == "Darwin" ]; then

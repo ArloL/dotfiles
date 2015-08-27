@@ -1,5 +1,8 @@
-source ~/.config/bash/paths
-source ~/.config/bash/config
-source ~/.config/bash/aliases
-source ~/.config/bash/completions
-source ~/.config/bash/functions
+# Environment variables
+export XDG_CONFIG_HOME="$HOME/.config"
+
+source $XDG_CONFIG_HOME/bash/paths
+source $XDG_CONFIG_HOME/bash/config
+source $XDG_CONFIG_HOME/bash/aliases
+source $XDG_CONFIG_HOME/bash/completions
+source $XDG_CONFIG_HOME/bash/functions
