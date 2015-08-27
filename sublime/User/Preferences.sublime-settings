@@ -3,7 +3,7 @@
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
-	"font_size": 12,
+	"font_size": 16,
 	"hot_exit": false,
 	"ignored_packages":
 	[
