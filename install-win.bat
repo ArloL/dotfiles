@@ -34,6 +34,8 @@ for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%" true
 )
 
+call:createSymLink "%dotfilesDir%config\readline\inputrc" "%homeDir%\.inputrc" "%backupDir%" true
+
 set sublimeDir=%APPDATA%\Sublime Text 3\Packages
 set backupDir=%sublimeDir%\dotfiles_backup
 
