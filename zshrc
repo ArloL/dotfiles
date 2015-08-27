@@ -1,2 +1,2 @@
-source ~/.zsh/config
-source ~/.zsh/interactive
+source ~/.config/zsh/config
+source ~/.config/zsh/interactive

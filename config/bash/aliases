@@ -1,4 +1,4 @@
-source ~/.shell/aliases
+source ~/.config/shell/aliases
 
 # reload
 alias reload='source ~/.bash_profile'

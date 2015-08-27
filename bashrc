@@ -1,5 +1,5 @@
-source ~/.bash/paths
-source ~/.bash/config
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/functions
+source ~/.config/bash/paths
+source ~/.config/bash/config
+source ~/.config/bash/aliases
+source ~/.config/bash/completions
+source ~/.config/bash/functions
