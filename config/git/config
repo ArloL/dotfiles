@@ -1,0 +1,7 @@
+[user]
+    name = Arlo O'Keeffe
+    email = mailtoarlo@gmail.com
+[push]
+    default = simple
+[color]
+    ui = true
