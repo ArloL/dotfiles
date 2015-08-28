@@ -41,6 +41,7 @@ set backupDir=%sublimeDir%\dotfiles_backup
 
 if exist "%sublimeDir%" (
     call:createSymLink "%dotfilesDir%sublime\User" "%sublimeDir%\User" "%backupDir%" false
+    call:createSymLink "%dotfilesDir%sublime\User (OS Settings)" "%sublimeDir%\User (OS Settings)" "%backupDir%" false
 )
 
 Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1

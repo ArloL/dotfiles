@@ -85,7 +85,7 @@ function setupSublime()
     local backupDir="${sublimeDir}/dotfiles_backup"
 
     # the folders to symlink for Sublime
-    local sublimeFolders=("User")
+    local sublimeFolders=("User" "User (OS Settings)")
 
     if [ -d "${sublimeDir}" ]; then
         # setup symlinks for sublime
