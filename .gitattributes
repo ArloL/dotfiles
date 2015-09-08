@@ -1,9 +1,8 @@
 bash_profile text eol=lf
 bashrc text eol=lf
-bash/* text eol=lf
 
-zprofile text eol=lf
-zshrc text eol=lf
-zsh/* text eol=lf
+zshenv text eol=lf
 
-shell/* text eol=lf
+config/bash/* text eol=lf
+config/zsh/* text eol=lf
+config/shell/* text eol=lf
