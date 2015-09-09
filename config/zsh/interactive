@@ -27,6 +27,6 @@ setopt HIST_IGNORE_ALL_DUPS
 source $XDG_CONFIG_HOME/shell/aliases
 
 # reload
-alias reload='source ~/.zshrc'
+alias reload='source $XDG_CONFIG_HOME/zsh/.zshrc'
 
 source $XDG_CONFIG_HOME/shell/functions
