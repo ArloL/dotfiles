@@ -7,7 +7,7 @@ prompt [%USERNAME%@%COMPUTERNAME% $p]$_$$$s
 rem Fake a UNIX environment
 
 doskey clear=cls
-doskey ls=dir /b $*
+doskey ls=dir /d $*
 doskey cp=copy $*
 doskey mv=move $*
 doskey rm=del $*
