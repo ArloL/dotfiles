@@ -12,7 +12,7 @@ doskey cp=copy $*
 doskey mv=move $*
 doskey rm=del $*
 doskey cat=type $*
-doskey touch=type nul>>$*
+doskey touch=type nul$G$G$*
 
 rem Easier navigation
 
