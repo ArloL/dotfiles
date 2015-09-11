@@ -11,7 +11,7 @@ setlocal EnableDelayedExpansion
 reg import open_here.reg
 reg import cmd.reg
 call powershell.bat
-if exist "C:\Program Files (x86)\Git" (
+if exist "C:\Program Files\Git" (
     reg import git_bash.reg
 )
 if exist "%CYGWIN_HOME%" (
