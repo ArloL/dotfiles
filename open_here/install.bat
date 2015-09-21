@@ -20,3 +20,6 @@ if exist "%CYGWIN_HOME%" (
 if exist "C:\Program Files\Sublime Text 3" (
     reg import sublime_text.reg
 )
+if exist "C:\Program Files (x86)\Atlassian\SourceTree" (
+    reg import sourcetree.reg
+)

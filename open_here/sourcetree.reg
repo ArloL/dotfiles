@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree]
+@="SourceTree"
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree\command]
+@="\"C:\\Program Files (x86)\\Atlassian\\SourceTree\\SourceTree.exe\" -f \"%V\""
