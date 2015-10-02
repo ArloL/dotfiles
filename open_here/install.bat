@@ -10,12 +10,12 @@ setlocal EnableDelayedExpansion
 
 reg import open_here.reg
 reg import cmd.reg
-call powershell.bat
+reg import powershell.reg
 if exist "C:\Program Files\Git" (
     reg import git_bash.reg
 )
 if exist "%CYGWIN_HOME%" (
-    call cygwin.bat
+    reg import cygwin.reg
 )
 if exist "C:\Program Files\Sublime Text 3" (
     reg import sublime_text.reg
