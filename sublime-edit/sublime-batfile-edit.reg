@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\batfile]
+
+[HKEY_CURRENT_USER\Software\Classes\batfile\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\batfile\shell\edit]
+
+[HKEY_CURRENT_USER\Software\Classes\batfile\shell\edit\command]
+@="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" %1"
+

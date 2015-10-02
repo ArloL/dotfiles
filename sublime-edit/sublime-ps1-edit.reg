@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Microsoft.PowerShellScript.1]
+
+[HKEY_CURRENT_USER\Software\Classes\Microsoft.PowerShellScript.1\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\Microsoft.PowerShellScript.1\shell\Edit]
+
+[HKEY_CURRENT_USER\Software\Classes\Microsoft.PowerShellScript.1\shell\Edit\command]
+@="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" %1"
+

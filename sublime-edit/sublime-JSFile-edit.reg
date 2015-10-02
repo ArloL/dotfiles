@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\JSFile]
+
+[HKEY_CURRENT_USER\Software\Classes\JSFile\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\JSFile\shell\Edit]
+
+[HKEY_CURRENT_USER\Software\Classes\JSFile\shell\Edit\Command]
+@="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" %1"
+
