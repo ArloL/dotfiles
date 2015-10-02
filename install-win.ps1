@@ -17,7 +17,7 @@ if (Test-Path $PROFILE) {
 
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 scoop update
-scoop install concfg
-scoop update concfg
+scoop install concfg curl wget
+scoop update concfg curl wget
 concfg import -n solarized-light small concfg\source-code-pro.json
 concfg clean
