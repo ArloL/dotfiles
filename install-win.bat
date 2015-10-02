@@ -44,7 +44,8 @@ if exist "%sublimeDir%" (
     call:createSymLink "%dotfilesDir%sublime\User (OS Settings)" "%sublimeDir%\User (OS Settings)" "%backupDir%" false
 )
 
-Powershell.exe -executionpolicy remotesigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
+PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
+PowerShell.exe -ExecutionPolicy RemoteSigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
 
 cd open_here
 call install.bat
