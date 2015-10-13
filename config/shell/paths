@@ -32,3 +32,8 @@ fi
 if [ -d "${HOME}/bin" ]; then
     export PATH="${HOME}/bin:${PATH}"
 fi
+
+# nix
+if [ -d /nix ]; then
+    source ~/.nix-profile/etc/profile.d/nix.sh
+fi
