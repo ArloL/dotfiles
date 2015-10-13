@@ -3,6 +3,9 @@
 # Install the dotfiles on OS X systems.
 ############################
 
+set -o errexit
+set -o nounset
+
 function fail()
 {
     echo "${1}"
