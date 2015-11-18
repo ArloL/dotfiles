@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\visualstudiocode]
+@="Visual Studio Code"
+
+[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\visualstudiocode\command]
+@="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%V\""

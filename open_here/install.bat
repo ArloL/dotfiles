@@ -23,3 +23,6 @@ if exist "C:\Program Files\Sublime Text 3" (
 if exist "C:\Program Files (x86)\Atlassian\SourceTree" (
     reg import sourcetree.reg
 )
+if exist "C:\Program Files (x86)\Microsoft VS Code" (
+    reg import visualstudiocode.reg
+)
