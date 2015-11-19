@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\txtfile]
+
+[HKEY_CURRENT_USER\Software\Classes\txtfile\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\txtfile\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\txtfile\shell\open\command]
+@="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%1\""
