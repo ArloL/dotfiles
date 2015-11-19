@@ -29,6 +29,11 @@ doskey ll=dir /b $*
 
 rem Edit functionality
 
+IF NOT EXIST "C:\Program Files (x86)\Microsoft VS Code" GOTO NOVSCODE
+    doskey edit="C:\Program Files (x86)\Microsoft VS Code\bin\code.cmd" $*
+    GOTO NOSUBLIME
+:NOVSCODE
+
 IF NOT EXIST "C:\Program Files\Sublime Text 3" GOTO NOSUBLIME
     doskey edit="C:\Program Files\Sublime Text 3\sublime_text" $*
 :NOSUBLIME
