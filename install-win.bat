@@ -44,6 +44,13 @@ if exist "%sublimeDir%" (
     call:createSymLink "%dotfilesDir%sublime\User (OS Settings)" "%sublimeDir%\User (OS Settings)" "%backupDir%" false
 )
 
+set vsCodeDir=%APPDATA%\Code
+set backupDir=%vsCodeDir%\dotfiles_backup
+
+if exist "%vsCodeDir%" (
+    call:createSymLink "%dotfilesDir%vscode\User" "%vsCodeDir%\User" "%backupDir%" false
+)
+
 PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
 PowerShell.exe -ExecutionPolicy RemoteSigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
 
