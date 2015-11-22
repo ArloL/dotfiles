@@ -66,7 +66,8 @@ function createSymlinks()
 
 function setupHome()
 {
-    local scriptPath=$( cd "$( dirname "$0" )" && pwd )
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
     # backup directory
     local backupDir="${HOME}/dotfiles_backup"
@@ -80,7 +81,8 @@ function setupHome()
 
 function setupSublime()
 {
-    local scriptPath=$( cd "$( dirname "$0" )" && pwd )
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
     local sublimeDir="${HOME}/Library/Application Support/Sublime Text 3/Packages"
 
