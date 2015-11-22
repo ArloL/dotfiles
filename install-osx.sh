@@ -6,14 +6,12 @@
 set -o errexit
 set -o nounset
 
-function fail()
-{
+fail() {
     echo "${1}"
     exit 1
 }
 
-function createSymlinks()
-{
+createSymlinks() {
     local sourceDirectory=${1}
     local targetDirectory=${2}
     local backupDirectory=${3}
@@ -64,8 +62,7 @@ function createSymlinks()
     unset symlink
 }
 
-function setupHome()
-{
+setupHome() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
@@ -79,8 +76,7 @@ function setupHome()
     createSymlinks "${scriptPath}" "${HOME}" "${backupDir}" 1 dotfiles[@]
 }
 
-function setupSublime()
-{
+setupSublime() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
@@ -98,8 +94,7 @@ function setupSublime()
     fi
 }
 
-function setupVSCode()
-{
+setupVSCode() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
 
