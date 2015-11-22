@@ -30,7 +30,7 @@ function createSymlinks()
 
     for symlink in "${symlinks[@]}"; do
 
-        if [ ${withDot} -eq 1 ]; then
+        if [ "${withDot}" -eq "1" ]; then
             local fullLinkTarget="${targetDirectory}/.${symlink}"
         else
             local fullLinkTarget="${targetDirectory}/${symlink}"
@@ -45,7 +45,7 @@ function createSymlinks()
         # move any existing files/dirs to $backupDirectory
         if [ -a "${fullLinkTarget}" ]; then
 
-            echo ${backupDirectory}
+            echo "${backupDirectory}"
             # create backupDirectory if it does not exist
             if [ ! -d "${backupDirectory}" ]; then
                 mkdir -p "${backupDirectory}"
