@@ -98,5 +98,25 @@ function setupSublime()
     fi
 }
 
+function setupVSCode()
+{
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local vsCodeDir="${HOME}/Library/Application Support/Code"
+
+    # backup directory
+    local backupDir="${vsCodeDir}/dotfiles_backup"
+
+    # the folders to symlink for visual studio code
+    local vsCodeFolders=("User")
+
+    if [ -d "${vsCodeDir}" ]; then
+        # setup symlinks for visual studio code
+        createSymlinks "${scriptPath}/vscode" "${vsCodeDir}" "${backupDir}" 0 vsCodeFolders[@]
+    fi
+}
+
 setupHome
 setupSublime
+setupVSCode
