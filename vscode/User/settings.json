@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"editor.fontFamily": "Source Code Pro",
-	"editor.fontSize": 16,
+	"editor.fontSize": 18,
 	"editor.wrappingColumn": 0,
 	"editor.wrappingIndent": "indent",
 	"editor.formatOnType": true,
