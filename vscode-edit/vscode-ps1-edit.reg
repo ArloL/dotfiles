@@ -8,3 +8,8 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Classes\Microsoft.PowerShellScript.1\shell\Edit\command]
 @="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.ps1\shell\edit]
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.ps1\shell\edit\command]
+@="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%1\""
