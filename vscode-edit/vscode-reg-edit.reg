@@ -1,15 +1,7 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\Classes\regfile]
-
-[HKEY_CURRENT_USER\Software\Classes\regfile\shell]
-
-[HKEY_CURRENT_USER\Software\Classes\regfile\shell\edit]
-
 [HKEY_CURRENT_USER\Software\Classes\regfile\shell\edit\command]
 @="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%1\""
-
-[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.reg\shell\edit]
 
 [HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\.reg\shell\edit\command]
 @="\"C:\\Program Files (x86)\\Microsoft VS Code\\code.exe\" \"%1\""
