@@ -36,3 +36,8 @@ if [ -d "/Applications/Sublime Text.app" ]; then
     export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
     alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
+
+# Edit alias for Visual Studio Code
+if [ -d "/Applications/Visual Studio Code.app" ]; then
+    alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
+fi
