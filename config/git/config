@@ -3,3 +3,5 @@
     email = mailtoarlo@gmail.com
 [color]
     ui = true
+[push]
+    default = simple
