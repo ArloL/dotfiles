@@ -46,5 +46,11 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
             start "" "/c/Program Files/Sublime Text 3/sublime_text.exe" "${target}"
         }
     fi
-
+    
+    if [ -f "/c/Program Files (x86)/Microsoft VS Code/code.exe" ]; then
+        function edit() {
+            local target=$(winpath "$1" | sed 's|\\|\\\\|g')
+            start "" "/c/Program Files (x86)/Microsoft VS Code/code.exe" "${target}"
+        }
+    fi
 fi
