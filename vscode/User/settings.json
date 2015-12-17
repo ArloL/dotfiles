@@ -5,5 +5,10 @@
 	"editor.wrappingColumn": 0,
 	"editor.wrappingIndent": "indent",
 	"editor.formatOnType": true,
-	"diffEditor.renderSideBySide": false
+	"diffEditor.renderSideBySide": false,
+	"window.openInNewWindow": false,
+	"window.reopenFolders": "none",
+	"markdown.styles": [
+		"http://arlol.github.io/markdown.css"
+	]
 }
