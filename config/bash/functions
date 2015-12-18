@@ -10,8 +10,10 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
         if [ -z "$1" ]; then
             echo "$@"
         elif [ -f "$1" ]; then
-            local dir=$(dirname "$1")
-            local fn=$(basename "$1")
+            local dir
+            local fn
+            dir=$(dirname "$1")
+            fn=$(basename "$1")
             echo "$(cd "$dir"; echo "$(pwd -W)/$fn")" | sed 's|/|\\|g';
         elif [ -d "$1" ]; then
             echo "$(cd "$1"; pwd -W)" | sed 's|/|\\|g';
@@ -25,11 +27,14 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
         if [ -z "$1" ]; then
             start "" .
         elif [ -f "$1" ]; then
-            local target=$(echo $1 | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g')
+            local target
+            target=$(echo "$1" | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g')
             start "" "${target}"
         elif [ -d "$1" ]; then
-            local target="$1"
-            local lastchar="${target:${#target} - 1}"
+            local target
+            local lastchar
+            target="$1"
+            lastchar="${target:${#target} - 1}"
             if [ "${lastchar}" = '/' ]; then
                 target="${target%?}"
             fi
@@ -42,14 +47,16 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
 
     if [ -f "/c/Program Files/Sublime Text 3/sublime_text.exe" ]; then
         function edit() {
-            local target=$(winpath "$1" | sed 's|\\|\\\\|g')
+            local target
+            target=$(winpath "$1" | sed 's|\\|\\\\|g')
             start "" "/c/Program Files/Sublime Text 3/sublime_text.exe" "${target}"
         }
     fi
     
     if [ -f "/c/Program Files (x86)/Microsoft VS Code/code.exe" ]; then
         function edit() {
-            local target=$(winpath "$1" | sed 's|\\|\\\\|g')
+            local target
+            target=$(winpath "$1" | sed 's|\\|\\\\|g')
             start "" "/c/Program Files (x86)/Microsoft VS Code/code.exe" "${target}"
         }
     fi
