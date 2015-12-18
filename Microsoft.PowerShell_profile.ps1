@@ -22,4 +22,8 @@ if (Test-Path 'C:\Program Files\Sublime Text 3') {
     Set-Alias edit 'C:\Program Files\Sublime Text 3\sublime_text'
 }
 
+if (Test-Path 'C:\Program Files (x86)\Microsoft VS Code') {
+    Set-Alias edit 'C:\Program Files (x86)\Microsoft VS Code\code'
+}
+
 [net.webrequest]::defaultwebproxy.credentials = [net.credentialcache]::defaultcredentials
