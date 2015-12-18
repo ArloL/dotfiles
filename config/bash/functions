@@ -18,7 +18,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
         elif [ -d "$1" ]; then
             echo "$(cd "$1"; pwd -W)" | sed 's|/|\\|g';
         else
-            echo "$(pwd -W)"/$1 | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g';
+            echo "$(pwd -W)/$1" | sed 's|^/\(.\)/|\1:\\|g; s|/|\\|g';
         fi
     }
 
