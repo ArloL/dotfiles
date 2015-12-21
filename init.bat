@@ -13,6 +13,7 @@ doskey mv=move $*
 doskey rm=del $*
 doskey cat=type $*
 doskey touch=type nul$G$G$*
+doskey pwd=echo %CD%
 
 rem Easier navigation
 
