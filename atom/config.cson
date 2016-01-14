@@ -1,0 +1,15 @@
+"*":
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-light-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 18
+    invisibles: {}
+  "exception-reporting":
+    userId: "30ac0e72-6e60-b139-dadb-1cdb8450c250"
+  "one-dark-ui": {}
+  welcome:
+    showOnStartup: false
