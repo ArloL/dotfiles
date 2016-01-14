@@ -51,6 +51,13 @@ if exist "%vsCodeDir%" (
     call:createSymLink "%dotfilesDir%vscode\User" "%vsCodeDir%\User" "%backupDir%" false
 )
 
+set backupDir=%USERPROFILE%\dotfiles_backup\atom
+set atomfiles=config.cson init.coffee keymap.cson snippets.cson styles.less
+
+for %%A in (%atomfiles%) DO (
+    call:createSymLink "%dotfilesDir%\atom\%%A" "%homeDir%\.atom\%%A" "%backupDir%" true
+)
+
 PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
 PowerShell.exe -ExecutionPolicy RemoteSigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
 
