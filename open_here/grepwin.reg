@@ -1,8 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\grepWin]
-@="grepWin"
-"Icon"="C:\\Program Files\\grepWin\\grepWin.exe,-107"
-
-[HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\grepWin\command]
-@="C:\\Program Files\\grepWin\\grepWin.exe /searchpath:\"%V\""
