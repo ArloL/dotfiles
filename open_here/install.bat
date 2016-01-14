@@ -27,3 +27,9 @@ if exist "C:\Program Files (x86)\Atlassian\SourceTree" (
 if exist "C:\Program Files (x86)\Microsoft VS Code" (
     reg import visualstudiocode.reg
 )
+if exist "C:\Program Files\grepWin" (
+    reg import grepwin.reg
+)
+if exist "%LOCALAPPDATA%\atom\app-1.4.0" (
+    reg import atom.reg
+)
