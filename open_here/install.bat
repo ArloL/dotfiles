@@ -31,5 +31,7 @@ if exist "C:\Program Files\grepWin" (
     reg import grepwin.reg
 )
 if exist "%LOCALAPPDATA%\atom\app-1.4.0" (
-    reg import atom.reg
+    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\atom /t REG_SZ /d "Atom" /f
+    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\atom /v Icon /t REG_EXPAND_SZ /d "%%LOCALAPPDATA%%\atom\app-1.4.0\atom.exe" /f
+    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\atom\command /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\atom\app-1.4.0\atom.exe\" \"%%V\"" /f
 )
