@@ -31,18 +31,15 @@ if [ $? -eq 0 ]; then
     alias open='cygstart'
 fi
 
-# Edit alias for Sublime
-if [ -d "/Applications/Sublime Text.app" ]; then
-    export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-    alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-fi
-
-hash atom 2>/dev/null
-if [ $? -eq 0 ]; then
-    alias edit='atom'
-fi
-
-# Edit alias for Visual Studio Code
+# Edit alias preferring vs code over atom over sublime
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
+else
+    hash atom 2>/dev/null
+    if [ $? -eq 0 ]; then
+        alias edit='atom'
+    elif [ -d "/Applications/Sublime Text.app" ]; then
+        export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+        alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+    fi
 fi
