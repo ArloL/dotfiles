@@ -37,6 +37,11 @@ if [ -d "/Applications/Sublime Text.app" ]; then
     alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
 
+hash atom 2>/dev/null
+if [ $? -eq 0 ]; then
+    alias edit='atom'
+fi
+
 # Edit alias for Visual Studio Code
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
