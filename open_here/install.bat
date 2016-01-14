@@ -15,7 +15,8 @@ if exist "C:\Program Files\Git" (
     reg import git_bash.reg
 )
 if exist "%CYGWIN_HOME%" (
-    reg import cygwin.reg
+    reg import cygwin_cmd.reg
+    reg import cygwin_mintty.reg
 )
 if exist "C:\Program Files\Sublime Text 3" (
     reg import sublime_text.reg
