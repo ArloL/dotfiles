@@ -16,7 +16,11 @@ set backupDir=%USERPROFILE%\dotfiles_backup
 set dotfiles=bashrc bash_profile config minttyrc zshenv puppet-lint.rc
 
 :: add registry key for init.bat
-reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
+if exist "%CLINK_DIR%" (
+    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_EXPAND_SZ /d "%dotfilesDir%init.bat&\"%%CLINK_DIR%%\clink\" inject --profile ~\clink" /f
+) else (
+    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
+)
 
 if exist "%HOME%" (
 	set homeDir=%HOME%
