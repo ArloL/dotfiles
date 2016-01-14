@@ -94,6 +94,24 @@ setupSublime() {
     fi
 }
 
+setupAtom() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local atomDir="${HOME}/.atom"
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup"
+
+    # list of files/folders to symlink in homedir/.atom
+    local atomFiles=("config.cson" "init.coffee" "keymap.cson" "snippets.cson" "styles.less")
+
+    if [ -d "${atomDir}" ]; then
+        # setup symlinks for atom
+        createSymlinks "${scriptPath}/atom" "${atomDir}" "${backupDir}" 0 atomFiles[@]
+    fi
+}
+
 setupVSCode() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
@@ -114,4 +132,5 @@ setupVSCode() {
 
 setupHome
 setupSublime
+setupAtom
 setupVSCode
