@@ -36,7 +36,7 @@ if exist ""%PROGRAMFILES%\Sublime Text 3"" (
 if exist ""%PROGRAMFILES(X86)%\Atlassian\SourceTree"" (
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree /t REG_SZ /d "SourceTree" /f
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES(X86)%%\Atlassian\SourceTree\SourceTree.exe" /f
-    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES(X86)%%\Atlassian\SourceTree\SourceTree.exe\" \"%%V\"" /f
+    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\sourcetree\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES(X86)%%\Atlassian\SourceTree\SourceTree.exe\" -f \"%%V\"" /f
 )
 if exist ""%PROGRAMFILES(X86)%\Microsoft VS Code"" (
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\visualstudiocode /t REG_SZ /d "Visual Studio Code" /f
