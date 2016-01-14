@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "metrics"
+    ]
     themes: [
       "atom-dark-ui"
       "solarized-light-syntax"
