@@ -12,6 +12,12 @@ reg add %registryRoot%\powershell /t REG_SZ /d "PowerShell" /f
 reg add %registryRoot%\powershell /v Icon /t REG_EXPAND_SZ /d "%%SystemRoot%%\system32\WindowsPowerShell\v1.0\powershell.exe" /f
 reg add %registryRoot%\powershell\command /t REG_EXPAND_SZ /d "\"%%SystemRoot%%\system32\WindowsPowerShell\v1.0\powershell.exe\"  -NoExit -Command Set-Location -LiteralPath \"%%V\"" /f
 
+if exist ""%USERPROFILE%\bin\elevate.exe"" (
+    reg add %registryRoot%\cmd_elevated /t REG_SZ /d "Eingabeaufforderung als Administrator" /f
+    reg add %registryRoot%\cmd_elevated /v Icon /t REG_SZ /d "cmd.exe" /f
+    reg add %registryRoot%\cmd_elevated\command /t REG_EXPAND_SZ /d "\"%%USERPROFILE%%\bin\elevate\" -k pushd \"%%V\"" /f
+)
+
 if exist ""%PROGRAMFILES%\Git"" (
     reg add %registryRoot%\git_bash /t REG_SZ /d "Git Bash" /f
     reg add %registryRoot%\git_bash /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
