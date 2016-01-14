@@ -2,6 +2,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\sublime]
 @="Sublime Text"
+"Icon"="C:\\Program Files\\Sublime Text 3\\sublime_text.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\*\ContextMenus\open_here\Shell\sublime\command]
 @="\"C:\\Program Files\\Sublime Text 3\\sublime_text.exe\" \"%V\""
