@@ -27,10 +27,10 @@ if exist "C:\Program Files (x86)\Atlassian\SourceTree" (
 if exist "C:\Program Files (x86)\Microsoft VS Code" (
     reg import visualstudiocode.reg
 )
-if exist "C:\Program Files\grepWin" (
+if exist "%PROGRAMFILES%\grepWin" (
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\grepWin /t REG_SZ /d "grepWin" /f
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\grepWin /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\grepWin\grepWin.exe,-107" /f
-    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\grepWin\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\grepWin\grepWin.exe\" /searchpath:\"%%V\"\"%%LOCALAPPDATA%%\atom\app-1.4.0\atom.exe\" \"%%V\"" /f
+    reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\grepWin\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\grepWin\grepWin.exe\" /searchpath:\"%%V\"" /f
 )
 if exist "%LOCALAPPDATA%\atom\app-1.4.0" (
     reg add HKCU\Software\Classes\*\ContextMenus\open_here\Shell\atom /t REG_SZ /d "Atom" /f
