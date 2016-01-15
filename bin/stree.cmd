@@ -1,2 +1,4 @@
 @echo off
-start "" "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" -f %~dpn1
+set directory=%~f1
+if %directory:~-1%==\ set directory=%directory:~0,-1%
+start "" "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" -f %directory%
