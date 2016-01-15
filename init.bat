@@ -31,7 +31,7 @@ doskey ll=dir /b $*
 rem Edit functionality
 
 if exist ""%PROGRAMFILES%\Sublime Text 3"" (
-    doskey edit="%PROGRAMFILES%\Sublime Text 3\sublime_text" $*
+    doskey edit="%PROGRAMFILES%\Sublime Text 3\sublime_text.exe" $*
 )
 where atom >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
