@@ -18,14 +18,14 @@ Set-Alias l Get-ChildItem
 Set-Alias ll Get-ChildItem
 Set-Alias open Invoke-Item
 
-if (Test-Path 'C:\Program Files\Sublime Text 3') {
-    Set-Alias edit 'C:\Program Files\Sublime Text 3\sublime_text'
-}
-if (Get-Command "atom" -ErrorAction SilentlyContinue) {
-    Set-Alias edit atom
-}
 if (Get-Command "code" -ErrorAction SilentlyContinue) {
-    Set-Alias edit code
+    function edit {
+        Start-Process code -WindowStyle Minimized $args
+    }
+} elseif (Get-Command "atom" -ErrorAction SilentlyContinue) {
+    Set-Alias edit atom
+} elseif (Test-Path 'C:\Program Files\Sublime Text 3') {
+    Set-Alias edit 'C:\Program Files\Sublime Text 3\sublime_text'
 }
 
 [net.webrequest]::defaultwebproxy.credentials = [net.credentialcache]::defaultcredentials
