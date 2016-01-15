@@ -39,7 +39,7 @@ if %ERRORLEVEL% EQU 0 (
 )
 where code >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
-    doskey edit=code $*
+    doskey edit=start /min code $*
 )
 
 rem Open functionality
