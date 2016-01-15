@@ -33,11 +33,13 @@ rem Edit functionality
 if exist ""%PROGRAMFILES%\Sublime Text 3"" (
     doskey edit="%PROGRAMFILES%\Sublime Text 3\sublime_text" $*
 )
-if exist ""%LOCALAPPDATA%\atom\app-1.4.0"" (
+where atom >nul 2>&1
+if %ERRORLEVEL% EQU 0 (
     doskey edit=atom $*
 )
-if exist ""%PROGRAMFILES(X86)%\Microsoft VS Code"" (
-    doskey edit="%PROGRAMFILES(X86)%\Microsoft VS Code\bin\code.cmd" $*
+where code >nul 2>&1
+if %ERRORLEVEL% EQU 0 (
+    doskey edit=code $*
 )
 
 rem Open functionality
