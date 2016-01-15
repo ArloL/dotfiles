@@ -11,17 +11,6 @@ if %ERRORLEVEL% neq 0 (
 
 setlocal EnableDelayedExpansion
 
-set dotfilesDir=%~dp0
-set backupDir=%USERPROFILE%\dotfiles_backup
-set dotfiles=bashrc bash_profile config minttyrc zshenv puppet-lint.rc
-
-:: add registry key for init.bat
-if exist "%CLINK_DIR%" (
-    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_EXPAND_SZ /d "%dotfilesDir%init.bat&\"%%CLINK_DIR%%\clink\" inject --profile ~\clink" /f
-) else (
-    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
-)
-
 if exist "%HOME%" (
 	set homeDir=%HOME%
 ) else (
@@ -33,6 +22,17 @@ if exist "%HOME%" (
 )
 
 IF %homeDir:~-1%==\ SET homeDir=%homeDir:~0,-1%
+
+set dotfilesDir=%~dp0
+set backupDir=%homeDir%\dotfiles_backup
+set dotfiles=bashrc bash_profile config minttyrc zshenv puppet-lint.rc
+
+:: add registry key for init.bat
+if exist "%CLINK_DIR%" (
+    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_EXPAND_SZ /d "%dotfilesDir%init.bat&\"%%CLINK_DIR%%\clink\" inject --profile ~\clink" /f
+) else (
+    reg add "HKCU\Software\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%dotfilesDir%init.bat" /f
+)
 
 for %%A in (%dotfiles%) DO (
     call:createSymLink "%dotfilesDir%%%A" "%homeDir%\.%%A" "%backupDir%" true
@@ -55,11 +55,18 @@ if exist "%vsCodeDir%" (
     call:createSymLink "%dotfilesDir%vscode\User" "%vsCodeDir%\User" "%backupDir%" false
 )
 
-set backupDir=%USERPROFILE%\dotfiles_backup\atom
+set backupDir=%homeDir%\dotfiles_backup\atom
 set atomfiles=config.cson init.coffee keymap.cson snippets.cson styles.less
 
 for %%A in (%atomfiles%) DO (
-    call:createSymLink "%dotfilesDir%\atom\%%A" "%homeDir%\.atom\%%A" "%backupDir%" true
+    call:createSymLink "%dotfilesDir%\atom\%%A" "%homeDir%\.atom\%%A" "%backupDir%" false
+)
+
+set backupDir=%homeDir%\dotfiles_backup\bin
+set binfiles=stree.cmd
+
+for %%A in (%binfiles%) DO (
+    call:createSymLink "%dotfilesDir%\bin\%%A" "%homeDir%\bin\%%A" "%backupDir%" false
 )
 
 PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
