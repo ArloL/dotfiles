@@ -21,10 +21,10 @@ Set-Alias open Invoke-Item
 if (Test-Path 'C:\Program Files\Sublime Text 3') {
     Set-Alias edit 'C:\Program Files\Sublime Text 3\sublime_text'
 }
-if (Get-Command "atom" -ErrorAction SilentlyContinue) { 
+if (Get-Command "atom" -ErrorAction SilentlyContinue) {
     Set-Alias edit atom
 }
-if (Get-Command "code" -ErrorAction SilentlyContinue) { 
+if (Get-Command "code" -ErrorAction SilentlyContinue) {
     Set-Alias edit code
 }
 
