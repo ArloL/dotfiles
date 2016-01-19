@@ -21,3 +21,5 @@ scoop install concfg curl wget
 scoop update concfg curl wget
 concfg import -n solarized-light small concfg\source-code-pro.json
 concfg clean
+
+Install-Module PSReadline
