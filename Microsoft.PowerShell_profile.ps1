@@ -29,3 +29,7 @@ if (Get-Command "code" -ErrorAction SilentlyContinue) {
 }
 
 [net.webrequest]::defaultwebproxy.credentials = [net.credentialcache]::defaultcredentials
+
+if (Get-Command Import-Module -ErrorAction SilentlyContinue) {
+    Import-Module PSReadLine
+}
