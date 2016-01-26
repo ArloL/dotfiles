@@ -22,7 +22,7 @@ if exist ""%PROGRAMFILES%\Git"" (
     reg add %registryRoot%\git_bash /t REG_SZ /d "Git Bash" /f
     reg add %registryRoot%\git_bash /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
     reg add %registryRoot%\git_bash\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Git\git-bash.exe\"" /f
-    
+
     reg add %registryRoot%\git_cmd /t REG_SZ /d "Git CMD" /f
     reg add %registryRoot%\git_cmd /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
     reg add %registryRoot%\git_cmd\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Git\git-cmd.exe\"" /f
@@ -31,7 +31,7 @@ if exist ""%CYGWIN_HOME%"" (
     reg add %registryRoot%\cygwin_mintty /t REG_SZ /d "Cygwin Mintty" /f
     reg add %registryRoot%\cygwin_mintty /v Icon /t REG_EXPAND_SZ /d "%%CYGWIN_HOME%%\Cygwin-Terminal.ico" /f
     reg add %registryRoot%\cygwin_mintty\command /t REG_EXPAND_SZ /d "\"%%CYGWIN_HOME%%\bin\mintty.exe\" -e /bin/xhere /bin/bash.exe \"%%V\"" /f
-    
+
     reg add %registryRoot%\cygwin_cmd /t REG_SZ /d "Cygwin CMD" /f
     reg add %registryRoot%\cygwin_cmd /v Icon /t REG_EXPAND_SZ /d "%%CYGWIN_HOME%%\Cygwin-Terminal.ico" /f
     reg add %registryRoot%\cygwin_cmd\command /t REG_EXPAND_SZ /d "\"%%CYGWIN_HOME%%\bin\bash\" -c \"/bin/xhere /bin/bash.exe '%%V'\"" /f
