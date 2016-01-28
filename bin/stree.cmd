@@ -17,7 +17,7 @@ for /f "delims=" %%i in ('git rev-parse --show-toplevel') do set directory=%%i
 git rev-parse --show-toplevel 1> nul 2> nul
 
 if %errorlevel% EQU 0 (
-    start "" "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" -f %directory%
+    start "" "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" -f %directory:/=\%
 )
 
 popd
