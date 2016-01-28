@@ -23,3 +23,5 @@
 
 *   browser.sessionstore.privacy_level: 2
 *   browser.showQuitWarning: true
+*   dom.event.clipboardevents.enabled: false
+*   media.peerconnection.enabled: false
