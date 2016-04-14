@@ -7,7 +7,7 @@
 	"editor.wrappingIndent": "indent",
 	"editor.formatOnType": true,
 	"diffEditor.renderSideBySide": false,
-	"window.openInNewWindow": false,
+	"window.openFilesInNewWindow": false,
 	"window.reopenFolders": "none",
 	"files.autoSave": "afterDelay",
 	"markdown.styles": [
