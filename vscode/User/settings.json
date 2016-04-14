@@ -9,10 +9,8 @@
 	"diffEditor.renderSideBySide": false,
 	"window.openInNewWindow": false,
 	"window.reopenFolders": "none",
+	"files.autoSave": "afterDelay",
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	]
-
-    , // Migrated from previous "File | Auto Save" setting:
-    "files.autoSave": "afterDelay"
 }
