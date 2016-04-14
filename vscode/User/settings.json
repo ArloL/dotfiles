@@ -12,5 +12,5 @@
 	"files.autoSave": "afterDelay",
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
-	]
+	]    
 }
