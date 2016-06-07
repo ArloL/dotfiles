@@ -1,6 +1,7 @@
 @echo off
 
-chcp 65001>nul
+rem Do not set codepage since it makes Eclipse act weird on DEV14
+rem chcp 65001>nul
 
 prompt [%USERNAME%@%COMPUTERNAME% $p]$_$$$s
 
