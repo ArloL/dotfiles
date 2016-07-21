@@ -18,6 +18,12 @@ if exist ""%USERPROFILE%\bin\elevate.exe"" (
     reg add %registryRoot%\cmd_elevated\command /t REG_EXPAND_SZ /d "\"%%USERPROFILE%%\bin\elevate\" -k pushd \"%%V\"" /f
 )
 
+if exist ""%USERPROFILE%\bin\elevate.exe"" (
+    reg add %registryRoot%\powershell_elevated /t REG_SZ /d "PowerShell als Administrator" /f
+    reg add %registryRoot%\powershell_elevated /v Icon /t REG_EXPAND_SZ /d "%%SystemRoot%%\system32\WindowsPowerShell\v1.0\powershell.exe" /f
+    reg add %registryRoot%\powershell_elevated\command /t REG_EXPAND_SZ /d "\"%%USERPROFILE%%\bin\elevate\" -k \"%%SystemRoot%%\system32\WindowsPowerShell\v1.0\powershell.exe\"" /f
+)
+
 if exist ""%PROGRAMFILES%\Git"" (
     reg add %registryRoot%\git_bash /t REG_SZ /d "Git Bash" /f
     reg add %registryRoot%\git_bash /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
