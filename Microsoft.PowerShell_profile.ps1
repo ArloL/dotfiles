@@ -32,4 +32,10 @@ if (Get-Command "code" -ErrorAction SilentlyContinue) {
 
 if (Get-Command Import-Module -ErrorAction SilentlyContinue) {
     Import-Module PSReadLine
+
+    $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+    if (Test-Path($ChocolateyProfile)) {
+        Import-Module "$ChocolateyProfile"
+    }
+
 }
