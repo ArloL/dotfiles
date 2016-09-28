@@ -19,7 +19,9 @@ fi
 
 if [ -f "/cygdrive/c/Program Files/Sublime Text 3/sublime_text.exe" ]; then
     function edit() {
-        local target="`cygpath -w "$1"`"
+        local target
+        local lastchar
+        target=$(cygpath -w "$1")
         lastchar="${target:${#target} - 1}"
         if [ "${lastchar}" = "\\" ]; then
             target="${target%?}"
@@ -31,7 +33,9 @@ fi
 
 if [ -f "/cygdrive/c/Program Files (x86)/Microsoft VS Code/code.exe" ]; then
     function edit() {
-        local target="`cygpath -w "$1"`"
+        local target
+        local lastchar
+        target=$(cygpath -w "$1")
         lastchar="${target:${#target} - 1}"
         if [ "${lastchar}" = "\\" ]; then
             target="${target%?}"
