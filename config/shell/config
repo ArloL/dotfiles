@@ -29,3 +29,5 @@ fi
 if [ -d /opt/local/share/java/maven3 ]; then
     export M2_HOME="/opt/local/share/java/maven3"
 fi
+
+export HOMEBREW_NO_ANALYTICS=1
