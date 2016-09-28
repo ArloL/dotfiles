@@ -7,7 +7,7 @@ function md() {
 }
 
 function port-reload() {
-    sudo port unload $@ && sudo port load $@
+    sudo port unload "$@" && sudo port load "$@"
 }
 
 # Use Git’s colored diff when available

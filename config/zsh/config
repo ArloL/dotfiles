@@ -1,2 +1,2 @@
-source $XDG_CONFIG_HOME/shell/paths
-source $XDG_CONFIG_HOME/shell/config
+source "$XDG_CONFIG_HOME/shell/paths"
+source "$XDG_CONFIG_HOME/shell/config"
