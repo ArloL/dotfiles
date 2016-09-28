@@ -16,7 +16,7 @@ export LC_ALL=
 if [ "$TERM" != "dumb" ]; then
     if hash dircolors 2>/dev/null; then
         export LS_OPTIONS='--color=auto'
-        eval "$(dircolors $XDG_CONFIG_HOME/dircolors/dircolors)"
+        eval "$(dircolors "$XDG_CONFIG_HOME/dircolors/dircolors")"
     fi
 fi
 
