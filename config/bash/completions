@@ -4,9 +4,11 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
 fi
 
 # Homebrew bash-completion
-brewPrefix=$(brew --prefix)
-if [ -f "${brewPrefix}/etc/bash_completion" ]; then
-    source "${brewPrefix}/etc/bash_completion"
+if hash brew 2>/dev/null; then
+    brewPrefix=$(brew --prefix)
+    if [ -f "${brewPrefix}/etc/bash_completion" ]; then
+        source "${brewPrefix}/etc/bash_completion"
+    fi
 fi
 
 if [ -f ~/.rbenv/completions/rbenv.bash ]; then
