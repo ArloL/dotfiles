@@ -2,7 +2,7 @@
 
 setlocal EnableDelayedExpansion
 
-set registryRoot=HKLM\Software\Classes
+set registryRoot=HKLM\Software\Classes\Directory\background\shellex
 
-reg delete %registryRoot%\Directory\background\shellex\ContextMenuHandlers\NvCplDesktopContext /f
-reg delete %registryRoot%\Directory\background\shellex\ContextMenuHandlers\00nView /f
+reg delete %registryRoot%\ContextMenuHandlers\NvCplDesktopContext /f
+reg delete %registryRoot%\ContextMenuHandlers\00nView /f
