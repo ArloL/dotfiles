@@ -2,7 +2,7 @@
 
 setlocal EnableDelayedExpansion
 
-set registryRoot=HKCU\Software\Classes
+set registryRoot=HKLM\Software\Classes
 
 reg delete %registryRoot%\*\shell\grepWin... /f
 reg delete %registryRoot%\*\shell\grepWin... /f
