@@ -72,7 +72,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
 
             target=$(winpath "$directory" | sed 's|\\|\\\\|g')
 
-            start "" "C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe" -f "${target}"
+            start "" "/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" -f "${target}"
 
         }
     fi
