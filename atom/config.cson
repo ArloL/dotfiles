@@ -3,6 +3,7 @@
     disabledPackages: [
       "metrics"
     ]
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "solarized-light-syntax"
