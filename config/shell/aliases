@@ -34,7 +34,9 @@ fi
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
 else
-    if hash atom 2>/dev/null; then
+    if hash code 2>/dev/null; then
+        alias edit='code'
+    elif hash atom 2>/dev/null; then
         alias edit='atom'
     elif [ -d "/Applications/Sublime Text.app" ]; then
         export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
