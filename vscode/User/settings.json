@@ -11,6 +11,7 @@
 	"explorer.openEditors.visible": 0,
 	"diffEditor.renderSideBySide": false,
 	"files.autoSave": "afterDelay",
+	"files.insertFinalNewline": true,
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	],
