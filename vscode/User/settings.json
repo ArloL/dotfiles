@@ -10,10 +10,10 @@
 	"editor.formatOnType": true,
 	"explorer.openEditors.visible": 0,
 	"diffEditor.renderSideBySide": false,
-	"window.openFilesInNewWindow": false,
-	"window.reopenFolders": "none",
 	"files.autoSave": "afterDelay",
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
-	]
+	],
+	"window.openFilesInNewWindow": false,
+	"window.reopenFolders": "none"
 }
