@@ -12,6 +12,7 @@
 	"diffEditor.renderSideBySide": false,
 	"files.autoSave": "afterDelay",
 	"files.insertFinalNewline": true,
+    "git.confirmSync": false,
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	],
