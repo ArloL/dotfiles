@@ -32,6 +32,14 @@ if exist ""%PROGRAMFILES%\Git"" (
     reg add %registryRoot%\git_cmd /t REG_SZ /d "Git CMD" /f
     reg add %registryRoot%\git_cmd /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
     reg add %registryRoot%\git_cmd\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Git\git-cmd.exe\"" /f
+
+    reg add %registryRoot%\gitk /t REG_SZ /d "gitk" /f
+    reg add %registryRoot%\gitk /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
+    reg add %registryRoot%\gitk\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Git\cmd\gitk.exe\"" /f
+
+    reg add %registryRoot%\git_gui /t REG_SZ /d "git-gui" /f
+    reg add %registryRoot%\git_gui /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Git\mingw64\share\git\git-for-windows.ico" /f
+    reg add %registryRoot%\git_gui\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Git\cmd\git-gui.exe\"" /f
 )
 if exist ""%CYGWIN_HOME%"" (
     reg add %registryRoot%\cygwin_mintty /t REG_SZ /d "Cygwin Mintty" /f
