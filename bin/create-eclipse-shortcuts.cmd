@@ -1,3 +1,3 @@
 @echo off
 
-powershell create-eclipse-shortcuts.ps1
+powershell -ExecutionPolicy Bypass create-eclipse-shortcuts.ps1
