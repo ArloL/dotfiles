@@ -1,18 +1,19 @@
-param(
-  [bool]$Clear = $false
-)
-
 $Startmenu = [Environment]::GetFolderPath("Startmenu")
 
 New-Item -ItemType Directory -Force -Path "$Startmenu\Programs\Eclipse\" | Out-Null
 
-IF ($Clear -eq $true) {
-  Get-ChildItem -Path "$Startmenu\Programs\Eclipse\" -Include *.lnk -File -Recurse | foreach { $_.Delete()}
+$WScriptShell = New-Object -ComObject WScript.Shell
+
+$EclipseShortcuts = Get-ChildItem -Recurse -Path "$Startmenu\Programs\Eclipse\" -Include *.lnk -File
+
+foreach ($EclipseShortcut in $EclipseShortcuts) {
+    $Shortcut = $WScriptShell.CreateShortcut($EclipseShortcut)
+    if (!(Test-Path $Shortcut.TargetPath)) {
+        Remove-Item -Force -Path $EclipseShortcut
+    }
 }
 
-$EclipseExes = gci -recurse -filter "eclipse.exe" -File
-
-$WScriptShell = New-Object -ComObject WScript.Shell
+$EclipseExes = Get-ChildItem -Recurse -filter "eclipse.exe" -File
 
 foreach ($EclipseExe in $EclipseExes) {
 
