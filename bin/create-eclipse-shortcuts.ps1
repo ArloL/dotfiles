@@ -1,6 +1,14 @@
+param(
+  [bool]$Clear = $false
+)
+
 $Startmenu = [Environment]::GetFolderPath("Startmenu")
 
 New-Item -ItemType Directory -Force -Path "$Startmenu\Programs\Eclipse\" | Out-Null
+
+IF ($Clear -eq $true) {
+  Get-ChildItem -Path "$Startmenu\Programs\Eclipse\" -Include *.lnk -File -Recurse | foreach { $_.Delete()}
+}
 
 $EclipseExes = gci -recurse -filter "eclipse.exe" -File
 
