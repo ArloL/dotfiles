@@ -4,9 +4,9 @@
 	"editor.fontSize": 18,
 	"editor.rulers": [80],
 	"editor.trimAutoWhitespace": true,
-	"editor.wordWrap": true,
-	"editor.wrappingColumn": 80,
+	"editor.wordWrap": "bounded",
 	"editor.wrappingIndent": "indent",
+	"editor.minimap.enabled": true,
 	"editor.formatOnType": true,
 	"explorer.openEditors.visible": 0,
 	"diffEditor.renderSideBySide": false,
@@ -16,6 +16,6 @@
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	],
-	"window.openFilesInNewWindow": false,
-	"window.reopenFolders": "none"
+    "window.reopenFolders": "none",
+    "workbench.colorTheme": "Solarized Light"
 }
