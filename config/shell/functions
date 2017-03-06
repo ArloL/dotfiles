@@ -55,7 +55,6 @@ if [ -f "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" ];
             target="${target%?}"
         fi
         target="\"${target}\""
-        echo $target
         cygstart "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" -f "${target}"
     }
 fi
