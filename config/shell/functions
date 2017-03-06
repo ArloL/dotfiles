@@ -49,7 +49,7 @@ if [ -f "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" ];
     function stree() {
         local target
         local lastchar
-        target=$(cygpath -w "$1")
+        target=$(cygpath --windows --absolute "$1")
         lastchar="${target:${#target} - 1}"
         if [ "${lastchar}" = "\\" ]; then
             target="${target%?}"
