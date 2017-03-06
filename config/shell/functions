@@ -44,3 +44,18 @@ if [ -f "/cygdrive/c/Program Files (x86)/Microsoft VS Code/code.exe" ]; then
         cygstart "/cygdrive/c/Program Files (x86)/Microsoft VS Code/code.exe" "${target}"
     }
 fi
+
+if [ -f "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" ]; then
+    function stree() {
+        local target
+        local lastchar
+        target=$(cygpath -w "$1")
+        lastchar="${target:${#target} - 1}"
+        if [ "${lastchar}" = "\\" ]; then
+            target="${target%?}"
+        fi
+        target="\"${target}\""
+        echo $target
+        cygstart "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" -f "${target}"
+    }
+fi
