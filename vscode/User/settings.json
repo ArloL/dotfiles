@@ -3,7 +3,6 @@
 	"editor.fontFamily": "Source Code Pro",
 	"editor.fontSize": 18,
 	"editor.rulers": [80],
-	"editor.trimAutoWhitespace": true,
 	"editor.wordWrap": "bounded",
 	"editor.wrappingIndent": "indent",
 	"editor.minimap.enabled": true,
@@ -12,6 +11,7 @@
 	"diffEditor.renderSideBySide": false,
 	"files.autoSave": "afterDelay",
 	"files.insertFinalNewline": true,
+	"files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
