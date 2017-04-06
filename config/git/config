@@ -5,3 +5,7 @@
     ui = true
 [push]
     default = simple
+[rebase]
+	autostash = true
+[pull]
+    ff = only
