@@ -15,7 +15,10 @@ if (Test-Path $PROFILE) {
 
 . $PROFILE
 
-Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
+if (-Not (Get-Command 'scoop' -errorAction SilentlyContinue)) {
+    Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
+}
+
 scoop update
 scoop install concfg curl wget 7zip
 scoop update concfg curl wget 7zip
