@@ -64,6 +64,12 @@ if exist ""%PROGRAMFILES(X86)%\Atlassian\SourceTree"" (
     reg add %registryRoot%\sourcetree\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES(X86)%%\Atlassian\SourceTree\SourceTree.exe\" -f \"%%V\"" /f
 )
 
+if exist ""%LOCALAPPDATA%\SourceTree"" (
+    reg add %registryRoot%\sourcetree2 /t REG_SZ /d "SourceTree 2" /f
+    reg add %registryRoot%\sourcetree2 /v Icon /t REG_EXPAND_SZ /d "%%LOCALAPPDATA%%\SourceTree\app-2.0.19.1\SourceTree.exe" /f
+    reg add %registryRoot%\sourcetree2\command /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\SourceTree\Update.exe\" --processStart \"SourceTree.exe\" --process-start-args \"-f \"%%V\"\"" /f
+)
+
 if exist ""%PROGRAMFILES(X86)%\Microsoft VS Code"" (
     reg add %registryRoot%\visualstudiocode /t REG_SZ /d "Visual Studio Code" /f
     reg add %registryRoot%\visualstudiocode /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES(X86)%%\Microsoft VS Code\code.exe" /f
