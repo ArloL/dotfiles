@@ -18,5 +18,6 @@
 		"http://arlol.github.io/markdown.css"
 	],
     "window.reopenFolders": "none",
-    "workbench.colorTheme": "Solarized Light"
+	"workbench.colorTheme": "Solarized Light",
+	"window.zoomLevel": 0
 }
