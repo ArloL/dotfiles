@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o xtrace
+
+cd ~/.dotfiles
+git pull --rebase
+git push origin master
+
+# Homebrew
+if hash brew 2>/dev/null; then
+    brew update
+    brew upgrade
+fi
+
+# gem
+if hash gem 2>/dev/null; then
+    gem update
+fi
+
+# nix
+if [ -d /nix ]; then
+    nix-channel --update
+    nix-env -u
+    nix-collect-garbage
+fi
+
+# MacPorts
+if hash port 2>/dev/null; then
+    sudo port selfupdate
+    sudo port upgrade outdated || true
+    sudo port uninstall inactive || true
+fi
+
+# npm
+if hash npm 2>/dev/null; then
+    sudo npm -g update
+fi
