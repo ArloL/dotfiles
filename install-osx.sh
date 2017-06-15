@@ -76,6 +76,20 @@ setupHome() {
     createSymlinks "${scriptPath}" "${HOME}" "${backupDir}" 1 dotfiles[@]
 }
 
+setupBin() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/bin"
+
+    # list of files/folders to symlink in homedir
+    local binfiles=("update-everything")
+
+    # setup symlinks in homedir/bin
+    createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
+}
+
 setupSublime() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
@@ -131,6 +145,7 @@ setupVSCode() {
 }
 
 setupHome
+setupBin
 setupSublime
 setupAtom
 setupVSCode
