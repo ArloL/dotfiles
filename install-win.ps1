@@ -30,6 +30,7 @@ if (-Not (Get-Command 'choco' -errorAction SilentlyContinue)) {
 }
 
 choco feature enable -n allowGlobalConfirmation
+choco upgrade chocolatey
 choco upgrade all
 
 Install-Module PSReadline
