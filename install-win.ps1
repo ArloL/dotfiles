@@ -20,8 +20,8 @@ if (-Not (Get-Command 'scoop' -errorAction SilentlyContinue)) {
 }
 
 scoop update
-scoop install concfg curl wget 7zip
-scoop update concfg curl wget 7zip
+scoop install concfg
+scoop update concfg
 concfg import -n solarized-light small concfg\source-code-pro.json
 concfg clean
 
@@ -31,6 +31,7 @@ if (-Not (Get-Command 'choco' -errorAction SilentlyContinue)) {
 
 choco feature enable -n allowGlobalConfirmation
 choco upgrade chocolatey
+choco install curl wget 7zip
 choco upgrade all
 
 Install-Module PSReadline
