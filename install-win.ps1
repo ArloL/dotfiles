@@ -25,4 +25,11 @@ scoop update concfg curl wget 7zip
 concfg import -n solarized-light small concfg\source-code-pro.json
 concfg clean
 
+if (-Not (Get-Command 'choco' -errorAction SilentlyContinue)) {
+    Invoke-Expression (new-object net.webclient).downloadstring('https://chocolatey.org/install.ps1')
+}
+
+choco feature enable -n allowGlobalConfirmation
+choco upgrade all
+
 Install-Module PSReadline
