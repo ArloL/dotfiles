@@ -1,4 +1,4 @@
 @echo off
 
+sudo choco upgrade all
 scoop update
-choco upgrade all
