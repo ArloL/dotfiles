@@ -17,11 +17,8 @@
 *   Clear history when Firefox closes
     *   Settings
         *   Cookies
-        *   Active Logins
 
 #   about:config
 
-*   browser.sessionstore.privacy_level: 2
 *   browser.showQuitWarning: true
-*   dom.event.clipboardevents.enabled: false
 *   media.peerconnection.enabled: false
