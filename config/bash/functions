@@ -61,6 +61,14 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
         }
     fi
 
+    if [ -f "/c/Program Files/Microsoft VS Code/code.exe" ]; then
+        function edit() {
+            local target
+            target=$(winpath "$1" | sed 's|\\|\\\\|g')
+            start "" "/c/Program Files/Microsoft VS Code/code.exe" "${target}"
+        }
+    fi
+
     if [ -f "/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" ]; then
         function stree() {
             local directory

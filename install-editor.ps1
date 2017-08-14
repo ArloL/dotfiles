@@ -1,8 +1,11 @@
-$code = ${Env:ProgramFiles(x86)} + "\Microsoft VS Code\code.exe"
+$code32 = ${Env:ProgramFiles(x86)} + "\Microsoft VS Code\code.exe"
+$code64 = ${Env:ProgramFiles} + "\Microsoft VS Code\code.exe"
 $sublime = ${Env:ProgramFiles} + "\Sublime Text 3\sublime_text.exe"
 $atom = ${Env:LocalAppData} + "\atom\app-1.4.0\atom.exe"
 
-if (Test-Path $code) {
+if (Test-Path $code64) {
+    $editor = '"%PROGRAMFILES%\Microsoft VS Code\code.exe" "%1"'
+} elseif (Test-Path $code32) {
     $editor = '"%PROGRAMFILES(X86)%\Microsoft VS Code\code.exe" "%1"'
 } elseif (Test-Path $sublime) {
     $editor = '"%PROGRAMFILES%\Sublime Text 3\sublime_text.exe" "%1"'

@@ -76,6 +76,12 @@ if exist ""%PROGRAMFILES(X86)%\Microsoft VS Code"" (
     reg add %registryRoot%\visualstudiocode\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES(X86)%%\Microsoft VS Code\code.exe\" \"%%V\"" /f
 )
 
+if exist ""%PROGRAMFILES%\Microsoft VS Code"" (
+    reg add %registryRoot%\visualstudiocode /t REG_SZ /d "Visual Studio Code" /f
+    reg add %registryRoot%\visualstudiocode /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\Microsoft VS Code\code.exe" /f
+    reg add %registryRoot%\visualstudiocode\command /t REG_EXPAND_SZ /d "\"%%PROGRAMFILES%%\Microsoft VS Code\code.exe\" \"%%V\"" /f
+)
+
 if exist ""%PROGRAMFILES%\grepWin"" (
     reg add %registryRoot%\grepWin /t REG_SZ /d "grepWin" /f
     reg add %registryRoot%\grepWin /v Icon /t REG_EXPAND_SZ /d "%%PROGRAMFILES%%\grepWin\grepWin.exe,-107" /f
