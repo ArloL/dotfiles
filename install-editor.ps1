@@ -36,3 +36,17 @@ foreach($item in $systemFileAssociations) {
 foreach($item in $applications) {
     New-Item -Path $applicationsRegistryRoot\$item\$registrySuffix -Value $editor -ItemType ExpandString -Force
 }
+
+New-Item -Path $classesRegistryRoot\batfile\shell\open\command -Value $editor -ItemType ExpandString -Force
+New-Item -Path $classesRegistryRoot\cmdfile\shell\open\command -Value $editor -ItemType ExpandString -Force
+
+$powerShellText = '@"%systemroot%\system32\windowspowershell\v1.0\powershell.exe ",-108'
+
+New-Item -Path $classesRegistryRoot\batfile\shell\0\command -Value '"%1" %*' -ItemType ExpandString -Force
+New-ItemProperty -Path $classesRegistryRoot\batfile\shell\0 -Name MUIVerb -Value $powerShellText -PropertyType ExpandString -Force
+
+New-Item -Path $classesRegistryRoot\cmdfile\shell\0\command -Value '"%1" %*' -ItemType ExpandString -Force
+New-ItemProperty -Path $classesRegistryRoot\cmdfile\shell\0 -Name MUIVerb -Value $powerShellText -PropertyType ExpandString -Force
+
+New-Item -Path $systemFileAssociationsRegistryRoot\.ps1\shell\0\command -Value '"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" "-file" "%1" "-Command" "if((Get-ExecutionPolicy ) -ne AllSigned) { Set-ExecutionPolicy -Scope Process Bypass }"' -ItemType ExpandString -Force
+New-ItemProperty -Path $systemFileAssociationsRegistryRoot\.ps1\shell\0 -Name MUIVerb -Value $powerShellText -PropertyType ExpandString -Force
