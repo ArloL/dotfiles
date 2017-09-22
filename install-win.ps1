@@ -34,4 +34,4 @@ choco upgrade chocolatey
 choco install curl wget 7zip
 choco upgrade all
 
-Install-Module PSReadline
+Install-Module PSReadline -Force
