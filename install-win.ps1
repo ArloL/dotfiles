@@ -31,7 +31,7 @@ if (-Not (Get-Command 'choco' -errorAction SilentlyContinue)) {
 
 choco feature enable -n allowGlobalConfirmation
 choco upgrade chocolatey
-choco install curl wget 7zip
+choco install curl wget 7zip sudo
 choco upgrade all
 
 Install-Module PSReadline -Force
