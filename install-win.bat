@@ -72,8 +72,6 @@ for %%A in (%binfiles%) DO (
 PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
 PowerShell.exe -ExecutionPolicy RemoteSigned -File install-win.ps1 %dotfilesDir%Microsoft.PowerShell_profile.ps1
 
-call install-open_here.bat
-
 goto:EOF
 
 ::function

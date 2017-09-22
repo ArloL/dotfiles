@@ -15,6 +15,8 @@ if (Test-Path $PROFILE) {
 
 . $PROFILE
 
+./install-open_here.ps1
+
 if (-Not (Get-Command 'scoop' -errorAction SilentlyContinue)) {
     Invoke-Expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
