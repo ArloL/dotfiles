@@ -9,7 +9,7 @@ $sourceTree2 = ${Env:LocalAppData} + "\SourceTree"
 $vsCodeX86 = ${Env:ProgramFiles(x86)} + "\Microsoft VS Code"
 $vsCode = ${Env:ProgramFiles} + "\Microsoft VS Code"
 $grepWin = ${Env:ProgramFiles} + "\grepWin"
-$atom = ${Env:LocalAppData} + "\atom\atom-1.4.0"
+$atom = ${Env:LocalAppData} + "\atom\Update.exe"
 $gitExtensions = ${Env:ProgramFiles(X86)} + "GitExtensions"
 
 New-Item -Path $registryRoot\cmd -Value "Eingabeaufforderung" -ItemType String -Force
