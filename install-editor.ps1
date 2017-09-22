@@ -12,7 +12,7 @@ if (Test-Path $code64) {
 } elseif (Test-Path $atom) {
     $editor = '"%LOCALAPPDATA%\atom\app-1.4.0\atom.exe" "%1"'
 } else {
-    echo "No supported editor installed."
+    Write-Output "No supported editor installed."
     exit 0
 }
 
