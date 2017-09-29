@@ -16,7 +16,7 @@
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	],
-	"window.restoreWindows": "one",
+	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"window.zoomLevel": 0
