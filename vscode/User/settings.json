@@ -16,6 +16,7 @@
 	"markdown.styles": [
 		"http://arlol.github.io/markdown.css"
 	],
+	"powershell.integratedConsole.showOnStartup": false,
 	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
