@@ -3,6 +3,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"SublimeLinter"
 	],
 	"installed_packages":
 	[
