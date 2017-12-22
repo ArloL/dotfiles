@@ -20,5 +20,6 @@
 	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
-	"window.zoomLevel": 0
+	"window.zoomLevel": 0,
+	"git.autofetch": true
 }
