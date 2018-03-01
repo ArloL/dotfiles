@@ -13,7 +13,7 @@ foreach ($EclipseShortcut in $EclipseShortcuts) {
     }
 }
 
-$EclipseExes = Get-ChildItem -Recurse -filter "eclipse.exe" -File
+$EclipseExes = Get-ChildItem -Recurse -filter "eclipse.exe" -File | ?{ $_.fullname -notmatch "\\backup\\?" }
 
 foreach ($EclipseExe in $EclipseExes) {
 
