@@ -14,7 +14,7 @@
 	"files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
 	"markdown.styles": [
-		"http://arlol.github.io/markdown.css"
+		"https://arlol.github.io/markdown.css"
 	],
 	"powershell.integratedConsole.showOnStartup": false,
 	"window.restoreWindows": "none",
