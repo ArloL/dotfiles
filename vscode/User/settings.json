@@ -17,6 +17,7 @@
 		"https://arlol.github.io/markdown.css"
 	],
 	"powershell.integratedConsole.showOnStartup": false,
+	"telemetry.enableTelemetry": false,
 	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
