@@ -2,5 +2,6 @@
     "font_face":  "Source Code Pro",
     "font_size":  "0x20",
     "font_weight":  500,
-    "font_true_type":  true
+    "font_true_type":  true,
+    "screen_buffer_size": "80x3000"
 }
