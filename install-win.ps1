@@ -22,7 +22,7 @@ if (-Not (Get-Command 'scoop' -errorAction SilentlyContinue)) {
 scoop update
 scoop install concfg
 scoop update concfg
-concfg import -n solarized-light small concfg\source-code-pro.json
+concfg import -n solarized-light concfg\source-code-pro.json
 concfg clean
 
 if (-Not (Get-Command 'choco' -errorAction SilentlyContinue)) {
