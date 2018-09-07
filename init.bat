@@ -15,6 +15,7 @@ doskey rm=del $*
 doskey cat=type $*
 doskey touch=type nul$G$G$*
 doskey pwd=echo %CD%
+doskey which=where $*
 
 rem Easier navigation
 
