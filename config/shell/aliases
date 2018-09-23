@@ -25,6 +25,9 @@ alias l="ls -lh ${colorflag}"
 alias ll="ls -lAh ${colorflag}"
 alias ls="command ls ${colorflag}"
 
+alias untar="tar --verbose --extract -f"
+alias untargz="tar --verbose --extract --gzip -f"
+
 # Open alias for Cygwin
 if hash cygstart 2>/dev/null; then
     alias open='cygstart'
