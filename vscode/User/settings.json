@@ -25,5 +25,6 @@
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"window.zoomLevel": 0,
-	"git.autofetch": true
+	"git.autofetch": true,
+	"git.rebaseWhenSync": true
 }
