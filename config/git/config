@@ -1,6 +1,8 @@
 [user]
     name = Arlo O'Keeffe
     email = mailtoarlo@gmail.com
+[core]
+    excludesfile = ~/.config/git/ignore
 [color]
     ui = true
 [push]
