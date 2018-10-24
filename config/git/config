@@ -11,3 +11,4 @@
 	autostash = true
 [pull]
     ff = only
+    rebase = true
