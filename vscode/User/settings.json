@@ -26,5 +26,6 @@
 	"workbench.startupEditor": "newUntitledFile",
 	"window.zoomLevel": 0,
 	"git.autofetch": true,
-	"git.rebaseWhenSync": true
+	"git.rebaseWhenSync": true,
+	"java.autobuild.enabled": false
 }
