@@ -43,4 +43,6 @@ if (-Not (Test-Path $elevate)) {
     Remove-Item -Force -Recurse elevate
 }
 
-Install-Module PSReadline -Force
+if (-Not (Get-Module -ListAvailable -Name PSReadline)) {
+    Install-Module PSReadline
+}
