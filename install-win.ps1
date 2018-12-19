@@ -34,4 +34,13 @@ choco upgrade chocolatey
 choco install curl wget 7zip sudo
 choco upgrade all
 
+$elevate = ${Env:UserProfile} + "\bin\elevate.exe"
+if (-Not (Test-Path $elevate)) {
+    Invoke-WebRequest -Uri http://code.kliu.org/misc/elevate/elevate-1.3.0-redist.7z -OutFile elevate.7z
+    7z x elevate.7z -y -oelevate
+    Move-Item -Force elevate/bin.x86-64/elevate.exe $elevate
+    Remove-Item elevate.7z
+    Remove-Item -Force -Recurse elevate
+}
+
 Install-Module PSReadline -Force
