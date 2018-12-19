@@ -67,7 +67,12 @@ for %%A in (%atomfiles%) DO (
 )
 
 set backupDir=%homeDir%\dotfiles_backup\bin
+set binDir=%homeDir%\bin
 set binfiles=create-eclipse-shortcuts.cmd create-eclipse-shortcuts.ps1 stree.cmd update-everything.cmd
+
+if not exist "%binDir%" (
+    mkdir "%binDir%"
+)
 
 for %%A in (%binfiles%) DO (
     call:createSymLink "%dotfilesDir%\bin\%%A" "%homeDir%\bin\%%A" "%backupDir%" false
