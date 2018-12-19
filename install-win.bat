@@ -58,6 +58,10 @@ if exist "%vsCodeDir%" (
 set backupDir=%homeDir%\dotfiles_backup\atom
 set atomfiles=config.cson init.coffee keymap.cson snippets.cson styles.less
 
+if not exist "%homeDir%\.atom" (
+    mkdir "%homeDir%\.atom"
+)
+
 for %%A in (%atomfiles%) DO (
     call:createSymLink "%dotfilesDir%\atom\%%A" "%homeDir%\.atom\%%A" "%backupDir%" false
 )
