@@ -41,7 +41,7 @@ for %%A in (%dotfiles%) DO (
 call:createSymLink "%dotfilesDir%config\readline\inputrc" "%homeDir%\.inputrc" "%backupDir%" true
 
 set sublimeDir=%APPDATA%\Sublime Text 3\Packages
-set backupDir=%sublimeDir%\dotfiles_backup
+set backupDir=%homeDir%\dotfiles_backup\sublime
 
 if exist "%sublimeDir%" (
     call:createSymLink "%dotfilesDir%sublime\User" "%sublimeDir%\User" "%backupDir%" false
@@ -49,7 +49,7 @@ if exist "%sublimeDir%" (
 )
 
 set vsCodeDir=%APPDATA%\Code
-set backupDir=%vsCodeDir%\dotfiles_backup
+set backupDir=%homeDir%\dotfiles_backup\code
 
 if exist "%vsCodeDir%" (
     call:createSymLink "%dotfilesDir%vscode\User" "%vsCodeDir%\User" "%backupDir%" false
