@@ -75,7 +75,7 @@ if not exist "%binDir%" (
 )
 
 for %%A in (%binfiles%) DO (
-    call:createSymLink "%dotfilesDir%\bin\%%A" "%homeDir%\bin\%%A" "%backupDir%" false
+    call:createSymLink "%dotfilesDir%\bin\%%A" "%binDir%\%%A" "%backupDir%" false
 )
 
 PowerShell.exe -Command  "& Set-ExecutionPolicy RemoteSigned -Force"
