@@ -33,6 +33,11 @@ if hash cygstart 2>/dev/null; then
     alias open='cygstart'
 fi
 
+# ranger alias to change directory
+if hash ranger 2>/dev/null; then
+    alias ranger='source ranger'
+fi
+
 # Edit alias preferring vs code over atom over sublime
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
