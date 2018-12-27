@@ -72,3 +72,18 @@ if [ -f "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" ];
         cygstart "/cygdrive/c/Program Files (x86)/Atlassian/SourceTree/SourceTree.exe" -f "${target}"
     }
 fi
+
+if hash nnn 2>/dev/null; then
+
+    export NNN_TMPFILE="/tmp/nnn_tmpfile"
+
+    function n() {
+        nnn "$@"
+
+        if [ -f $NNN_TMPFILE ]; then
+            . $NNN_TMPFILE
+            rm -f $NNN_TMPFILE > /dev/null
+        fi
+    }
+
+fi
