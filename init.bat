@@ -16,6 +16,7 @@ doskey cat=type $*
 doskey touch=type nul$G$G$*
 doskey pwd=echo %CD%
 doskey which=where $*
+doskey ifconfig=ipconfig
 
 rem Easier navigation
 
