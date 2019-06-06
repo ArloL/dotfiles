@@ -17,6 +17,7 @@ doskey touch=type nul$G$G$*
 doskey pwd=echo %CD%
 doskey which=where $*
 doskey ifconfig=ipconfig
+doskey reboot=shutdown /r /t 0
 
 rem Easier navigation
 
