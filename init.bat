@@ -18,6 +18,7 @@ doskey pwd=echo %CD%
 doskey which=where $*
 doskey ifconfig=ipconfig
 doskey reboot=shutdown /r /t 0
+doskey uptime=wmic path Win32_OperatingSystem get LastBootUpTime
 
 rem Easier navigation
 
