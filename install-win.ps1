@@ -1,16 +1,12 @@
+$profileDotSource = '. C:\Users\okeeffea\dotfiles\Microsoft.PowerShell_profile.ps1'
+
 if (Test-Path $PROFILE) {
-    $file = Get-Item $PROFILE -Force -ea 0
-    $symlink = $file.Attributes -band [IO.FileAttributes]::ReparsePoint
-    if (-Not $symlink) {
-        Remove-Item $PROFILE
-        cmd /c mklink "$PROFILE" "$($args[0])"
+    $textInProfile = Select-String -Quiet -Pattern "$profileDotSource" -SimpleMatch -Path $PROFILE
+    if (-not $textInProfile) {
+        Add-Content -Path $PROFILE -Value "`r`n$profileDotSource"
     }
 } else {
-    $profilePath = Split-Path $PROFILE
-    if (!(Test-Path -Path $profilePath)) {
-        New-Item -ItemType directory -Path $profilePath | Out-Null
-    }
-    cmd /c mklink "$PROFILE" "$($args[0])"
+    New-Item -Path $PROFILE -ItemType "file" -Value "$profileDotSource" -Force
 }
 
 . $PROFILE
