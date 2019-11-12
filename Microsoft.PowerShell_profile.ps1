@@ -42,6 +42,18 @@ if (Get-Command Import-Module -ErrorAction SilentlyContinue) {
             if ($line -eq 'exit') {
                 return $false
             }
+            if ($line -eq 'ls') {
+                return $false
+            }
+            if ($line -eq 'pwd') {
+                return $false
+            }
+            if ($line -eq 'cls') {
+                return $false
+            }
+            if ($line -eq 'clear') {
+                return $false
+            }
             $true
         }
     }
