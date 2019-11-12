@@ -35,6 +35,18 @@ if (Get-Command Import-Module -ErrorAction SilentlyContinue) {
 
     Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
 
+    $PSReadLineOptions = @{
+        HistoryNoDuplicates = $true
+        AddToHistoryHandler = {
+            param($line)
+            if ($line -eq 'exit') {
+                return $false
+            }
+            $true
+        }
+    }
+    Set-PSReadLineOption @PSReadLineOptions
+
     $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
     if (Test-Path($ChocolateyProfile)) {
         Import-Module "$ChocolateyProfile"
