@@ -41,6 +41,7 @@ fi
 # Edit alias preferring vs code over atom over sublime
 if [ -d "/Applications/Visual Studio Code.app" ]; then
     alias edit='VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args'
+    alias code='edit'
 else
     if hash code 2>/dev/null; then
         alias edit='code'
