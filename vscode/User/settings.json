@@ -27,5 +27,10 @@
 	"window.zoomLevel": 0,
 	"git.autofetch": true,
 	"git.rebaseWhenSync": true,
-	"java.autobuild.enabled": false
+	"java.autobuild.enabled": false,
+	"editor.suggestSelection": "first",
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"java.configuration.checkProjectSettingsExclusions": false,
+	"java.maven.downloadSources": true,
+	"workbench.settings.enableNaturalLanguageSearch": false
 }
