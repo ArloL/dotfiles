@@ -1,7 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"[markdown]": {
-		"editor.wordWrap": "off"
+		"editor.wordWrap": "off",
+		"files.trimTrailingWhitespace": false
 	},
 	"editor.fontFamily": "Source Code Pro",
 	"editor.fontSize": 18,
