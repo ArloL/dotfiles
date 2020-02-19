@@ -38,3 +38,8 @@ fi
 if hash npm 2>/dev/null; then
     sudo npm -g update
 fi
+
+# yarn
+if hash yarn 2>/dev/null; then
+    yarn global upgrade
+fi
