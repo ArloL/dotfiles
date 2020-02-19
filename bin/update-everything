@@ -32,6 +32,7 @@ if hash port 2>/dev/null; then
     sudo port selfupdate
     sudo port upgrade outdated || true
     sudo port uninstall inactive || true
+    sudo port uninstall rleaves || true
 fi
 
 # npm
