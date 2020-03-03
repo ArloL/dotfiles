@@ -1,3 +1,8 @@
+# Homebrew
+if [ -n "${PATH##*/usr/local/bin*}" ]; then
+    export PATH="/usr/local/bin:${PATH}"
+fi
+
 # MacPorts
 if [ -d /opt/local ]; then
     export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
