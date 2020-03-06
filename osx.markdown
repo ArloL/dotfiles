@@ -14,5 +14,4 @@
 * MacPorts
 * Homebrew
 * `sudo port install git p7zip watch wget`
-* `brew cask install coconutbattery jetbrains-toolbox virtualbox vagrant dbeaver-community pgadmin4 postman vlc`
-* SourceTree
+* `brew cask install coconutbattery jetbrains-toolbox virtualbox vagrant dbeaver-community sourcetree pgadmin4 postman vlc`
