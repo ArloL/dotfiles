@@ -32,7 +32,9 @@
 * `sudo hostname -s ${name}`
 * `git config --global credential.helper osxkeychain`
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
+* `git push` to setup github credentials
 * Homebrew: https://brew.sh/
+* No Night Shift? `brew cask install flux`
 * Source Code Pro
     * `brew tap homebrew/cask-fonts`
     * `brew cask install font-source-code-pro`
@@ -43,3 +45,5 @@
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
 * `brew cask install macports`: nope
 * `sudo port install git p7zip watch wget`
+* Firefox: see firefox.markdown
+* BetterTouchTool: import preset
