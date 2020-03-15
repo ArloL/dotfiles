@@ -15,19 +15,27 @@
     * Language & Region
         * English as Primary
         * Region: Germany
-    * Trackpad:
+    * Trackpad
         * Point & Click
             * Tap to click: enabled
         * More Gestures
             * Swipe between full-screen apps: with four fingers
+    * Sharing
+        * Set Computer Name
+        * edit local hostname
+* https://github.com/tomislav/osx-terminal.app-colors-solarized/
+* Terminal
+    * Preferences
+        * Profiles
+            * Solarized Light as Default
+                * Text: Source Code Pro 16pt
+* `sudo hostname -s ${name}`
 * `git config --global credential.helper osxkeychain`
-* set hostname: how? :)
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * Homebrew: https://brew.sh/
 * Source Code Pro
     * `brew tap homebrew/cask-fonts`
     * `brew cask install font-source-code-pro`
-* Terminal Font & Colors https://github.com/tomislav/osx-terminal.app-colors-solarized/
 * `brew cask install visual-studio-code`
 * `code`
 * `~/.dotfiles/install-osx.sh`
