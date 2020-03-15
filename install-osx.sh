@@ -86,6 +86,8 @@ setupBin() {
     # list of files/folders to symlink in homedir
     local binfiles=("update-everything")
 
+    mkdir -p "${HOME}/bin"
+
     # setup symlinks in homedir/bin
     createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
 }
