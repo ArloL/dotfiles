@@ -68,6 +68,11 @@
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
 * Firefox: see firefox.markdown
 * BetterTouchTool: install license & import preset
+* The Unarchiver
+    * Archive Formats
+        * Select all
+    * Extraction
+        * Enable Move the archive to the trash
 * rbenv
     * `sudo port install rbenv ruby-build`
     * `rbenv install ${version}`
