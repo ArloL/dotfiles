@@ -23,6 +23,19 @@
     * Sharing
         * Set Computer Name
         * edit local hostname
+* Dock
+    * add Applications List
+    * add Import to iTunes
+    * remove everything except Firefox, Mail, iTunes, Calendar & Notes
+* Finder
+    * Preferences
+        * General
+            * New Finder windows show: ${HOME}
+            * 
+        * Sidebar
+            * Disable: All My Files, iCloud Drive, AirDrop, Shared and Tags
+            * Enable: ${HOME}
+    * Change display to columns for all favorites
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
 * Terminal
     * Preferences
@@ -38,8 +51,7 @@
 * Source Code Pro
     * `brew tap homebrew/cask-fonts`
     * `brew cask install font-source-code-pro`
-* `brew cask install visual-studio-code`
-* `code`
+* `brew cask install visual-studio-code && code`
 * `~/.dotfiles/install-osx.sh`
 * `brew cask install bettertouchtool caffeine coconutbattery firefox libreoffice skype the-unarchiver vlc`
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
