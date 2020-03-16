@@ -23,6 +23,10 @@
     * Sharing
         * Set Computer Name
         * edit local hostname
+    * Displays
+        * Night Shift
+            * From 18:00 to 8:00
+            * More Warm
 * Dock
     * add Applications List
     * add Import to iTunes
@@ -45,17 +49,29 @@
 * `sudo hostname -s ${name}`
 * `git config --global credential.helper osxkeychain`
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
+* `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
+* MacPorts: https://www.macports.org/
+    * `sudo port install git httpie nnn p7zip watch wget`
 * Homebrew: https://brew.sh/
-* No Night Shift? `brew cask install flux`
+* No Night Shift?
+    * `brew cask install flux`
+    * Sunset: Tungsten
+    * Bedtime: Candle
 * Source Code Pro
     * `brew tap homebrew/cask-fonts`
     * `brew cask install font-source-code-pro`
-* `brew cask install visual-studio-code && code`
-* `~/.dotfiles/install-osx.sh`
+* Visual Studio Code
+    * `brew cask install visual-studio-code && code`
+    * `~/.dotfiles/install-osx.sh`
 * `brew cask install bettertouchtool caffeine coconutbattery firefox libreoffice skype the-unarchiver vlc`
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
-* `brew cask install macports`: nope
-* `sudo port install git p7zip watch wget`
 * Firefox: see firefox.markdown
 * BetterTouchTool: import preset
+* rbenv
+    * `sudo port install rbenv ruby-build`
+    * `rbenv install ${version}`
+* Java Development?
+    * `sudo port install maven3 openjdk8`
+* JavaScript Development?
+    * `sudo port install npm6 nodejs13 yarn`
