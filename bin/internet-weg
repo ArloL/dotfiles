@@ -1,0 +1,28 @@
+#!/bin/sh
+
+NETWORK_INTERFACE="en1"
+NO_WIFI="You are not associated with an AirPort network."
+WIFI=$(networksetup -getairportnetwork ${NETWORK_INTERFACE})
+
+networksetup -setairportpower ${NETWORK_INTERFACE} on
+
+while : ; do
+    echo Checking Wi-Fi…
+    WIFI=$(networksetup -getairportnetwork ${NETWORK_INTERFACE})
+    [ "${WIFI}" = "${NO_WIFI}" ] || break
+    networksetup -setairportpower ${NETWORK_INTERFACE} off
+    networksetup -setairportpower ${NETWORK_INTERFACE} on
+    sleep 10
+done
+
+NO_WAN_IP="var wan_ip='';"
+WAN_IP=${NO_WAN_IP}
+
+while : ; do
+    echo Checking WAN IP…
+    WAN_IP=$(curl --silent http://easy.box/ | grep "wan_ip=")
+    [ "${WAN_IP}" = "" -o "${WAN_IP}" = "${NO_WAN_IP}" ] || break
+    sleep 1
+done
+
+say "Internet connected"
