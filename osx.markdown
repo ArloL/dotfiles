@@ -67,7 +67,7 @@
 * `brew cask install bettertouchtool caffeine coconutbattery firefox libreoffice skype the-unarchiver vlc`
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
 * Firefox: see firefox.markdown
-* BetterTouchTool: import preset
+* BetterTouchTool: install license & import preset
 * rbenv
     * `sudo port install rbenv ruby-build`
     * `rbenv install ${version}`
