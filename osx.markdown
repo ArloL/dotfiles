@@ -27,6 +27,9 @@
         * Night Shift
             * From 18:00 to 8:00
             * More Warm
+    * Accessibility
+        * Zoom
+            * Enable Use scroll gesture with modifier keys to zoom
 * Dock
     * add Applications List
     * add Import to iTunes
