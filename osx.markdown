@@ -97,6 +97,7 @@
     * `sudo port install npm6 nodejs13 yarn`
 * Android SDK
     * `brew cask install android-sdk`
+    * `brew cask install intel-haxm`
     * `sdkmanager`
         * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
     * `sdkmanager "build-tools;28.0.3" "emulator" "platform-tools" "platforms;android-28"`
