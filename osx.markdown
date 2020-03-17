@@ -74,7 +74,15 @@
 * `brew cask install bettertouchtool caffeine coconutbattery firefox libreoffice skype the-unarchiver vlc`
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
 * Firefox: see firefox.markdown
-* BetterTouchTool: install license & import preset
+* BetterTouchTool
+    * install license
+    * import preset
+    * El Capitan? Change Terminal shortcuts
+    * BTT Remote
+        * Disable BTT Remote support
+    * Advanced Settings
+        * General
+            * Disable Allow external BetterTouchTool Scripting
 * The Unarchiver
     * Archive Formats
         * Select all
