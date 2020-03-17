@@ -43,6 +43,8 @@
             * Disable: All My Files, iCloud Drive, AirDrop, Shared and Tags
             * Enable: ${HOME}
     * Change display to columns for all favorites
+    * View
+        * Show Status Bar
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
 * Terminal
     * Preferences
@@ -55,6 +57,7 @@
 * `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
 * Homebrew: https://brew.sh/
+    * `brew install ssh-copy-id`
 * MacPorts: https://www.macports.org/
     * if git via Homebrew not installed: `sudo port install git`
     * `sudo port install nnn p7zip watch wget`
