@@ -99,4 +99,5 @@
     * `brew cask install android-sdk`
     * `sdkmanager`
         * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
+    * `sdkmanager platform-tools`
 * `update-everything`
