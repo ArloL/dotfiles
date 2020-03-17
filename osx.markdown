@@ -95,4 +95,8 @@
     * `sudo port install maven3 openjdk8`
 * JavaScript Development?
     * `sudo port install npm6 nodejs13 yarn`
+* Android SDK
+    * `brew cask install android-sdk`
+    * `sdkmanager`
+        * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
 * `update-everything`
