@@ -99,5 +99,5 @@
     * `brew cask install android-sdk`
     * `sdkmanager`
         * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
-    * `sdkmanager platform-tools`
+    * `sdkmanager "build-tools;28.0.3" "emulator" "platform-tools" "platforms;android-28"`
 * `update-everything`
