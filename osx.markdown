@@ -15,6 +15,12 @@
     * Language & Region
         * English as Primary
         * Region: Germany
+    * El Capitan: Keyboard
+        * Shortcuts
+            * App Shortcuts
+                * Terminal
+                    * Show Previous Tab: Control+Shift+Tab
+                    * Show Next Tab: Control+Tab
     * Trackpad
         * Point & Click
             * Tap to click: enabled
@@ -77,7 +83,6 @@
 * BetterTouchTool
     * install license
     * import preset
-    * El Capitan? Change Terminal shortcuts
     * BTT Remote
         * Disable BTT Remote support
     * Advanced Settings
