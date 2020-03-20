@@ -1,0 +1,56 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+use Getopt::Long;
+use URI;
+use HTTP::Tiny;
+use File::Slurp;
+use List::MoreUtils qw(uniq);
+
+use constant DEFAULT_TIMEOUT => 300;
+use constant DEFAULT_SLEEP => 5;
+use constant LOCAL_CONFIG_FILE => '.wait-for-http';
+
+my $timeout = DEFAULT_TIMEOUT;
+my $sleep = DEFAULT_SLEEP;
+
+GetOptions ('timeout=i' => \$timeout, 'sleep=i' => \$sleep);
+
+alarm $timeout;
+
+my @endpoints = ();
+
+my @lines = ();
+
+if (-e LOCAL_CONFIG_FILE) {
+    @lines = read_file(LOCAL_CONFIG_FILE, chomp => 1);
+}
+
+foreach my $uri (uniq(@ARGV,@lines)) {
+    push @endpoints, { uri => URI->new($uri), status => 0 };
+}
+
+my $Client = HTTP::Tiny->new();
+
+my $keepChecking = 1;
+while ($keepChecking == 1) {
+    $keepChecking = 0;
+    foreach my $endpoint (@endpoints) {
+        say $endpoint->{uri};
+        if ($endpoint->{status} == $endpoint->{uri}->fragment) {
+            next;
+        }
+        $endpoint->{status} = $Client->get($endpoint->{uri})->{status};
+        if ($endpoint->{status} != $endpoint->{uri}->fragment) {
+            say $endpoint->{uri}, ": ", $endpoint->{status};
+            $keepChecking = 1;
+        }
+    }
+    if ($keepChecking == 1) {
+        say 'Sleeping';
+        sleep $sleep;
+    }
+}
