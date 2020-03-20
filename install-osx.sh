@@ -84,7 +84,7 @@ setupBin() {
     local backupDir="${HOME}/dotfiles_backup/bin"
 
     # list of files/folders to symlink in homedir
-    local binfiles=("update-everything" "internet-weg")
+    local binfiles=("update-everything" "internet-weg" "wait-for-http")
 
     mkdir -p "${HOME}/bin"
 
