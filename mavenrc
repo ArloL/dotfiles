@@ -1,0 +1,6 @@
+#!/bin/sh
+echo $(pwd)
+
+if [ -f ".mvn/environment.config" ]; then
+    . .mvn/environment.config
+fi
