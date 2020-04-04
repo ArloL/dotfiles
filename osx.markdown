@@ -77,7 +77,7 @@
 * Visual Studio Code
     * `brew cask install visual-studio-code && code`
     * `~/.dotfiles/install-osx.sh`
-* `brew cask install bettertouchtool caffeine coconutbattery firefox libreoffice skype the-unarchiver vlc`
+* `brew cask install bettertouchtool keepingyouawake coconutbattery firefox libreoffice skype the-unarchiver vlc`
 * High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
 * Firefox: see firefox.markdown
 * BetterTouchTool
