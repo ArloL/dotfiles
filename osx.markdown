@@ -66,7 +66,7 @@
     * `brew install ssh-copy-id`
 * MacPorts: https://www.macports.org/
     * if git via Homebrew not installed: `sudo port install git`
-    * `sudo port install nnn p7zip watch wget`
+    * `sudo port install nnn p7zip watch wget coreutils findutils`
 * No Night Shift?
     * `brew cask install flux`
     * Sunset: Tungsten
