@@ -12,11 +12,6 @@ if [ -d /opt/local ]; then
         export PATH="/opt/local/apache2/bin:${PATH}"
     fi
 
-    # MacPorts GNU binaries
-    if [ -d /opt/local/libexec/gnubin ]; then
-        export PATH="/opt/local/libexec/gnubin:${PATH}"
-    fi
-
     # MacPorts PostgreSQL binaries
     if [ -d /opt/local/lib/postgresql92/bin ]; then
         export PATH="/opt/local/lib/postgresql92/bin:${PATH}"
