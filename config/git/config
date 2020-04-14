@@ -15,3 +15,5 @@
 [alias]
 	adog = log --all --decorate --oneline --graph
     changes = log --patch --find-renames --follow --stat --
+[help]
+    autocorrect = 25
