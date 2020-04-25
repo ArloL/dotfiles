@@ -16,7 +16,7 @@ networksetup -setairportpower ${NETWORK_INTERFACE} on
 while : ; do
     echo Checking…
     WIFI=$(networksetup -getairportnetwork ${NETWORK_INTERFACE})
-    if [ "${WIFI}" == "${NO_WIFI}" ]; then
+    if [ "${WIFI}" = "${NO_WIFI}" ]; then
         echo Reconnect Wi-Fi…
         networksetup -setairportpower ${NETWORK_INTERFACE} off
         networksetup -setairportpower ${NETWORK_INTERFACE} on
