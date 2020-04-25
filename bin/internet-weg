@@ -9,6 +9,8 @@ NO_WIFI="You are not associated with an AirPort network."
 NO_WAN_IP="var wan_ip='';"
 WAN_IP=${NO_WAN_IP}
 
+hash caffeinate 2>/dev/null && sleep="caffeinate -t" || sleep="sleep"
+
 say "Checking Internet"
 
 networksetup -setairportpower ${NETWORK_INTERFACE} on
@@ -20,12 +22,12 @@ while : ; do
         echo Reconnect Wi-Fi…
         networksetup -setairportpower ${NETWORK_INTERFACE} off
         networksetup -setairportpower ${NETWORK_INTERFACE} on
-        sleep 13
+        ${sleep} 13
         continue
     fi
     WAN_IP=$(curl --silent http://easy.box/ | grep "wan_ip=")
     [ "${WAN_IP}" = "" -o "${WAN_IP}" = "${NO_WAN_IP}" ] || break
-    sleep 3
+    ${sleep} 3
 done
 
 say "Internet connected"
