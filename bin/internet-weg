@@ -26,7 +26,9 @@ while : ; do
         continue
     fi
     WAN_IP=$(curl --silent http://easy.box/ | grep "wan_ip=" || echo "")
-    [ "${WAN_IP}" = "" -o "${WAN_IP}" = "${NO_WAN_IP}" ] || break
+    if [ ! "${WAN_IP}" = "" ] && [ ! "${WAN_IP}" = "${NO_WAN_IP}" ]; then
+      break
+    fi
     ${sleep} 3
 done
 
