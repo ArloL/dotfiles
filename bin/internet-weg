@@ -25,7 +25,7 @@ while : ; do
         ${sleep} 13
         continue
     fi
-    WAN_IP=$(curl --silent http://easy.box/ | grep "wan_ip=")
+    WAN_IP=$(curl --silent http://easy.box/ | grep "wan_ip=" || echo "")
     [ "${WAN_IP}" = "" -o "${WAN_IP}" = "${NO_WAN_IP}" ] || break
     ${sleep} 3
 done
