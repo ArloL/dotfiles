@@ -27,3 +27,4 @@ while : ; do
 done
 
 say "Internet connected"
+echo "Internet connected"
