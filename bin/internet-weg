@@ -9,6 +9,8 @@ NO_WIFI="You are not associated with an AirPort network."
 NO_WAN_IP="var wan_ip='';"
 WAN_IP=${NO_WAN_IP}
 
+say "Checking Internet"
+
 networksetup -setairportpower ${NETWORK_INTERFACE} on
 
 while : ; do
