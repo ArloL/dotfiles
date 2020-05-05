@@ -33,3 +33,4 @@
 
 *   browser.showQuitWarning: true
 *   media.peerconnection.enabled: false
+*   browser.backspace_action: 2
