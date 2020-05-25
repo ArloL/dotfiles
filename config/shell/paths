@@ -48,3 +48,8 @@ fi
 if [ -d "/usr/local/share/android-sdk" ]; then
     export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 fi
+
+# go
+if hash go 2>/dev/null; then
+    export PATH=$PATH:$(go env GOPATH)/bin
+fi
