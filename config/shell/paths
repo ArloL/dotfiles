@@ -53,3 +53,8 @@ fi
 if hash go 2>/dev/null; then
     export PATH=$PATH:$(go env GOPATH)/bin
 fi
+
+# homebrew curl
+if [ -d /usr/local/opt/curl/bin ]; then
+    export PATH="/usr/local/opt/curl/bin:$PATH"
+fi
