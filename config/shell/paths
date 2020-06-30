@@ -58,3 +58,8 @@ fi
 if [ -d /usr/local/opt/curl/bin ]; then
     export PATH="/usr/local/opt/curl/bin:$PATH"
 fi
+
+
+if [ -d "${HOME}/.dotnet/tools" ]; then
+    export PATH="${PATH}:${HOME}/.dotnet/tools"
+fi
