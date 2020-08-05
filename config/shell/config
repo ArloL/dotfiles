@@ -41,6 +41,10 @@ if hash dotnet 2>/dev/null; then
     export DOTNET_CLI_TELEMETRY_OPTOUT='1'
 fi
 
+if [ -f "${HOME}/.kube/config" ]; then
+    export KUBECONFIG="${HOME}/.kube/config"
+fi
+
 if [ -f "${HOME}/.kube/setup-kubeconfig-env.sh" ]; then
     source "${HOME}/.kube/setup-kubeconfig-env.sh"
 fi
