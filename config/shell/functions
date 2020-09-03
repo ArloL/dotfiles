@@ -100,7 +100,7 @@ if hash nnn 2>/dev/null; then
         # stty lwrap undef
         # stty lnext undef
 
-        nnn "$@"
+        nnn -nA "$@"
 
         if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"
