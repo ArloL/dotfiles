@@ -12,7 +12,6 @@ git push origin master
 if hash brew 2>/dev/null; then
     brew update
     brew upgrade
-    brew cask upgrade
     brew cleanup
 fi
 
