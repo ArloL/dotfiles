@@ -39,4 +39,7 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"extensions.ignoreRecommendations": true,
 	"extensions.showRecommendationsOnlyOnDemand": true,
+	"shellcheck.exclude": [
+		"1091"
+	],
 }
