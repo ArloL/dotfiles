@@ -4,6 +4,9 @@
 		"editor.wordWrap": "wordWrapColumn",
 		"files.trimTrailingWhitespace": false,
 	},
+	"[yaml]": {
+        "editor.autoIndent": "advanced"
+    },
 	"debug.console.fontSize": 16,
 	"diffEditor.renderSideBySide": false,
 	"editor.fontFamily": "Source Code Pro",
