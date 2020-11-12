@@ -1,3 +1,5 @@
+[init]
+	defaultBranch = main
 [user]
     name = Arlo O'Keeffe
     email = tiger@k5d.de
