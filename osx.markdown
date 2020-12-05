@@ -104,7 +104,7 @@
     * `sudo port install rbenv ruby-build`
     * `rbenv install ${version}`
 * Java Development?
-    * `sudo port install maven3 openjdk8`
+    * `sudo port install maven3 openjdk11`
 * JavaScript Development?
     * `sudo port install npm6 nodejs13 yarn`
 * Android SDK
