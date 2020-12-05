@@ -116,4 +116,4 @@
     * `sdkmanager "build-tools;28.0.3" "emulator" "patcher;v4" "platform-tools" "platforms;android-28" "tools" "extras;intel;Hardware_Accelerated_Execution_Manager"`
 * `update-everything`
 * SourceTree
-    * `brew cask install sourcetree`
+    * `brew install sourcetree`
