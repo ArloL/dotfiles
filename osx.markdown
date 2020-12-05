@@ -45,7 +45,6 @@
     * Preferences
         * General
             * New Finder windows show: ${HOME}
-            * 
         * Sidebar
             * Disable: All My Files, iCloud Drive, AirDrop, Shared and Tags
             * Enable: ${HOME}
