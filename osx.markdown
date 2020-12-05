@@ -65,6 +65,8 @@
 * MacPorts: https://www.macports.org/
     * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
 * Homebrew: https://brew.sh/
+    * El Capitan
+        * `brew install git`
     * `brew install ssh-copy-id`
 * No Night Shift?
     * `brew cask install flux`
