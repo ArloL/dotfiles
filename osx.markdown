@@ -75,7 +75,7 @@
     * Terminal
         * Preferences
             * Profiles
-                * Solarized Light
+                * All
                     * Text: Source Code Pro 16pt
 * Visual Studio Code
     * `brew cask install visual-studio-code && code`
