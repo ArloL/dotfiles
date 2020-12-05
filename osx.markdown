@@ -40,7 +40,7 @@
 * Dock
     * add Applications List
     * add Import to iTunes
-    * remove everything except Firefox, Mail, iTunes, Calendar & Notes
+    * remove everything except Safari, Mail, iTunes, Calendar & Notes
 * Finder
     * Preferences
         * General
