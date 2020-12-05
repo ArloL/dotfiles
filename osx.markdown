@@ -62,7 +62,7 @@
 * `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
 * MacPorts: https://www.macports.org/
-    * `sudo port install git nnn p7zip watch wget coreutils findutils`
+    * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
 * Homebrew: https://brew.sh/
     * `brew install ssh-copy-id`
 * No Night Shift?
