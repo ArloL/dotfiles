@@ -69,22 +69,23 @@
         * `brew install git`
     * `brew install ssh-copy-id`
 * No Night Shift?
-    * `brew cask install flux`
+    * `brew install homebrew/cask/flux`
     * Sunset: Tungsten
     * Bedtime: Candle
 * Source Code Pro
-    * `brew tap homebrew/cask-fonts`
-    * `brew cask install font-source-code-pro`
+    * `brew install homebrew/cask-fonts/font-source-code-pro`
     * Terminal
         * Preferences
             * Profiles
                 * All
                     * Text: Source Code Pro 16pt
 * Visual Studio Code
-    * `brew cask install visual-studio-code && code`
+    * `brew install visual-studio-code`
+    * `code`
     * `~/.dotfiles/install-osx.sh`
-* `brew cask install bettertouchtool keepingyouawake coconutbattery firefox libreoffice skype the-unarchiver vlc`
-* High Sierra: `brew cask install alt-tab disk-inventory-x dozer`
+* Other software
+    * All: `brew install bettertouchtool coconutbattery the-unarchiver vlc`
+    * Sierra: `brew install alt-tab disk-inventory-x dozer firefox keepingyouawake libreoffice skype`
 * Firefox: see firefox.markdown
 * BetterTouchTool
     * install license
