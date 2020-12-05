@@ -56,7 +56,6 @@
     * Preferences
         * Profiles
             * Solarized Light as Default
-                * Text: Source Code Pro 16pt
 * `sudo hostname -s ${name}`
 * `git config --global credential.helper osxkeychain`
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
