@@ -61,6 +61,7 @@
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
+* El Capitan: Add "USERTrust RSA Certification Authority" root certificate
 * MacPorts: https://www.macports.org/
     * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
 * Homebrew: https://brew.sh/
