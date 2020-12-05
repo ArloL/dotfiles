@@ -61,11 +61,10 @@
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
+* MacPorts: https://www.macports.org/
+    * `sudo port install git nnn p7zip watch wget coreutils findutils`
 * Homebrew: https://brew.sh/
     * `brew install ssh-copy-id`
-* MacPorts: https://www.macports.org/
-    * if git via Homebrew not installed: `sudo port install git`
-    * `sudo port install nnn p7zip watch wget coreutils findutils`
 * No Night Shift?
     * `brew cask install flux`
     * Sunset: Tungsten
