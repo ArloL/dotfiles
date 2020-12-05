@@ -1,6 +1,7 @@
 # OS X Setup
 
 * System Update
+    * El Capitan: App Store...
 * Safari
     * Preferences
         * Search
