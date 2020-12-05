@@ -72,6 +72,11 @@
 * Source Code Pro
     * `brew tap homebrew/cask-fonts`
     * `brew cask install font-source-code-pro`
+    * Terminal
+        * Preferences
+            * Profiles
+                * Solarized Light
+                    * Text: Source Code Pro 16pt
 * Visual Studio Code
     * `brew cask install visual-studio-code && code`
     * `~/.dotfiles/install-osx.sh`
