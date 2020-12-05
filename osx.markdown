@@ -5,7 +5,7 @@
 * Safari
     * Preferences
         * Search
-            * Search engine: Duck Duck Go
+            * Search engine: DuckDuckGo
 * System Preferences
     * General
         * Appearance: Auto
