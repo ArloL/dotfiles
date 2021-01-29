@@ -57,3 +57,7 @@ fi
 if [ -d "${HOME}/.dotnet/tools" ]; then
     export PATH="${PATH}:${HOME}/.dotnet/tools"
 fi
+
+if ! hash mysql 2>/dev/null && [ -d "/usr/local/opt/mysql-client/bin" ]; then
+    export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+fi
