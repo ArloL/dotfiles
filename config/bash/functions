@@ -73,7 +73,7 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ] || [ "$(expr substr $
         function stree() {
             local directory
 
-            directory=${pwd}
+            directory=$(pwd)
             if [ $# -eq 1 ]; then
                 directory=${1}
             fi
