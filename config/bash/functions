@@ -70,7 +70,7 @@ if [[ "$(uname -s)" = MINGW* ]]; then
         function stree() {
             local directory
 
-            directory=$(pwd)
+            directory=${PWD}
             if [ $# -eq 1 ]; then
                 directory=${1}
             fi
