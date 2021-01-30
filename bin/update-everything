@@ -47,3 +47,9 @@ fi
 if hash yarn 2>/dev/null; then
     yarn global upgrade
 fi
+
+# vagrant
+if hash vagrant 2>/dev/null; then
+    vagrant box update
+    vagrant box prune
+fi
