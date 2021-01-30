@@ -8,6 +8,9 @@ cd ~/.dotfiles
 git pull --rebase
 git push origin master
 
+# macOS
+softwareupdate --install --recommended
+
 # Homebrew
 if hash brew 2>/dev/null; then
     brew update
