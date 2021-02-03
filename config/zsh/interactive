@@ -1,7 +1,7 @@
 # prompt
 
 ##[ArloLOK@arlos-mbp ~]
-##$ 
+##$
 ##instead of
 ##(ArloLOK@arlos-mbp)[1] ~ %
 export PS1="[%n@%m %~]
@@ -30,3 +30,8 @@ source "$XDG_CONFIG_HOME/shell/aliases"
 alias reload='source "$XDG_CONFIG_HOME/zsh/.zshrc"'
 
 source "$XDG_CONFIG_HOME/shell/functions"
+
+# direnv
+if hash direnv 2>/dev/null; then
+    eval "$(direnv hook zsh)"
+fi
