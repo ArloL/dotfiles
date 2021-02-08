@@ -4,6 +4,8 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
+sleep 33
+
 cd ~/.dotfiles
 git pull --rebase
 git push origin master
