@@ -45,4 +45,5 @@
 	"shellcheck.exclude": [
 		"1091"
 	],
+	"terminal.integrated.scrollback": 10000,
 }
