@@ -19,3 +19,5 @@
     changes = log --patch --find-renames --follow --stat --
 [help]
     autocorrect = 25
+[fetch]
+	prune = true
