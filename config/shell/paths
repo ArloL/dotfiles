@@ -61,3 +61,7 @@ fi
 if ! hash mysql 2>/dev/null && [ -d "/usr/local/opt/mysql-client/bin" ]; then
     export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 fi
+
+if [ -d "${HOME}/Library/Python/3.9/bin" ]; then
+    export PATH="${PATH}:${HOME}/Library/Python/3.9/bin"
+fi
