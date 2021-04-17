@@ -48,13 +48,3 @@ if hash vagrant 2>/dev/null; then
         | xargs -L1 vagrant box update --box
     vagrant box prune --force --keep-active-boxes
 fi
-
-# yarn
-if hash yarn 2>/dev/null; then
-    yarn global upgrade
-fi
-
-# npm
-if hash npm 2>/dev/null; then
-    sudo npm -g update
-fi
