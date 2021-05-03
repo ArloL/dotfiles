@@ -44,6 +44,4 @@
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"extensions.ignoreRecommendations": true,
-	"extensions.showRecommendationsOnlyOnDemand": true,
 }
