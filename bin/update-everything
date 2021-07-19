@@ -20,6 +20,10 @@ if hash brew 2>/dev/null; then
     brew cleanup
 fi
 
+if [ -d /Applications/Chromium.app ]; then
+    xattr -d -r com.apple.quarantine /Applications/Chromium.app
+fi
+
 # gem
 if hash gem 2>/dev/null; then
     gem update
