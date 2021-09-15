@@ -15,21 +15,20 @@ if exist "%programfiles%\Atlassian\%sourcetreepath%" (
 
 set directory=%~f1
 if "%directory%" == "" set directory=%CD%
-echo %directory%
 
-if exist "%directory%\NUL" (
+if exist "%directory%\" (
     set directory=%directory%
 ) else (
     set directory=%~dp1
 )
 
-pushd %directory%
+pushd "%directory%"
 
 for /f "delims=" %%i in ('git rev-parse --show-toplevel') do set directory=%%i
 git rev-parse --show-toplevel 1> nul 2> nul
 
 if %errorlevel% EQU 0 (
-    start "" "%sourcetreepath%" -f "%directory:/=\%" log
+    start "" "%sourcetreepath%" -f "%directory:/=\%"
 )
 
 popd
