@@ -19,9 +19,7 @@ REM If the first argument is empty use the current directory
 if "%directory%" == "" set directory=%CD%
 
 REM If the first argument is not a directory (e.g. a file) remove the filename
-if exist "%directory%\" (
-    set directory=%directory%
-) else (
+if not exist "%directory%\*" (
     set directory=%~dp1
 )
 
