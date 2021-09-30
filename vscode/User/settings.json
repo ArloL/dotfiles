@@ -44,4 +44,6 @@
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.settings.enableNaturalLanguageSearch": false,
+	"redhat.telemetry.enabled": false,
+	"javascript.updateImportsOnFileMove.enabled": "always",
 }
