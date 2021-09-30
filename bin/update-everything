@@ -17,6 +17,7 @@ softwareupdate --install --recommended
 if hash brew 2>/dev/null; then
     brew update
     brew upgrade
+    brew autoremove
     brew cleanup
 fi
 
