@@ -37,6 +37,24 @@
     * Accessibility
         * Zoom
             * Enable Use scroll gesture with modifier keys to zoom
+    * Time Machine
+        * Options…
+            * ~/.cache
+            * ~/.docker
+            * ~/.gluon/
+            * ~/.local/share/containers/podman/machine
+            * ~/.m2/repository
+            * ~/.npm/_cacache
+            * ~/.p2/pool
+            * ~/.rbenv
+            * ~/.sdkman
+            * ~/.vagrant.d/boxes
+            * ~/Developer
+            * ~/Downloads
+            * ~/Library/Caches <-- Excluded differently
+            * ~/Library/Containers/com.docker.docker <-- Excluded differently
+            * ~/Library/Containers/Docker <-- Excluded differently
+            * ~/Library/Developer/CoreSimulator <-- Excluded differently
 * Dock
     * add Applications List
     * add Import to iTunes
