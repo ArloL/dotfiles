@@ -1,0 +1,16 @@
+/Users/aokeeffe/.cache
+/Users/aokeeffe/.docker
+/Users/aokeeffe/.gluon/
+/Users/aokeeffe/.local/share/containers/podman
+/Users/aokeeffe/.m2/repository
+/Users/aokeeffe/.npm/_cacache
+/Users/aokeeffe/.p2/pool
+/Users/aokeeffe/.rbenv
+/Users/aokeeffe/.sdkman/
+/Users/aokeeffe/.vagrant.d/boxes
+/Users/aokeeffe/Developer
+/Users/aokeeffe/Downloads
+/Users/aokeeffe/Library/Caches
+/Users/aokeeffe/Library/Containers/com.docker.docker
+/Users/aokeeffe/Library/Containers/Docker
+/Users/aokeeffe/Library/Developer/CoreSimulator
