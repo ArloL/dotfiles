@@ -50,6 +50,7 @@ if hash vagrant 2>/dev/null; then
     vagrant box list --machine-readable \
         | grep box-name \
         | cut -d, -f4 \
+        | uniq \
         | xargs -L1 vagrant box update --box
     vagrant box prune --force --keep-active-boxes
 fi
