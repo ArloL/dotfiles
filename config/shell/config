@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # editors
 export SVN_EDITOR=nano
 export EDITOR=nano
