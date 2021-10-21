@@ -50,3 +50,10 @@ elif [ -d "/Applications/Sublime Text.app" ]; then
     export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
     alias edit='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 fi
+
+if [ -d "${HOME}/dotfiles" ]; then
+    alias dotfiles='edit "${HOME}/dotfiles"'
+fi
+if [ -d "${HOME}/.dotfiles" ]; then
+    alias dotfiles='edit "${HOME}/.dotfiles"'
+fi
