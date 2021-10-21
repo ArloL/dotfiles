@@ -39,8 +39,8 @@ if [ -f "/usr/libexec/java_home" ]; then
 fi
 
 # GRAALVM_HOME
-if [ -d /Library/Java/JavaVirtualMachines/openjdk11-graalvm ]; then
-    export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/openjdk11-graalvm/Contents/Home"
+if [ -d /Library/Java/JavaVirtualMachines/openjdk17-graalvm ]; then
+    export GRAALVM_HOME="/Library/Java/JavaVirtualMachines/openjdk17-graalvm/Contents/Home"
 fi
 
 if hash dotnet 2>/dev/null; then
