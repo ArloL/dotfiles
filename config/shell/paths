@@ -60,3 +60,10 @@ fi
 if [ -d "${HOME}/Library/Python/3.9/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Python/3.9/bin"
 fi
+
+# phpenv
+if [ -d "${HOME}/.phpenv" ]; then
+    export PHPENV_ROOT="${HOME}/.phpenv"
+    export PATH="${PHPENV_ROOT}/bin:${PATH}"
+    eval "$(phpenv init -)"
+fi
