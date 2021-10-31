@@ -1,8 +1,5 @@
-bash_profile text eol=lf
-bashrc text eol=lf
-
-zshenv text eol=lf
-
-config/bash/* text eol=lf
-config/zsh/* text eol=lf
-config/shell/* text eol=lf
+*        text=auto eol=lf
+*.bat    text      eol=crlf
+*.cmd    text      eol=crlf
+*.ps1    text      eol=crlf
+*.sh     text      eol=lf
