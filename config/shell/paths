@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Homebrew
 if [ -n "${PATH##*/usr/local/bin*}" ]; then
     export PATH="/usr/local/bin:${PATH}"
@@ -30,7 +32,7 @@ fi
 
 # nix
 if [ -d /nix ]; then
-    source ~/.nix-profile/etc/profile.d/nix.sh
+    . ~/.nix-profile/etc/profile.d/nix.sh
 fi
 
 # Android
@@ -46,7 +48,8 @@ fi
 
 # go
 if hash go 2>/dev/null; then
-    export PATH="${PATH}:$(go env GOPATH)/bin"
+    PATH="${PATH}:$(go env GOPATH)/bin"
+    export PATH
 fi
 
 if [ -d "${HOME}/.dotnet/tools" ]; then
