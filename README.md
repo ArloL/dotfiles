@@ -1,12 +1,16 @@
-# ${PROJECT}
+# dotfiles
 
-Short description
+These are my so called dotfiles.
 
 # Quickstart
 
-`./call-some-command --with-some-options`
-
-# Install
-
-`./install`
-
+```
+git clone https://github.com/ArloL/dotfiles.git
+cd dotfiles
+# macos
+sh install-osx.sh
+# linux
+sh install-linux.sh
+# windows; requires administrative privileges
+install-win.bat
+```
