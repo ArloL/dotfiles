@@ -43,6 +43,7 @@ if hash port 2>/dev/null; then
     sudo port upgrade outdated || true
     sudo port uninstall inactive || true
     sudo port uninstall rleaves || true
+    sudo port reclaim || true
 fi
 
 # vagrant
