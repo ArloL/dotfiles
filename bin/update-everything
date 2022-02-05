@@ -55,3 +55,9 @@ if hash vagrant 2>/dev/null; then
         | xargs -L1 vagrant box update --box
     vagrant box prune --force --keep-active-boxes
 fi
+
+# docker
+if hash docker 2>/dev/null; then
+    docker system prune --filter "until=240h" --force
+    docker volume prune --force
+fi
