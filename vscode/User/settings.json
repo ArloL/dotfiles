@@ -46,4 +46,7 @@
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"redhat.telemetry.enabled": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredDarkColorTheme": "Solarized Dark",
+	"workbench.preferredLightColorTheme": "Solarized Light",
 }
