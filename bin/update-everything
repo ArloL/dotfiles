@@ -58,8 +58,10 @@ fi
 
 # docker
 if hash docker 2>/dev/null; then
-    docker system prune --filter "until=240h" --force
-    docker volume prune --force
+    if docker info; then
+        docker system prune --filter "until=240h" --force
+        docker volume prune --force
+    fi
 fi
 
 # vscode
