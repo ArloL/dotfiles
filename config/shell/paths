@@ -21,8 +21,11 @@ if [ -d /opt/local ]; then
 fi
 
 # rbenv
-if [ -d "${HOME}/.rbenv" ]; then
-    export PATH="${PATH}:${HOME}/.rbenv/bin"
+if [ -d "${HOME}/.rbenv/bin" ]; then
+    export PATH="${HOME}/.rbenv/bin:${PATH}"
+fi
+
+if hash rbenv 2>/dev/null; then
     eval "$(rbenv init - "$(basename "${SHELL}")")"
 fi
 
