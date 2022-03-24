@@ -46,4 +46,4 @@ jobs:
       run: |
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ArloL/chorito/HEAD/run-latest.sh)"
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3.14.0
+      uses: peter-evans/create-pull-request@v4
