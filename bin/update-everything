@@ -66,4 +66,5 @@ fi
 
 if hash sdk 2>/dev/null; then
     sdk selfupdate
+    sdk update
 fi
