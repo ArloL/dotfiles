@@ -63,3 +63,7 @@ if hash docker 2>/dev/null; then
         docker volume prune --force
     fi
 fi
+
+if hash sdk 2>/dev/null; then
+    sdk selfupdate
+fi
