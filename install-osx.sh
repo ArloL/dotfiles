@@ -146,8 +146,27 @@ setupVSCode() {
     fi
 }
 
+setupSdkman() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local sdkmanDir="${HOME}/.sdkman"
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/sdkman"
+
+    # the folders to symlink
+    local sdkmanFolders=("etc")
+
+    if [ -d "${sdkmanDir}" ]; then
+        # setup symlinks for visual studio code
+        createSymlinks "${scriptPath}/sdkman" "${sdkmanDir}" "${backupDir}" 0 sdkmanFolders[@]
+    fi
+}
+
 setupHome
 setupBin
 setupSublime
 setupAtom
 setupVSCode
+setupSdkman
