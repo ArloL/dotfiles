@@ -64,7 +64,7 @@ if hash docker 2>/dev/null; then
     fi
 fi
 
-if hash sdk 2>/dev/null; then
+if [ -d "${HOME}/.sdkman" ]; then
     sdk selfupdate
     sdk update
 fi
