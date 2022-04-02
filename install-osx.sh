@@ -84,7 +84,7 @@ setupBin() {
     local backupDir="${HOME}/dotfiles_backup/bin"
 
     # list of files/folders to symlink in homedir
-    local binfiles=("update-everything")
+    local binfiles=("update-everything" "sdk")
 
     mkdir -p "${HOME}/bin"
 

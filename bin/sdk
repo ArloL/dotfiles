@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]; then
+    . "${HOME}/.sdkman/bin/sdkman-init.sh"
+    sdk "$@"
+else
+    echo 'sdkman missing: curl -s "https://get.sdkman.io" | bash'
+fi
