@@ -60,7 +60,5 @@ fi
 # sdkman
 if [ -d "${HOME}/.sdkman" ]; then
     export SDKMAN_DIR="${HOME}/.sdkman"
-    if ! hash sdk 2>/dev/null; then
-        [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && . "$HOME/.sdkman/bin/sdkman-init.sh"
-    fi
+    [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
