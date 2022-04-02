@@ -65,6 +65,8 @@ if hash docker 2>/dev/null; then
 fi
 
 if [ -d "${HOME}/.sdkman" ]; then
+    set +o nounset
+    set +o xtrace
     . "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk selfupdate
     sdk update
