@@ -87,6 +87,14 @@
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * `~/.dotfiles/install-osx.sh`
 * `git push` to setup github credentials
+* Mail
+    * Preferences
+        * iCloud
+            * Mailbox Behaviours
+                * Erase deleted messages: never
+        * K5D
+            * Mailbox Behaviours
+                * Erase deleted messages: never
 * El Capitan: Add "USERTrust RSA Certification Authority" root certificate
 * MacPorts: https://www.macports.org/
     * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
