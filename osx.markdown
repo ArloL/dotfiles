@@ -209,10 +209,9 @@
     * `reload`
     * `gem install bundler`
 * Java Development?
-    * `sudo port install maven3 openjdk11`
-    * `sudo port select --set maven maven3`
+    * `brew install maven openjdk`
 * JavaScript Development?
-    * `sudo port install npm6 nodejs13 yarn`
+    * `brew install nodejs yarn`
 * Android SDK
     * `brew cask install android-sdk`
     * `brew cask install android-ndk`
