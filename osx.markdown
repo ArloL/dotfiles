@@ -114,27 +114,88 @@
                 * All
                     * Text: Source Code Pro 16pt
 * Visual Studio Code
-    * `brew install visual-studio-code`
+    * `brew install visual-studio-code  `
     * `code`
     * `~/.dotfiles/install-osx.sh`
-* Other software
-    * All: `brew install bettertouchtool coconutbattery the-unarchiver vlc`
-    * Sierra: `brew install alt-tab disk-inventory-x dozer firefox keepingyouawake libreoffice skype`
-    * brew install homebrew/cask/transmission inkscape tunnelblick dbeaver-community keepassxc purevpn arq drawio keka sekey signal sourcetree chromium
-* Firefox: see firefox.markdown
+* Firefox
+    * `brew install firefox`
+    * see firefox.markdown
 * BetterTouchTool
+    * `brew install bettertouchtool`
     * install license
     * import preset
-    * BTT Remote
-        * Disable BTT Remote support
-    * Advanced Settings
+    * Preferences
+        * Basic
+            * General
+                * Launch BetterTouchTool on startup
+        * BTT Remote
+            * Enable BTT Remote support
+        * Advanced Settings
+            * General
+                * Disable Allow external BetterTouchTool Scripting
+* Inkscape
+    * `brew install inkscape`
+* Tunnelblick
+    * `brew install tunnelblick`
+    * Open
+    * …
+* DBeaver
+    * `brew install dbeaver-community`
+* KeePassXC
+    * `brew install keepassxc`
+* Arq
+    * `brew install arq`
+    * Open
+    *   …
+* Drawio
+    * `brew install drawio`
+* Keka
+    * `brew install keka`
+* sekey
+    * `brew install sekey`
+* Signal
+    * `brew install signal`
+    * Open
+    * Link with Phone
+* Chromium
+    * `brew install chromium`
+* SourceTree
+    * `brew install sourcetree`
+* Coconut Battery
+    * `brew install coconutbattery`
+* VLC
+    * `brew install vlc`
+* DiskInventoryX
+    * `brew install disk-inventory-x`
+* Dozer
+    * `brew install dozer`
+    *  Open
+    *  Preferences
         * General
-            * Disable Allow external BetterTouchTool Scripting
+            * Launch at login: enabled
+* KeepingYouAwake
+    * `brew install keepingyouawake`
+    * Open
+    * Preferences
+        * General
+            * Start at Login: enabled
+        * Activation Duration
+            * 5 hours
+            * Set Default
+        * Advanced
+            * Deactivate when battery capacity is below: enabled
+                * 40%
+            * Allow the display to sleep: enabled
+* LibreOffice
+    * `brew install libreoffice`
+* Skype
+    * `brew install skype`
 * The Unarchiver
+    * `brew install the-unarchiver`
     * Archive Formats
         * Select all
     * Extraction
-        * Enable Move the archive to the trash
+        * Move the archive to the trash: enabled
 * Microsoft Teams
     * Try Screen Share
         * System Preferences
@@ -142,8 +203,11 @@
                 * Screen Recording
                     * Microsoft Teams: enabled
 * rbenv
-    * `sudo port install rbenv ruby-build`
+    * `brew install rbenv`
     * `rbenv install ${version}`
+    * `rbenv global ${version}`
+    * `reload`
+    * `gem install bundler`
 * Java Development?
     * `sudo port install maven3 openjdk11`
     * `sudo port select --set maven maven3`
@@ -157,5 +221,3 @@
         * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
     * `sdkmanager "build-tools;28.0.3" "emulator" "patcher;v4" "platform-tools" "platforms;android-28" "tools" "extras;intel;Hardware_Accelerated_Execution_Manager"`
 * `update-everything`
-* SourceTree
-    * `brew install sourcetree`
