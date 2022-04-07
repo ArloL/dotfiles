@@ -14,6 +14,10 @@
     * Dock
         * Automatically hide and show the Dock: enabled
         * Show recent applications in Dock: disabled
+    * Mission Control
+        * Hot Corners…
+            * Top Left: Put Display To Sleep
+            * Top Right: Mission Control
     * Language & Region
         * English as Primary
         * Region: Germany
