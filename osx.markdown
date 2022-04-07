@@ -105,6 +105,7 @@
 * Other software
     * All: `brew install bettertouchtool coconutbattery the-unarchiver vlc`
     * Sierra: `brew install alt-tab disk-inventory-x dozer firefox keepingyouawake libreoffice skype`
+    * brew install homebrew/cask/transmission inkscape tunnelblick dbeaver-community keepassxc purevpn arq drawio keka sekey signal sourcetree chromium
 * Firefox: see firefox.markdown
 * BetterTouchTool
     * install license
