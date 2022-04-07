@@ -23,6 +23,9 @@
                 * Terminal
                     * Show Previous Tab: Control+Shift+Tab
                     * Show Next Tab: Control+Tab
+    * Keyboard
+        * Modifier Keys…
+            * Caps Lock Key: Escape
     * Trackpad
         * Point & Click
             * Tap to click: enabled
