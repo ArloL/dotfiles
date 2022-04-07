@@ -1,22 +1,43 @@
 # Firefox Setup
 
 * Sign in to Sync
-* Temporary Containers: Import from Sync
-* uBlock Origin
-    * Settings
-        * Enable cloud storage support
-    * My filters
-        * Import from cloud storage
 * Preferences
     * Search
         * Default Search Engine: DuckDuckGo
+* Pin everything except BitWarten to the Overflow menu
+* Customize Toolbar
+    * Add "Email link" between Downloads and Bitwarden
 
 #   about:config
 
 *   browser.backspace_action: 2
 
+# Temporary Containers
+
+* Export/Import
+    * Import from Sync
+
+# Firefox Multi-Account Containers
+
+* 
+
+# uBlock Origin
+
+* Settings
+    * Enable cloud storage support
+* My filters
+    * Import from cloud storage
+
+
+# LeechBlock NG
+
+* Preferences
+    * General
+        * Import Options from Sync Storage
+
 # Enhancer for YouTube
 
+* Try importing `firefox-youtube-enhancer.json`
 * Theme
     * Dark Theme: enabled
 * Video player
