@@ -165,7 +165,7 @@
     * `brew install coconutbattery`
 * VLC
     * `brew install vlc`
-* DiskInventoryX
+* Disk Inventory X
     * `brew install disk-inventory-x`
 * Dozer
     * `brew install dozer`
