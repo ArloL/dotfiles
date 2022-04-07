@@ -2,6 +2,7 @@
 
 * System Update
     * El Capitan: App Store...
+    * Others: System Preferences -> Software Update
 * Safari
     * Preferences
         * Search
