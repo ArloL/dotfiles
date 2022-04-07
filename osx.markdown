@@ -127,6 +127,12 @@
         * Select all
     * Extraction
         * Enable Move the archive to the trash
+* Microsoft Teams
+    * Try Screen Share
+        * System Preferences
+            * Security & Privacy
+                * Screen Recording
+                    * Microsoft Teams: enabled
 * rbenv
     * `sudo port install rbenv ruby-build`
     * `rbenv install ${version}`
