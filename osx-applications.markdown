@@ -50,7 +50,6 @@ Pages.app
 Postman.app
 Quick Calendar.app
 Safari.app
-SeKey.app
 Signal.app
 Simple Comic.app
 Skype.app

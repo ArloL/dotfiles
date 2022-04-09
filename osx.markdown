@@ -151,8 +151,6 @@
     * `brew install drawio`
 * Keka
     * `brew install keka`
-* sekey
-    * `brew install sekey`
 * Signal
     * `brew install signal`
     * Open
