@@ -71,3 +71,7 @@ if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
     sdk selfupdate
     sdk update
 fi
+
+if hash rbenv 2>/dev/null; then
+    rbenv rehash
+fi
