@@ -1,16 +1,26 @@
+# sudo tmutil addexclusion -p
+/Applications
+/opt
 /Users/aokeeffe/.cache
 /Users/aokeeffe/.docker
-/Users/aokeeffe/.gluon/
+/Users/aokeeffe/.gem
+/Users/aokeeffe/.gluon
+/Users/aokeeffe/.gradle
+/Users/aokeeffe/.lima
 /Users/aokeeffe/.local/share/containers/podman
 /Users/aokeeffe/.m2/repository
 /Users/aokeeffe/.npm/_cacache
 /Users/aokeeffe/.p2/pool
 /Users/aokeeffe/.rbenv
-/Users/aokeeffe/.sdkman/
+/Users/aokeeffe/.sdkman
 /Users/aokeeffe/.vagrant.d/boxes
+/Users/aokeeffe/.vscode
 /Users/aokeeffe/Developer
 /Users/aokeeffe/Downloads
+/Users/aokeeffe/Library/Application Support/JetBrains/Toolbox/apps
+# already excluded by default
 /Users/aokeeffe/Library/Caches
-/Users/aokeeffe/Library/Containers/com.docker.docker
-/Users/aokeeffe/Library/Containers/Docker
-/Users/aokeeffe/Library/Developer/CoreSimulator
+/Users/aokeeffe/Library/Developer/CoreSimulator/Caches
+/Users/aokeeffe/Library/Logs
+/Users/aokeeffe/Library/PersonalizationPortrait
+/Users/aokeeffe/Library/Suggestions
