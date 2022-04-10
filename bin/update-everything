@@ -75,3 +75,7 @@ fi
 if hash rbenv 2>/dev/null; then
     rbenv rehash
 fi
+
+if hash direnv 2>/dev/null; then
+    direnv prune
+fi
