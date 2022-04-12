@@ -31,7 +31,10 @@ fi
 
 # rbenv
 if [ -d "${HOME}/.rbenv/bin" ]; then
-    export PATH="${HOME}/.rbenv/shims:${HOME}/.rbenv/bin:${PATH}"
+    export PATH="${HOME}/.rbenv/bin:${PATH}"
+fi
+if [ -d "${HOME}/.rbenv/shims" ]; then
+    export PATH="${HOME}/.rbenv/shims:${PATH}"
 fi
 
 if [ -d "${HOME}/bin" ]; then
