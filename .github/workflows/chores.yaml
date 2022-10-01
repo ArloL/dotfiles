@@ -45,5 +45,11 @@ jobs:
     - name: Chores
       run: |
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ArloL/chorito/HEAD/run-latest.sh)"
+        git diff
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
+      with:
+        commit-message: "chore: automated changes by chorito"
+        branch: "chorito/patch"
+        title: "chore: automated changes by chorito"
+        body: "Automated changes by [chorito](https://github.com/ArloL/chorito)"
