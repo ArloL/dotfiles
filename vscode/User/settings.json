@@ -25,8 +25,6 @@
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.rebaseWhenSync": true,
-	"java.autobuild.enabled": true,
-	"java.import.generatesMetadataFilesAtProjectRoot": true,
 	"java.maven.downloadSources": true,
 	"markdown.preview.fontSize": 16,
 	"markdown.styles": [
