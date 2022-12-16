@@ -14,4 +14,3 @@ end_of_line = lf
 
 [.vscode/**.json]
 insert_final_newline = false
-
