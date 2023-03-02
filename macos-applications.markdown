@@ -1,43 +1,33 @@
-# 2022-04
-
+AS Timer.app
 Adobe Digital Editions 4.5.app
 Adobe Digital Editions.app
-Airtame.app
-AltTab.app
-Anki.app
 Arq.app
-AS Timer.app
+Bartender 4.app
 BetterTouchTool.app
 Bitwarden.app
-Blackmagic Disk Speed Test.app
-Brother
-calibre.app
-Camo Studio.app
 Chromium.app
-coconutBattery.app
-Cyberduck.app
 DBeaver.app
+DiffusionBee.app
 Disk Inventory X.app
-djay Pro AI.app
 Dozer.app
-draw.io.app
-Eclipse Installer.app
 ESET Endpoint Security.app
 ESET Management Agent.app
 ESET Remote Administrator Agent.app
+Eclipse Installer.app
 Firefox.app
 GarageBand.app
-gitfx.app
-iMovie.app
+Hidden Bar.app
 Inkscape.app
 JetBrains Toolbox.app
 KeePassXC.app
 KeepingYouAwake.app
 Keka.app
 Keynote.app
-Kindle.old.app
-LibreOffice.app
+Kindle 1.26.app
+Kindle 1.31.app
+Kindle.app
 LICEcap.app
+LibreOffice.app
 Microsoft Excel.app
 Microsoft OneNote.app
 Microsoft Outlook.app
@@ -46,23 +36,27 @@ Microsoft Teams.app
 Microsoft Word.app
 Numbers.app
 OneDrive.app
+Overcast.app
 Pages.app
-Postman.app
-Quick Calendar.app
+PureVPN.app
+QuickLook Video.app
 Safari.app
+Shazam.app
 Signal.app
-Simple Comic.app
 Skype.app
 Sourcetree.app
-SwiftBar.app
-tbswitcher_resources
 The Unarchiver.app
 Things3.app
+Transmission.app
 Tunnelblick.app
-Turbo Boost Switcher Pro.app
 Utilities
-VirtualBox.app
-Visual Studio Code.app
 VLC.app
-xbar.app
+Visual Studio Code.app
+VisualVM.app
+WebTorrent.app
 Xcode.app
+calibre.app
+coconutBattery.app
+djay Pro AI.app
+draw.io.app
+iMovie.app
