@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ############################
-# Install the dotfiles on OS X systems.
+# Install the dotfiles on macOS systems.
 ############################
 
 set -o errexit
