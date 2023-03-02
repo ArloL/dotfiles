@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+set -o xtrace
+
+NPM_PACKAGE_NAME=$(jq -r ".name" package.json)
+LINK_FOLDER=$(yarn config get link-folder)
+
+if [ "${LINK_FOLDER}" = "undefined" ]; then
+    LINK_FOLDER=~/.config/yarn/link
+fi
+
+PACKAGE_LINK=${LINK_FOLDER}/${NPM_PACKAGE_NAME}
+PACKAGE_LINK_DIRECTORY=$(dirname "${PACKAGE_LINK}")
+
+mkdir -p "${PACKAGE_LINK_DIRECTORY}"
+rm -f "${PACKAGE_LINK}"
+ln -s "${PWD}" "${PACKAGE_LINK}"
