@@ -14,6 +14,12 @@
     * Desktop & Screen Saver
         * Screen Saver
             * Show screen saver after: 2 Minutes
+            * Flurry
+                * Options
+                    * Colour: Slow cycle
+                    * Streams: A little more than few
+                    * Thickness: Thin
+                    * Speed: Slow
     * Dock & Menu Bar
         * Automatically hide and show the Dock: enabled
         * Show recent applications in Dock: disabled
