@@ -1,4 +1,4 @@
-# OS X Setup
+# macOS Setup
 
 * System Update
     * El Capitan: App Store...
