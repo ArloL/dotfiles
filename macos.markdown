@@ -4,13 +4,15 @@
     * El Capitan: App Store...
     * Others: System Preferences -> Software Update
 * Safari
-    * Preferences
+    * Settings/Preferences
         * Search
             * Search engine: DuckDuckGo
-* System Preferences
+* System Settings/Preferences
     * General
         * Appearance: Auto
         * Older: Use dark menu bar and Dock: enabled
+        * AirDrop & Handoff
+            * Allow Handoff between this Mac and your iCloud devices: disabled
     * Desktop & Screen Saver
         * Screen Saver
             * Show screen saver after: 2 Minutes
@@ -91,13 +93,17 @@
     * Preferences
         * Profiles
             * Solarized Light as Default
+* Touch ID for sudo
+    * `sudo nano /etc/pam.d/sudo`
+    * `auth sufficient pam_tid.so`
+* Xcode
 * `sudo hostname -s ${name}`
 * `git config --global credential.helper osxkeychain`
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
-* `~/.dotfiles/install-osx.sh`
+* `~/.dotfiles/install-macos.sh`
 * `git push` to setup github credentials
 * Mail
-    * Preferences
+    * Settings/Preferences
         * iCloud
             * Mailbox Behaviours
                 * Erase deleted messages: never
@@ -105,12 +111,15 @@
             * Mailbox Behaviours
                 * Erase deleted messages: never
 * El Capitan: Add "USERTrust RSA Certification Authority" root certificate
-* MacPorts: https://www.macports.org/
+* MacPorts
+    * https://www.macports.org/
     * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
-* Homebrew: https://brew.sh/
+* Homebrew
+    * https://brew.sh/
     * El Capitan
         * `brew install git`
-    * `brew install ssh-copy-id`
+    * Older
+        * `brew install ssh-copy-id`
 * No Night Shift?
     * `brew install homebrew/cask/flux`
     * Sunset: Tungsten
@@ -118,14 +127,14 @@
 * Source Code Pro
     * `brew install homebrew/cask-fonts/font-source-code-pro`
     * Terminal
-        * Preferences
+        * Settings/Preferences
             * Profiles
                 * All
                     * Text: Source Code Pro 16pt
 * Visual Studio Code
-    * `brew install visual-studio-code  `
+    * `brew install visual-studio-code`
     * `code`
-    * `~/.dotfiles/install-osx.sh`
+    * `~/.dotfiles/install-macos.sh`
 * Firefox
     * `brew install firefox`
     * see firefox.markdown
@@ -133,15 +142,15 @@
     * `brew install bettertouchtool`
     * install license
     * import preset
-    * Preferences
+    * Settings/Preferences
         * Basic
             * General
                 * Launch BetterTouchTool on startup
         * BTT Remote
             * Enable BTT Remote support
         * Advanced Settings
-            * General
-                * Disable Allow external BetterTouchTool Scripting
+            * Scripting BTT
+                * Allow external BetterTouchTool Scripting: disabled
 * Inkscape
     * `brew install inkscape`
 * Tunnelblick
@@ -174,24 +183,22 @@
     * `brew install vlc`
 * Disk Inventory X
     * `brew install disk-inventory-x`
-* Dozer
-    * `brew install dozer`
+* Hidden Bar
+    * `brew install hiddenbar`
     *  Open
-    *  Preferences
-        * General
-            * Launch at login: enabled
 * KeepingYouAwake
     * `brew install keepingyouawake`
     * Open
     * Preferences
         * General
-            * Start at Login: enabled
+            * Start at Login: disabled
         * Activation Duration
             * 5 hours
             * Set Default
-        * Advanced
+        * Battery
             * Deactivate when battery capacity is below: enabled
                 * 40%
+        * Advanced
             * Allow the display to sleep: enabled
 * LibreOffice
     * `brew install libreoffice`
