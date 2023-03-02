@@ -10,17 +10,23 @@
 * System Preferences
     * General
         * Appearance: Auto
-        * Use dark menu bar and Dock: enabled
-    * Dock
+        * Older: Use dark menu bar and Dock: enabled
+    * Desktop & Screen Saver
+        * Screen Saver
+            * Show screen saver after: 2 Minutes
+    * Dock & Menu Bar
         * Automatically hide and show the Dock: enabled
         * Show recent applications in Dock: disabled
     * Mission Control
         * Hot Corners…
-            * Top Left: Put Display To Sleep
+            * Top Left: Start Screen Saver
             * Top Right: Mission Control
     * Language & Region
         * English as Primary
         * Region: Germany
+    * Accessibility
+        * Zoom
+            * Enable Use scroll gesture with modifier keys to zoom
     * El Capitan: Keyboard
         * Shortcuts
             * App Shortcuts
@@ -35,16 +41,13 @@
             * Tap to click: enabled
         * More Gestures
             * Swipe between full-screen apps: with four fingers
-    * Sharing
-        * Set Computer Name
-        * edit local hostname
     * Displays
         * Night Shift
             * From 18:00 to 8:00
             * More Warm
-    * Accessibility
-        * Zoom
-            * Enable Use scroll gesture with modifier keys to zoom
+    * Sharing
+        * Set Computer Name
+        * edit local hostname
     * Time Machine
         * Options…
             * ~/.cache
