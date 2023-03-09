@@ -70,7 +70,7 @@ setupHome() {
     local backupDir="${HOME}/dotfiles_backup"
 
     # list of files/folders to symlink in homedir
-    local dotfiles=("bashrc" "bash_profile" "config" "zshenv" "puppet-lint.rc" "mavenrc")
+    local dotfiles=("bashrc" "bash_profile" "config" "zshenv" "puppet-lint.rc" "mavenrc" "gradle")
 
     # setup symlinks in homedir
     createSymlinks "${scriptPath}" "${HOME}" "${backupDir}" 1 dotfiles[@]
