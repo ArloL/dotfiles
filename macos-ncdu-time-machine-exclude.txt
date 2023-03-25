@@ -5,6 +5,8 @@
 /Users/aokeeffe/.cache
 /Users/aokeeffe/.diffusionbee
 /Users/aokeeffe/.docker
+/Users/aokeeffe/.dotfiles/config/yarn
+/Users/aokeeffe/.dotfiles/gradle
 /Users/aokeeffe/.dotfiles/vscode/User/workspaceStorage
 /Users/aokeeffe/.dotfiles/vscode/User/globalStorage
 /Users/aokeeffe/.gem
@@ -12,6 +14,7 @@
 /Users/aokeeffe/.gradle
 /Users/aokeeffe/.lima
 /Users/aokeeffe/.local/share/containers/podman
+/Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.m2/repository
 /Users/aokeeffe/.npm/_cacache
 /Users/aokeeffe/.npm/_npx
