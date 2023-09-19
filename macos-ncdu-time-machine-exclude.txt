@@ -35,6 +35,9 @@
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Code Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
+/Users/aokeeffe/Library/Containers/FB564D20-825F-4475-A727-7D1E8725A685
+/Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite
 /Users/aokeeffe/Library/pnpm
 # already excluded by default
 /Users/aokeeffe/Library/Caches
