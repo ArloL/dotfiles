@@ -31,6 +31,9 @@
 		"https://arlol.github.io/markdown.css"
 	],
 	"powershell.integratedConsole.showOnStartup": false,
+	"search.exclude": {
+		"**/.yarn": true
+	},
 	"shellcheck.exclude": [
 		"1091"
 	],
