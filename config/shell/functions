@@ -14,13 +14,6 @@ function cs() {
     curl cheat.sh/$1
 }
 
-# Use Git’s colored diff when available
-if hash git 2>/dev/null; then
-    function diff() {
-        git diff --no-index --color-words "$@"
-    }
-fi
-
 if [ -f "/cygdrive/c/Program Files/Sublime Text 3/sublime_text.exe" ]; then
     function edit() {
         local target
