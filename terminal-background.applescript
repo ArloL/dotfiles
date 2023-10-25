@@ -11,7 +11,10 @@ on run argv
 		end if
 		set window_list to every window
 		repeat with the_window in window_list
-			set tab_list to every tab in the_window
+			set tab_list to {}
+			try
+				set tab_list to every tab in the_window
+			end try
 			repeat with the_tab in tab_list
 				set the_tty to the tty of the_tab # grab the title
 				if the_tty contains (target_tty as text) then
