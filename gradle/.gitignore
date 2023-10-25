@@ -1,7 +1,10 @@
 .tmp/
+android/
 caches/
 daemon/
 jdks/
+kotlin-profile/
 native/
 notifications/
 wrapper/
+android.lock
