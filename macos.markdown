@@ -90,7 +90,8 @@
         * Show Status Bar
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
 * Terminal
-    * Preferences
+    * Settings/Preferences
+        * New tabs open with: Default Profile
         * Profiles
             * Solarized Light as Default
 * Touch ID for sudo
