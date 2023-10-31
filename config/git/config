@@ -12,7 +12,6 @@
 [rebase]
 	autostash = true
 [pull]
-    ff = only
     rebase = true
 [alias]
 	adog = log --all --decorate --oneline --graph
