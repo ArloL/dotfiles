@@ -90,3 +90,7 @@ if [ -d "${HOME}/.phpenv" ]; then
     export PATH="${PHPENV_ROOT}/bin:${PATH}"
     eval "$(phpenv init -)"
 fi
+
+if [ -d "${HOME}/Library/Application Support/JetBrains/Toolbox/scripts" ]; then
+    export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
+fi
