@@ -1,6 +1,6 @@
 # powerlevel10k
-if [ -f /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme ]; then
-    source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+if [ -f /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]; then
+    source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 source "$XDG_CONFIG_HOME/zsh/config"
