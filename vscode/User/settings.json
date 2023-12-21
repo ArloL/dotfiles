@@ -50,4 +50,5 @@
 	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
+	"git.allowForcePush": true,
 }
