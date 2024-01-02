@@ -1,7 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"[markdown]": {
-		"editor.wordWrap": "wordWrapColumn",
 		"files.trimTrailingWhitespace": false,
 	},
 	"[yaml]": {
