@@ -72,7 +72,7 @@ if hash go 2>/dev/null; then
     export PATH
 fi
 
-if [ -d "${HOME}/.dotnet/tools" ] && [ ! -f /etc/paths.d/dotnet-cli-tools ]; then
+if [ -d "${HOME}/.dotnet/tools" ]; then
     export PATH="${PATH}:${HOME}/.dotnet/tools"
 fi
 
