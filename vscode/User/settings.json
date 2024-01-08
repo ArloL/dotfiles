@@ -1,6 +1,9 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"[markdown]": {
+		"editor.unicodeHighlight.ambiguousCharacters": false,
+		"editor.wrappingIndent": "same",
+		"editor.wordWrap": "bounded",
 		"files.trimTrailingWhitespace": false,
 	},
 	"[yaml]": {
