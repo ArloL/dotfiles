@@ -1,4 +1,10 @@
 on run argv
+	set terminalIsOpen to isAppRunning("Terminal")
+
+    if not terminalIsOpen then
+        return
+    end if
+
 	tell application "Terminal"
 		set target_tty to "not a tty"
 		set profile to "Basic"
@@ -24,3 +30,7 @@ on run argv
 		end repeat
 	end tell
 end run
+
+on isAppRunning(appName)
+    tell application "System Events" to (name of processes) contains appName
+end isAppRunning
