@@ -1,7 +1,10 @@
-# sudo tmutil addexclusion -p
-# or tmutil addexclusion
+# use sudo tmutil addexclusion -p for a path exclusion
+# that also shows up in System Settings
+# use tmutil addexclusion for a sticky exclusion
+# I currently use sudo
 /Applications
 /opt
+/usr/local/share/dotnet
 /Users/aokeeffe/.cache
 /Users/aokeeffe/.diffusionbee
 /Users/aokeeffe/.docker
@@ -11,11 +14,11 @@
 /Users/aokeeffe/.dotfiles/vscode/User/globalStorage
 /Users/aokeeffe/.gem
 /Users/aokeeffe/.gluon
-/Users/aokeeffe/.gradle
+#/Users/aokeeffe/.gradle
 /Users/aokeeffe/.lima
 /Users/aokeeffe/.local/share/containers/podman
-/Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.m2/repository
+/Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.npm/_cacache
 /Users/aokeeffe/.npm/_npx
 /Users/aokeeffe/.p2/pool
@@ -26,17 +29,16 @@
 /Users/aokeeffe/.yarn/berry/cache
 /Users/aokeeffe/Developer
 /Users/aokeeffe/Downloads
-/Users/aokeeffe/Library/Application Support/JetBrains/Toolbox/apps
 /Users/aokeeffe/Library/Application Support/Caches
 /Users/aokeeffe/Library/Application Support/Code/Cache
 /Users/aokeeffe/Library/Application Support/Code/CachedData
 /Users/aokeeffe/Library/Application Support/Code/CachedExtensionVSIXs
-/Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Code Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
-/Users/aokeeffe/Library/Containers/FB564D20-825F-4475-A727-7D1E8725A685
+/Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Containers/FB564D20-825F-4475-A727-7D1E8725A685
 /Users/aokeeffe/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite
 /Users/aokeeffe/Library/pnpm
 # already excluded by default
@@ -45,3 +47,9 @@
 /Users/aokeeffe/Library/Logs
 /Users/aokeeffe/Library/PersonalizationPortrait
 /Users/aokeeffe/Library/Suggestions
+# sub-directories are excluded by Arq
+/Library/Application Support/ArqAgentAPFS.noindex
+# necessary to ignore recursively checking the same directories again
+/System/Volumes/
+# necessary to ignore e.g. com.apple.TimeMachine.localsnapshots in ncdu
+/Volumes/
