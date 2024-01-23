@@ -5,7 +5,9 @@
 /Applications
 /opt
 /usr/local/share/dotnet
+/Users/aokeeffe/.android
 /Users/aokeeffe/.cache
+/Users/aokeeffe/.colima
 /Users/aokeeffe/.diffusionbee
 /Users/aokeeffe/.docker
 /Users/aokeeffe/.dotfiles/config/yarn
@@ -21,6 +23,7 @@
 /Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.npm/_cacache
 /Users/aokeeffe/.npm/_npx
+/Users/aokeeffe/.nuget
 /Users/aokeeffe/.ollama
 /Users/aokeeffe/.p2/pool
 /Users/aokeeffe/.rbenv
@@ -28,8 +31,10 @@
 /Users/aokeeffe/.vagrant.d/boxes
 /Users/aokeeffe/.vscode
 /Users/aokeeffe/.yarn/berry/cache
+/Users/aokeeffe/Applications
 /Users/aokeeffe/Developer
 /Users/aokeeffe/Downloads
+/Users/aokeeffe/Library/Android
 /Users/aokeeffe/Library/Application Support/Caches
 /Users/aokeeffe/Library/Application Support/Code/Cache
 /Users/aokeeffe/Library/Application Support/Code/CachedData
@@ -39,7 +44,9 @@
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
 /Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Containers/com.microsoft.teams2
 /Users/aokeeffe/Library/Containers/FB564D20-825F-4475-A727-7D1E8725A685
+/Users/aokeeffe/Library/Group Containers/UBF8T346G9.Office
 /Users/aokeeffe/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite
 /Users/aokeeffe/Library/pnpm
 # already excluded by default
