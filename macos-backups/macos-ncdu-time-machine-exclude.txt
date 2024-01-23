@@ -53,3 +53,5 @@
 /System/Volumes/
 # necessary to ignore e.g. com.apple.TimeMachine.localsnapshots in ncdu
 /Volumes/
+/Library
+/System/Library

@@ -4,4 +4,8 @@ set -o errexit
 set -o nounset
 set -o xtrace
 
-ncdu --exclude-from ~/.dotfiles/macos-backups/macos-ncdu-time-machine-exclude.txt /
+cd "$(dirname "$0")" || exit 1
+
+ncdu \
+    --exclude-from ./macos-ncdu-time-machine-exclude.txt \
+    /
