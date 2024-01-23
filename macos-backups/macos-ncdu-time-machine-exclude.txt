@@ -21,6 +21,7 @@
 /Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.npm/_cacache
 /Users/aokeeffe/.npm/_npx
+/Users/aokeeffe/.ollama
 /Users/aokeeffe/.p2/pool
 /Users/aokeeffe/.rbenv
 /Users/aokeeffe/.sdkman
@@ -47,11 +48,10 @@
 /Users/aokeeffe/Library/Logs
 /Users/aokeeffe/Library/PersonalizationPortrait
 /Users/aokeeffe/Library/Suggestions
+/System/Library
 # sub-directories are excluded by Arq
 /Library/Application Support/ArqAgentAPFS.noindex
 # necessary to ignore recursively checking the same directories again
 /System/Volumes/
 # necessary to ignore e.g. com.apple.TimeMachine.localsnapshots in ncdu
 /Volumes/
-/Library
-/System/Library
