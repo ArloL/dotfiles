@@ -25,6 +25,10 @@ if [ -d /Applications/Chromium.app ]; then
     xattr -d -r com.apple.quarantine /Applications/Chromium.app
 fi
 
+if [ -d /Library/Java/JavaVirtualMachines/graalvm-21.jdk ]; then
+    xattr -d -r com.apple.quarantine /Library/Java/JavaVirtualMachines/graalvm-21.jdk
+fi
+
 # gem
 if hash gem 2>/dev/null; then
     gem update
