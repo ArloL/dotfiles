@@ -44,9 +44,24 @@
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
 /Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService
+/Users/aokeeffe/Library/Containers/com.microsoft.errorreporting
+/Users/aokeeffe/Library/Containers/com.microsoft.Excel
+/Users/aokeeffe/Library/Containers/com.microsoft.netlib.shipassertprocess
+/Users/aokeeffe/Library/Containers/com.microsoft.Office365ServiceV2
+/Users/aokeeffe/Library/Containers/com.microsoft.onenote.mac
+/Users/aokeeffe/Library/Containers/com.microsoft.onenote.mac.shareextension
+/Users/aokeeffe/Library/Containers/com.microsoft.openxml.excel.app
+/Users/aokeeffe/Library/Containers/com.microsoft.Outlook
+/Users/aokeeffe/Library/Containers/com.microsoft.outlook.profilemanager
+/Users/aokeeffe/Library/Containers/com.microsoft.Powerpoint
 /Users/aokeeffe/Library/Containers/com.microsoft.teams2
+/Users/aokeeffe/Library/Containers/com.microsoft.Word
 /Users/aokeeffe/Library/Containers/FB564D20-825F-4475-A727-7D1E8725A685
+/Users/aokeeffe/Library/Group Containers/UBF8T346G9.ms
 /Users/aokeeffe/Library/Group Containers/UBF8T346G9.Office
+/Users/aokeeffe/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration
+/Users/aokeeffe/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost
 /Users/aokeeffe/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite
 /Users/aokeeffe/Library/pnpm
 # already excluded by default
