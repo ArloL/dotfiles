@@ -31,6 +31,7 @@
 /Users/aokeeffe/.vagrant.d/boxes
 /Users/aokeeffe/.vscode
 /Users/aokeeffe/.yarn/berry/cache
+/Users/aokeeffe/.sonar/cache
 /Users/aokeeffe/Applications
 /Users/aokeeffe/Developer
 /Users/aokeeffe/Downloads
