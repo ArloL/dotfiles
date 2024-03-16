@@ -53,4 +53,7 @@
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
 	"git.allowForcePush": true,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
 }
