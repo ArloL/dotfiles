@@ -89,3 +89,7 @@ fi
 if [ -d "${HOME}/Library/Application Support/JetBrains/Toolbox/scripts" ]; then
     export PATH="${PATH}:${HOME}/Library/Application Support/JetBrains/Toolbox/scripts"
 fi
+
+if [ -d "${HOME}/.docker/bin" ]; then
+    export PATH="${PATH}:${HOME}/.docker/bin"
+fi
