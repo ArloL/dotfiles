@@ -64,3 +64,5 @@ if [ -d "${HOME}/.sdkman" ]; then
 fi
 
 export GOPATH="${HOME}/Developer/go"
+
+. "${HOME}"/.config/shell/config.d/*.config
