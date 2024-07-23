@@ -11,6 +11,3 @@ end_of_line = crlf
 
 [*.sh]
 end_of_line = lf
-
-[.vscode/**.json]
-insert_final_newline = false
