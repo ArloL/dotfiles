@@ -16,6 +16,7 @@
 [alias]
 	adog = log --all --decorate --oneline --graph
     changes = log --patch --find-renames --follow --stat --
+    puschel = push --force-with-lease
 [help]
     autocorrect = 25
 [fetch]
