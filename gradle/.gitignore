@@ -6,5 +6,6 @@ jdks/
 kotlin-profile/
 native/
 notifications/
+workers/
 wrapper/
 android.lock
