@@ -1,11 +1,3 @@
-.tmp/
-android/
-caches/
-daemon/
-jdks/
-kotlin-profile/
-native/
-notifications/
-workers/
-wrapper/
-android.lock
+*
+!/.gitignore
+!/gradle.properties
