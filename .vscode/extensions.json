@@ -1,6 +1,6 @@
 {
     "recommendations": [
         "editorconfig.editorconfig",
-        "timonwong.shellcheck"
+        "timonwong.shellcheck",
     ],
 }
