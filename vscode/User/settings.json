@@ -19,7 +19,7 @@
 	"editor.unicodeHighlight.ambiguousCharacters": true,
 	"editor.wordWrap": "bounded",
 	"editor.wordWrapColumn": 80,
-	"editor.wrappingIndent": "indent",
+	"editor.wrappingIndent": "deepIndent",
 	"explorer.openEditors.visible": 0,
 	"files.autoSave": "afterDelay",
 	"files.insertFinalNewline": true,
