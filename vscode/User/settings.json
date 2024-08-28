@@ -30,6 +30,7 @@
 	"git.rebaseWhenSync": true,
 	"git.replaceTagsWhenPull": true,
 	"java.maven.downloadSources": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
 	"markdown.preview.fontSize": 16,
 	"markdown.styles": [
 		"https://arlol.github.io/markdown.css"
@@ -51,7 +52,6 @@
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"javascript.updateImportsOnFileMove.enabled": "always",
 	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
