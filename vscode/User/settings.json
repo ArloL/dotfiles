@@ -1,5 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
+	"[java]": {
+		"editor.foldingImportsByDefault": true,
+	},
 	"[markdown]": {
 		"editor.unicodeHighlight.ambiguousCharacters": false,
 		"editor.wrappingIndent": "same",
@@ -7,8 +10,8 @@
 		"files.trimTrailingWhitespace": false,
 	},
 	"[yaml]": {
-        "editor.autoIndent": "advanced"
-    },
+		"editor.autoIndent": "advanced"
+	},
 	"debug.console.fontSize": 16,
 	"diffEditor.renderSideBySide": false,
 	"editor.fontFamily": "Source Code Pro",
