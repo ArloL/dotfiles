@@ -24,6 +24,7 @@
 	"files.autoSave": "afterDelay",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
+	"git.allowForcePush": true,
 	"git.autofetch": true,
 	"git.confirmSync": false,
 	"git.rebaseWhenSync": true,
@@ -52,7 +53,6 @@
 	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
-	"git.allowForcePush": true,
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
