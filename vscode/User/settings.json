@@ -35,6 +35,7 @@
 		"https://arlol.github.io/markdown.css"
 	],
 	"powershell.integratedConsole.showOnStartup": false,
+	"redhat.telemetry.enabled": false,
 	"scm.showHistoryGraph": false,
 	"search.exclude": {
 		"**/.yarn": true
@@ -50,7 +51,6 @@
 	"workbench.colorTheme": "Solarized Light",
 	"workbench.startupEditor": "newUntitledFile",
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"redhat.telemetry.enabled": false,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
