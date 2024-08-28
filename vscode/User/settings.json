@@ -48,13 +48,13 @@
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.scrollback": 10000,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"window.autoDetectColorScheme": true,
 	"window.restoreWindows": "none",
 	"workbench.colorTheme": "Solarized Light",
-	"workbench.startupEditor": "newUntitledFile",
-	"workbench.settings.enableNaturalLanguageSearch": false,
-	"window.autoDetectColorScheme": true,
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"workbench.startupEditor": "newUntitledFile",
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
