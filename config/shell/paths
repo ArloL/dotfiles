@@ -93,3 +93,7 @@ fi
 if [ -d "${HOME}/.docker/bin" ]; then
     export PATH="${PATH}:${HOME}/.docker/bin"
 fi
+
+if [ -d "/Applications/Xcode.app/Contents/Developer/usr/bin" ]; then
+    export PATH="${PATH}:/Applications/Xcode.app/Contents/Developer/usr/bin"
+fi
