@@ -46,6 +46,7 @@
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
 /Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Containers/com.docker.docker/Data/vms/0/data
 /Users/aokeeffe/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService
 /Users/aokeeffe/Library/Containers/com.microsoft.errorreporting
 /Users/aokeeffe/Library/Containers/com.microsoft.Excel
@@ -79,3 +80,4 @@
 /System/Volumes/
 # necessary to ignore e.g. com.apple.TimeMachine.localsnapshots in ncdu
 /Volumes/
+
