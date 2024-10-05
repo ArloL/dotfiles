@@ -8,4 +8,4 @@ cd "$(dirname "$0")" || exit 1
 
 ncdu \
     --exclude-from ./macos-ncdu-time-machine-exclude.txt \
-    /
+    /Users
