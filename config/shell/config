@@ -63,6 +63,11 @@ if [ -d "${HOME}/.sdkman" ]; then
     [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
+# Load Angular CLI autocompletion.
+if hash ng 2>/dev/null; then
+    . <(ng completion script)
+fi
+
 export GOPATH="${HOME}/Developer/go"
 
 . "${HOME}"/.config/shell/config.d/*.config
