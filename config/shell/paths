@@ -97,3 +97,7 @@ fi
 if [ -d "/Applications/Xcode.app/Contents/Developer/usr/bin" ]; then
     export PATH="${PATH}:/Applications/Xcode.app/Contents/Developer/usr/bin"
 fi
+
+if [ -d "${HOME}/.rd/bin" ]; then
+    export PATH="${PATH}:${HOME}/.rd/bin"
+fi
