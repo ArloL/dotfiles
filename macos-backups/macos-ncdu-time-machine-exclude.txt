@@ -44,6 +44,7 @@
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Code Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
+/Users/aokeeffe/Library/Application Support/rancher-desktop/lima
 /Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
 /Users/aokeeffe/Library/Containers/com.docker.docker/Data/vms/0/data
@@ -80,4 +81,3 @@
 /System/Volumes/
 # necessary to ignore e.g. com.apple.TimeMachine.localsnapshots in ncdu
 /Volumes/
-
