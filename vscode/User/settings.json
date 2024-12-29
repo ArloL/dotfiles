@@ -64,4 +64,5 @@
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
+	"chat.commandCenter.enabled": false,
 }
