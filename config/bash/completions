@@ -1,20 +1,24 @@
+#!/bin/sh
+
 # MacPorts bash-completion
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-    source /opt/local/etc/profile.d/bash_completion.sh
+    . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
 # Homebrew bash-completion
 if hash brew 2>/dev/null; then
     brewPrefix=$(brew --prefix)
     if [ -f "${brewPrefix}/etc/bash_completion" ]; then
-        source "${brewPrefix}/etc/bash_completion"
+        . "${brewPrefix}/etc/bash_completion"
     fi
 fi
 
 if [ -f ~/.rbenv/completions/rbenv.bash ]; then
-    source ~/.rbenv/completions/rbenv.bash
+    . ~/.rbenv/completions/rbenv.bash
 fi
 
 if hash bazel 2>/dev/null; then
-    source "$XDG_CONFIG_HOME/bash/completions.d/bazel-complete.bash"
+    . "$XDG_CONFIG_HOME/bash/completions.d/bazel-complete.bash"
 fi
+
+. "$XDG_CONFIG_HOME/shell/completions"

@@ -1,0 +1,4 @@
+# Load Angular CLI autocompletion.
+if hash ng 2>/dev/null; then
+    . <(ng completion script)
+fi

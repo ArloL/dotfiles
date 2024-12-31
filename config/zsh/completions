@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Initialize the completion system
+autoload -U +X compinit
+compinit
+
+. "$XDG_CONFIG_HOME/shell/completions"
