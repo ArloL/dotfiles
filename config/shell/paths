@@ -35,7 +35,9 @@ if [ -d /opt/local ]; then
 fi
 
 # rbenv
-eval "$(rbenv init -)"
+if hash rbenv 2>/dev/null; then
+    eval "$(rbenv init -)"
+fi
 
 if [ -d "${HOME}/bin" ]; then
     export PATH="${PATH}:${HOME}/bin"
