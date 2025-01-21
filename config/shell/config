@@ -35,7 +35,7 @@ fi
 export HOMEBREW_NO_ANALYTICS=1
 
 # macOS JAVA_HOME
-if [ -f "/usr/libexec/java_home" ]; then
+if [ -f "/usr/libexec/java_home" ] && [ -z "${JAVA_HOME+x}" ]; then
     JAVA_HOME=$(/usr/libexec/java_home)
     export JAVA_HOME
 fi
