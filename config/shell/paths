@@ -107,7 +107,3 @@ fi
 if [ -d "${HOME}/.rd/bin" ]; then
     export PATH="${PATH}:${HOME}/.rd/bin"
 fi
-
-if hash mise 2>/dev/null; then
-    eval "$(mise activate)"
-fi

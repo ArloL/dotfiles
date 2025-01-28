@@ -1,1 +1,9 @@
 source "$XDG_CONFIG_HOME/shell/paths"
+
+if hash mise 2>/dev/null; then
+    if [ -n "$PS1" ]; then
+        eval "$(mise activate bash)"
+    else
+        eval "$(mise activate bash --shims)"
+    fi
+fi
