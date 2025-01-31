@@ -72,3 +72,6 @@ ehthumbs_vista.db
 $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux
+
+# https://mise.jdx.dev/
+mise.local.toml
