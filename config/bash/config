@@ -1,14 +1,16 @@
+#!/bin/bash
+
 source "$XDG_CONFIG_HOME/shell/config"
 
 #[ArloLOK@arlos-mbp ~]
-#$ 
+#$
 #instead of
 #arlos-mbp:~ ArloLOK$
 export PS1="[\u@\h \w]\n$ "
 
 # Change Terminal title to
 # ArloLOK@arlos-mbp ~
-export PS1="\e]0;\u@\h \w\a${PS1}"
+export PS1="\[\e]0;\u@\h \w\a${PS1}\]"
 
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="ls:exit:pwd:cls:clear"
