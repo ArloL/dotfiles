@@ -57,3 +57,5 @@ fi
 if [ -d "${HOME}/.dotfiles" ]; then
     alias dotfiles='edit "${HOME}/.dotfiles"'
 fi
+
+alias dcup="docker compose up --detach && docker compose logs --follow"
