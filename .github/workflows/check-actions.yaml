@@ -1,14 +1,10 @@
-name: Chores
+name: Check actions
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
-    types:
-    - chores
+  push:
   schedule:
-  - cron: '39 11 2 * *'
+  - cron: '40 22 10 * *'
 permissions: {}
-concurrency: chores
 
 jobs:
   debug:
@@ -40,26 +36,33 @@ jobs:
       run: echo "$MATRIX_CONTEXT"
     - name: Dump environment variables
       run: set
-  chores:
-    name: Chores
+  actionlint:
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
-      contents: write
-      pull-requests: write
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@v4.2.2
       with:
         persist-credentials: false
-    - name: Chores
+    - name: run actionlint
       run: |
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ArloL/chorito/HEAD/run-latest.sh)"
-        git diff
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v7.0.7
+        bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+        ./actionlint
+  zizmor:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+    - uses: actions/checkout@v4.2.2
       with:
-        commit-message: "chore: automated changes by chorito"
-        branch: "chorito/patch"
-        title: "chore: automated changes by chorito"
-        body: "Automated changes by [chorito](https://github.com/ArloL/chorito)"
+        persist-credentials: false
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v5
+    - name: Run zizmor 🌈
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        uvx zizmor --format sarif . > results.sarif
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: results.sarif
+        category: zizmor
