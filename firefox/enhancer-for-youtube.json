@@ -69,7 +69,7 @@
         "newestcomments": false,
         "overridespeeds": false,
         "pauseforegroundtab": false,
-        "pausevideos": true,
+        "pausevideos": false,
         "popuplayersize": "640x360",
         "qualityembeds": "medium",
         "qualityembedsfullscreen": "hd1080",
