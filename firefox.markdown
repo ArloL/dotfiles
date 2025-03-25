@@ -38,15 +38,13 @@
 
 # Enhancer for YouTube
 
-* Try importing `firefox-youtube-enhancer.json`
+* Try importing `firefox/enhancer-for-youtube.json`
 * Theme
     * Dark Theme: enabled
 * Video player
     * Controls
         * Only Loop
-    *  Place controls within the video player 
-    * Ads Management
-        * Block ads: disabled
+    * Place controls within the video player 
     * Playback speed
         * Override default playback speeds: disabled
         * Control the playback speed with the mouse wheel when the mouse cursor is over the video player and the “Control” key (Ctrl) is pressed: disabled
@@ -64,5 +62,6 @@
     * Hide chat: enabled
     * Hide related videos: enabled
     * Hide Shorts: enabled
+    * Convert Shorts: enabled
 * Cinema mode
     * Automatically expand or shrink the video player when the cinema mode is toggled: disabled
