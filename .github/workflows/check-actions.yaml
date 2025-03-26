@@ -38,6 +38,8 @@ jobs:
       run: set
   actionlint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
     - uses: actions/checkout@v4.2.2
       with:
@@ -49,6 +51,8 @@ jobs:
   zizmor:
     runs-on: ubuntu-latest
     permissions:
+      actions: read
+      contents: read
       security-events: write
     steps:
     - uses: actions/checkout@v4.2.2
