@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1743026130562,
+  "date": 1743338840426,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -103,7 +103,46 @@
       "addons.mozilla.org"
     ],
     "cookies": {
-      "domain": {}
+      "domain": {
+        "*.youtube.com": [
+          {
+            "domain": ".youtube.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "PREF",
+            "path": "/",
+            "sameSite": "",
+            "secure": "true",
+            "url": "https://www.youtube.com/",
+            "value": "tz=Europe.Berlin&f4=4000000&f7=100&f5=30000&f6=400"
+          },
+          {
+            "domain": ".youtube.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "",
+            "name": "wide",
+            "path": "/",
+            "sameSite": "no_restriction",
+            "secure": "false",
+            "url": "https://www.youtube.com/",
+            "value": "1"
+          },
+          {
+            "domain": ".youtube.com",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "false",
+            "name": "SOCS",
+            "path": "/",
+            "sameSite": "lax",
+            "secure": "",
+            "url": "https://www.youtube.com/",
+            "value": "CAESEwgDEgk3NDA5ODczMTEaAmVuIAEaBgiAk6K_Bg"
+          }
+        ]
+      }
     },
     "scripts": {
       "active": false,
