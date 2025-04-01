@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1743338840426,
+  "date": 1743497658368,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -15,7 +15,7 @@
       "icon": "circle",
       "iconRandom": false,
       "iconRandomExcluded": [],
-      "numberMode": "keep",
+      "numberMode": "reuse",
       "removal": 900000
     },
     "iconColor": "default",
@@ -40,13 +40,39 @@
           }
         },
         "excluded": {
-          "login.microsoftonline.com": {}
+          "login.microsoftonline.com": {},
+          "secure.kps-payment.de": {}
         },
         "excludedContainers": []
       },
       "domain": [
         {
           "pattern": "login.microsoftonline.com",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*": {}
+          }
+        },
+        {
+          "pattern": "secure.kps-payment.de",
           "always": {
             "action": "disabled",
             "allowedInPermanent": false,
@@ -140,6 +166,20 @@
             "secure": "",
             "url": "https://www.youtube.com/",
             "value": "CAESEwgDEgk3NDA5ODczMTEaAmVuIAEaBgiAk6K_Bg"
+          }
+        ],
+        "*.woki.de": [
+          {
+            "domain": "www.woki.de",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "false",
+            "name": "klaro",
+            "path": "/",
+            "sameSite": "lax",
+            "secure": "false",
+            "url": "https://www.woki.de/",
+            "value": "%7B%22cpConfig%22%3Atrue%2C%22basicCookie%22%3Atrue%2C%22cpIt%22%3Atrue%2C%22scrollContent%22%3Atrue%2C%22klaro%22%3Atrue%2C%22youtube%22%3Afalse%2C%22googleMaps%22%3Afalse%2C%22googleRecaptcha%22%3Afalse%2C%22googleAnalytics%22%3Afalse%7D"
           }
         ]
       }
