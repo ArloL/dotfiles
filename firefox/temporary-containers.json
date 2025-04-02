@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1743497658368,
+  "date": 1743603819745,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -41,7 +41,8 @@
         },
         "excluded": {
           "login.microsoftonline.com": {},
-          "secure.kps-payment.de": {}
+          "secure.kps-payment.de": {},
+          "*.login.microsoftonline.com": {}
         },
         "excludedContainers": []
       },
@@ -73,6 +74,31 @@
         },
         {
           "pattern": "secure.kps-payment.de",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*": {}
+          }
+        },
+        {
+          "pattern": "*.login.microsoftonline.com",
           "always": {
             "action": "disabled",
             "allowedInPermanent": false,
