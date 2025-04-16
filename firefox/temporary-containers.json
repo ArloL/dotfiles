@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1743603819745,
+  "date": 1744798760866,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -211,8 +211,15 @@
       }
     },
     "scripts": {
-      "active": false,
-      "domain": {}
+      "active": true,
+      "domain": {
+        "www.kraftfuttermischwerk.de": [
+          {
+            "code": "localStorage.setItem('jetpack_post_subscribe_modal_dismissed', Date.now().toString());",
+            "runAt": "document_start"
+          }
+        ]
+      }
     },
     "deletesHistory": {
       "active": false,
