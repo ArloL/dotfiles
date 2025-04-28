@@ -87,6 +87,7 @@ setupBin() {
     local binfiles=("update-everything" "base64-encode-stdin.sh" "yarn-link")
 
     mkdir -p "${HOME}/bin"
+    chflags hidden "${HOME}/bin"
 
     # setup symlinks in homedir/bin
     createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
