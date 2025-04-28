@@ -1,16 +1,12 @@
 # Firefox Setup
 
 * Sign in to Sync
-* Settings/Preferences
+* Preferences
     * Search
         * Default Search Engine: DuckDuckGo
 * Pin everything except BitWarden to the Overflow menu
 * Customize Toolbar
     * Add "Email link" between Downloads and Bitwarden
-
-#   about:config
-
-*   browser.backspace_action: 2
 
 # Temporary Containers
 
@@ -19,7 +15,7 @@
 
 # Firefox Multi-Account Containers
 
-* 
+* Sign in to sync
 
 # uBlock Origin
 
@@ -39,17 +35,15 @@
 # Enhancer for YouTube
 
 * Try importing `firefox/enhancer-for-youtube.json`
-* Theme
-    * Dark Theme: enabled
 * Video player
     * Controls
-        * Only Loop
+        * Only: Loop
     * Place controls within the video player 
     * Playback speed
         * Override default playback speeds: disabled
         * Control the playback speed with the mouse wheel when the mouse cursor is over the video player and the “Control” key (Ctrl) is pressed: disabled
     * Autoplay
-        * Disable autplay: enabled
+        * Disable autoplay: enabled
         * Prevent videos loaded in background tabs from automatically playing: enabled
         * Pause videos playing in background tabs when a video starts playing in the foreground tab: disabled
     * Mini player
@@ -57,7 +51,7 @@
     * Appearance
         * Automatically hide info cards and end screens: enabled
 * Appearance
-    * Automatically enable YouTube's “Theater mode”: enabled
+    * Automatically enable YouTube's “Theater mode”: disabled
     * Hide comments: enabled
     * Hide chat: enabled
     * Hide related videos: enabled
