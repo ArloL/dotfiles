@@ -29,6 +29,7 @@
             * Bottom Right: Disabled
             * Bottom Left: Disabled
     * Displays
+        * Automaticall adjust brightness: disabled
         * Night Shift
             * Schedule: From 18:00 to 08:00
             * Color temperatur: More Warm
