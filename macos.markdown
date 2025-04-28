@@ -125,6 +125,7 @@
 * Visual Studio Code
     * `brew install visual-studio-code`
     * `~/.dotfiles/install-macos.sh`
+    * `code --install-extension morrislaptop.vscode-open-in-sourcetree`
 * Firefox
     * `brew install firefox`
     * see firefox.markdown
@@ -141,41 +142,19 @@
         * Advanced Settings
             * Scripting BTT
                 * Allow external BetterTouchTool Scripting: disabled
-* Inkscape
-    * `brew install inkscape`
-* Tunnelblick
-    * `brew install tunnelblick`
-    * Open
-    * …
-* DBeaver
-    * `brew install dbeaver-community`
-* KeePassXC
-    * `brew install keepassxc`
 * Arq
     * `brew install arq`
-    * Open
     *   …
-* Drawio
-    * `brew install drawio`
-* Keka
-    * `brew install keka`
 * Signal
     * `brew install signal`
     * Open
     * Link with Phone
-* Chromium
-    * `brew install chromium`
 * SourceTree
     * `brew install sourcetree`
-* Coconut Battery
-    * `brew install coconutbattery`
 * VLC
     * `brew install vlc`
 * Disk Inventory X
     * `brew install disk-inventory-x`
-* Hidden Bar
-    * `brew install hiddenbar`
-    *  Open
 * KeepingYouAwake
     * `brew install keepingyouawake`
     * Open
@@ -192,35 +171,22 @@
             * Allow the display to sleep: enabled
 * LibreOffice
     * `brew install libreoffice`
-* Skype
-    * `brew install skype`
 * The Unarchiver
     * `brew install the-unarchiver`
     * Archive Formats
         * Select all
     * Extraction
         * Move the archive to the trash: enabled
-* Microsoft Teams
-    * Try Screen Share
-        * System Preferences
-            * Security & Privacy
-                * Screen Recording
-                    * Microsoft Teams: enabled
-* rbenv
-    * `brew install rbenv`
-    * `rbenv install ${version}`
-    * `rbenv global ${version}`
-    * `reload`
-    * `gem install bundler`
+* mise
+    * `brew install mise`
 * Java Development?
     * `brew install maven openjdk`
+    * `mise use -g java@temurin-21`
+    * `sudo mkdir /Library/Java/JavaVirtualMachines/temurin-21`
+    * `sudo ln -s ~/.local/share/mise/installs/java/temurin-21/Contents /Library/Java/JavaVirtualMachines/temurin-21/Contents`
+    * `sudo mkdir /Library/Java/JavaVirtualMachines/temurin-latest`
+    * `sudo ln -s ~/.local/share/mise/installs/java/temurin-latest/Contents /Library/Java/JavaVirtualMachines/temurin-latest/Contents`
 * JavaScript Development?
-    * `brew install nodejs yarn`
-* Android SDK
-    * `brew cask install android-sdk`
-    * `brew cask install android-ndk`
-    * `brew cask install intel-haxm`
-    * `sdkmanager`
-        * if error: `mkdir -p .android && touch ~/.android/repositories.cfg`
-    * `sdkmanager "build-tools;28.0.3" "emulator" "patcher;v4" "platform-tools" "platforms;android-28" "tools" "extras;intel;Hardware_Accelerated_Execution_Manager"`
+    * `brew install yarn`
+    * `mise use --global node@22`
 * `update-everything`
