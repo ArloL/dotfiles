@@ -82,45 +82,48 @@
     * Change display to columns for all favorites
     * View
         * Show Status Bar
+* Mail
+    * Settings…
+        * Accounts
+            * iCloud
+                * Mailbox Behaviours
+                    * Erase deleted messages: never
+            * +
+                * Email Address: starlord@k5d.de
+                * User Name: starlord@k5d.de
+                * Password: …
+                * Account Type: IMAP
+                * Incoming Mail Server: …
+                * Outgoing Mail Server: …
+            * K5D
+                * Mailbox Behaviours
+                    * Erase deleted messages: never
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
+    * Download `Solarized Light.terminal`
 * Terminal
-    * Settings/Preferences
+    * Settings…
         * New tabs open with: Default Profile
         * Profiles
-            * Solarized Light as Default
+            * … -> Import -> `Solarized Light.terminal`
+            * Solarized Light -> Default
 * Touch ID for sudo
     * `sudo nano /etc/pam.d/sudo`
     * `auth sufficient pam_tid.so`
-* Xcode
 * `sudo hostname -s ${name}`
-* `git config --global credential.helper osxkeychain`
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * `~/.dotfiles/install-macos.sh`
 * `git push` to setup github credentials
-* Mail
-    * Settings/Preferences
-        * iCloud
-            * Mailbox Behaviours
-                * Erase deleted messages: never
-        * K5D
-            * Mailbox Behaviours
-                * Erase deleted messages: never
 * Homebrew
     * https://brew.sh/
-    * El Capitan
-        * `brew install git`
-    * Older
-        * `brew install ssh-copy-id`
 * Source Code Pro
-    * `brew install homebrew/cask-fonts/font-source-code-pro`
+    * `brew install --cask font-source-code-pro`
     * Terminal
-        * Settings/Preferences
+        * Settings…
             * Profiles
                 * All
                     * Text: Source Code Pro 16pt
 * Visual Studio Code
     * `brew install visual-studio-code`
-    * `code`
     * `~/.dotfiles/install-macos.sh`
 * Firefox
     * `brew install firefox`
