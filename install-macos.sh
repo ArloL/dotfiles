@@ -104,7 +104,7 @@ setupVSCode() {
     # the folders to symlink for visual studio code
     local vsCodeFolders=("User")
 
-    if [ -d "${vsCodeDir}" ]; then
+    if [ -d "/Applications/Visual Studio Code.app" ]; then
         # setup symlinks for visual studio code
         createSymlinks "${scriptPath}/vscode" "${vsCodeDir}" "${backupDir}" 0 vsCodeFolders[@]
     fi
