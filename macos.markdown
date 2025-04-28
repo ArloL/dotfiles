@@ -1,61 +1,55 @@
 # macOS Setup
 
 * System Update
-    * El Capitan: App Store...
-    * Others: System Preferences -> Software Update
+    * System Settings… -> General -> Software Update
 * Safari
-    * Settings/Preferences
+    * Settings…
         * Search
             * Search engine: DuckDuckGo
-* System Settings/Preferences
+* System Settings…
     * General
+        * About
+            * Name: Arlos Mac %YY%MM
+        * Language & Region
+            * English as Primary
+            * Region: Germany
+        * Sharing
+            * Local hostname: Arlos-Mac-%YY%MM
+    * Accessibility
+        * Zoom
+            * Use scroll gesture with modifier keys to zoom: enabled
+    * Appearance
         * Appearance: Auto
-        * Older: Use dark menu bar and Dock: enabled
-        * AirDrop & Handoff
-            * Allow Handoff between this Mac and your iCloud devices: disabled
-    * Desktop & Screen Saver
-        * Screen Saver
-            * Show screen saver after: 2 Minutes
-            * Flurry
-                * Options
-                    * Colour: Slow cycle
-                    * Streams: A little more than few
-                    * Thickness: Thin
-                    * Speed: Slow
-    * Dock & Menu Bar
+    * Desktop & Dock
         * Automatically hide and show the Dock: enabled
-        * Show recent applications in Dock: disabled
-    * Mission Control
+        * Show suggested and recent applications in Dock: disabled
         * Hot Corners…
             * Top Left: Start Screen Saver
             * Top Right: Mission Control
-    * Language & Region
-        * English as Primary
-        * Region: Germany
-    * Accessibility
-        * Zoom
-            * Enable Use scroll gesture with modifier keys to zoom
-    * El Capitan: Keyboard
-        * Shortcuts
-            * App Shortcuts
-                * Terminal
-                    * Show Previous Tab: Control+Shift+Tab
-                    * Show Next Tab: Control+Tab
+            * Bottom Right: Disabled
+            * Bottom Left: Disabled
+    * Displays
+        * Night Shift
+            * Schedule: From 18:00 to 08:00
+            * Color temperatur: More Warm
+    * Screen Saver
+        * Flurry
+            * Options
+                * Colour: Slow cycle
+                * Streams: A little more than few
+                * Thickness: Thin
+                * Speed: Slow
+    * Lock Screen
+        * Start Screen Saver when inactive: For 2 minutes
     * Keyboard
-        * Modifier Keys…
-            * Caps Lock Key: Escape
+        * Keyboard Shortcuts
+            * Modifier Keys
+                * Caps Lock key: Escape
     * Trackpad
         * Point & Click
             * Tap to click: enabled
         * More Gestures
-            * Swipe between full-screen apps: with four fingers
-    * Displays
-        * Night Shift
-            * From 18:00 to 8:00
-            * More Warm
-    * Sharing
-        * Set Computer Name
-        * edit local hostname
+            * Swipe between full-screen applications: with four fingers
     * Time Machine
         * Options…
             * ~/.cache
@@ -77,13 +71,13 @@
 * Dock
     * add Applications List
     * add Import to iTunes
-    * remove everything except Safari, Mail, iTunes, Calendar & Notes
+    * remove everything except Safari, Mail, Music, Calendar & Notes
 * Finder
-    * Preferences
+    * Settings…
         * General
             * New Finder windows show: ${HOME}
         * Sidebar
-            * Disable: All My Files, iCloud Drive, AirDrop, Shared and Tags
+            * Disable: Recent tags
             * Enable: ${HOME}
     * Change display to columns for all favorites
     * View
@@ -111,20 +105,12 @@
         * K5D
             * Mailbox Behaviours
                 * Erase deleted messages: never
-* El Capitan: Add "USERTrust RSA Certification Authority" root certificate
-* MacPorts
-    * https://www.macports.org/
-    * `sudo port install nnn p7zip watch wget coreutils findutils mpstats`
 * Homebrew
     * https://brew.sh/
     * El Capitan
         * `brew install git`
     * Older
         * `brew install ssh-copy-id`
-* No Night Shift?
-    * `brew install homebrew/cask/flux`
-    * Sunset: Tungsten
-    * Bedtime: Candle
 * Source Code Pro
     * `brew install homebrew/cask-fonts/font-source-code-pro`
     * Terminal
