@@ -99,6 +99,10 @@
             * K5D
                 * Mailbox Behaviours
                     * Erase deleted messages: never
+* Calendar
+    * Settings…
+        * Advanced
+            * Show week numbers: enabled
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
     * Download `Solarized Light.terminal`
 * Terminal
