@@ -184,6 +184,7 @@
         * Move the archive to the trash: enabled
 * mise
     * `brew install mise`
+    * `ln -s ~/.local/share/mise ~/.asdf`
 * Java Development?
     * `brew install maven openjdk`
     * `mise use -g java@temurin-21`
