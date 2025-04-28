@@ -92,42 +92,6 @@ setupBin() {
     createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
 }
 
-setupSublime() {
-    local scriptPath
-    scriptPath=$( cd "$( dirname "$0" )" && pwd )
-
-    local sublimeDir="${HOME}/Library/Application Support/Sublime Text 3/Packages"
-
-    # backup directory
-    local backupDir="${sublimeDir}/dotfiles_backup"
-
-    # the folders to symlink for Sublime
-    local sublimeFolders=("User" "User (OS Settings)")
-
-    if [ -d "${sublimeDir}" ]; then
-        # setup symlinks for sublime
-        createSymlinks "${scriptPath}/sublime" "${sublimeDir}" "${backupDir}" 0 sublimeFolders[@]
-    fi
-}
-
-setupAtom() {
-    local scriptPath
-    scriptPath=$( cd "$( dirname "$0" )" && pwd )
-
-    local atomDir="${HOME}/.atom"
-
-    # backup directory
-    local backupDir="${HOME}/dotfiles_backup"
-
-    # list of files/folders to symlink in homedir/.atom
-    local atomFiles=("config.cson" "init.coffee" "keymap.cson" "snippets.cson" "styles.less")
-
-    if [ -d "${atomDir}" ]; then
-        # setup symlinks for atom
-        createSymlinks "${scriptPath}/atom" "${atomDir}" "${backupDir}" 0 atomFiles[@]
-    fi
-}
-
 setupVSCode() {
     local scriptPath
     scriptPath=$( cd "$( dirname "$0" )" && pwd )
@@ -159,14 +123,12 @@ setupSdkman() {
     local sdkmanFolders=("etc")
 
     if [ -d "${sdkmanDir}" ]; then
-        # setup symlinks for visual studio code
+        # setup symlinks for sdkman
         createSymlinks "${scriptPath}/sdkman" "${sdkmanDir}" "${backupDir}" 0 sdkmanFolders[@]
     fi
 }
 
 setupHome
 setupBin
-setupSublime
-setupAtom
 setupVSCode
 setupSdkman
