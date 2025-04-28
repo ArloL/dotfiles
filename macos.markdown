@@ -159,9 +159,9 @@
 * KeepingYouAwake
     * `brew install keepingyouawake`
     * Open
-    * Preferences
+    * Settings…
         * General
-            * Start at Login: disabled
+            * Activate on Launch: enabled
         * Activation Duration
             * 5 hours
             * Set Default
