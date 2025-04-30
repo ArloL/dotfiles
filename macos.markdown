@@ -26,6 +26,7 @@
     * Desktop & Dock
         * Automatically hide and show the Dock: enabled
         * Show suggested and recent applications in Dock: disabled
+        * Tiled windows have margins: disabled
         * Hot Corners…
             * Top Left: Start Screen Saver
             * Top Right: Mission Control
