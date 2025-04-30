@@ -42,6 +42,7 @@
                 * Speed: Slow
     * Lock Screen
         * Start Screen Saver when inactive: For 2 minutes
+        * Require password after screen saver begins or display is turned off: Immediately
     * Keyboard
         * Keyboard Shortcuts
             * Modifier Keys
