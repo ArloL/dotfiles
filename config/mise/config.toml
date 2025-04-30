@@ -1,0 +1,7 @@
+[tools]
+java = "temurin"
+node = "lts"
+ruby = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["java", "ruby", "node", "python"]
