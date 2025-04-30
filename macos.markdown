@@ -20,6 +20,9 @@
             * Use scroll gesture with modifier keys to zoom: enabled
     * Appearance
         * Appearance: Auto
+    * Control Center
+        * Now Playing: Don't Show in Menu Bar
+        * Spotlight: Don't Show in Menu Bar
     * Desktop & Dock
         * Automatically hide and show the Dock: enabled
         * Show suggested and recent applications in Dock: disabled
