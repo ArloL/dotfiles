@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1744798760866,
+  "date": 1746196736000,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -42,7 +42,8 @@
         "excluded": {
           "login.microsoftonline.com": {},
           "secure.kps-payment.de": {},
-          "*.login.microsoftonline.com": {}
+          "*.login.microsoftonline.com": {},
+          "id.bund.de": {}
         },
         "excludedContainers": []
       },
@@ -55,7 +56,7 @@
             "allowedInTemporary": false
           },
           "navigation": {
-            "action": "global"
+            "action": "never"
           },
           "mouseClick": {
             "middle": {
@@ -68,9 +69,7 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "*": {}
-          }
+          "excluded": {}
         },
         {
           "pattern": "secure.kps-payment.de",
@@ -80,7 +79,7 @@
             "allowedInTemporary": false
           },
           "navigation": {
-            "action": "global"
+            "action": "never"
           },
           "mouseClick": {
             "middle": {
@@ -93,9 +92,7 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "*": {}
-          }
+          "excluded": {}
         },
         {
           "pattern": "*.login.microsoftonline.com",
@@ -105,7 +102,7 @@
             "allowedInTemporary": false
           },
           "navigation": {
-            "action": "global"
+            "action": "never"
           },
           "mouseClick": {
             "middle": {
@@ -118,9 +115,53 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "*": {}
-          }
+          "excluded": {}
+        },
+        {
+          "pattern": "id.bund.de",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "never"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        },
+        {
+          "pattern": "/^moz-extension:\\/\\/[a-z0-9-]+\\/delayed\\.html.*/",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "never"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
         }
       ],
       "mac": {
@@ -152,7 +193,8 @@
     },
     "ignoreRequests": [
       "getpocket.com",
-      "addons.mozilla.org"
+      "addons.mozilla.org",
+      "5b5e5f00-cdba-421c-b4ea-ff77c9132c48"
     ],
     "cookies": {
       "domain": {
