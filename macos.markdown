@@ -7,6 +7,9 @@
         * Search
             * Search engine: DuckDuckGo
 * System Settings…
+    * Battery
+        * Options…
+            * Slightly dim the display on battery: disabled
     * General
         * About
             * Name: Arlos Mac %YY%MM
