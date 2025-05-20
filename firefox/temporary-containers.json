@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1746196736000,
+  "date": 1747750494304,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -43,7 +43,8 @@
           "login.microsoftonline.com": {},
           "secure.kps-payment.de": {},
           "*.login.microsoftonline.com": {},
-          "id.bund.de": {}
+          "id.bund.de": {},
+          "threedssvc.pay1.de": {}
         },
         "excludedContainers": []
       },
@@ -142,6 +143,29 @@
         },
         {
           "pattern": "/^moz-extension:\\/\\/[a-z0-9-]+\\/delayed\\.html.*/",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "never"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {}
+        },
+        {
+          "pattern": "threedssvc.pay1.de",
           "always": {
             "action": "disabled",
             "allowedInPermanent": false,
