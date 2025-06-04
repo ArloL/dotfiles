@@ -41,7 +41,7 @@ jobs:
     permissions:
       contents: read
     steps:
-    - uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       with:
         persist-credentials: false
     - name: run actionlint
@@ -55,18 +55,18 @@ jobs:
       contents: read
       security-events: write
     steps:
-    - uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       with:
         persist-credentials: false
     - name: Install the latest version of uv
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5.4.2
     - name: Run zizmor 🌈
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         uvx zizmor --format sarif . > results.sarif
     - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v3
+      uses: github/codeql-action/upload-sarif@fca7ace96b7d713c7035871441bd52efbe39e27e # v3.28.19
       with:
         sarif_file: results.sarif
         category: zizmor
