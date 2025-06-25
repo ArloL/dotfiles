@@ -11,13 +11,9 @@
         * Options…
             * Slightly dim the display on battery: disabled
     * General
-        * About
-            * Name: Arlos Mac %YY%MM
         * Language & Region
             * English as Primary
             * Region: Germany
-        * Sharing
-            * Local hostname: Arlos-Mac-%YY%MM
     * Accessibility
         * Zoom
             * Use scroll gesture with modifier keys to zoom: enabled
@@ -122,7 +118,14 @@
 * Touch ID for sudo
     * `sudo nano /etc/pam.d/sudo`
     * `auth sufficient pam_tid.so`
-* `sudo hostname -s ${name}`
+* Hostname
+    * ```
+        yearmonth=$(date +"%y%m")
+        sudo hostname -s "Arlos-Mac-${yearmonth}"
+        sudo scutil --set HostName "Arlos-Mac-${yearmonth}"
+        sudo scutil --set ComputerName "Arlos Mac ${yearmonth}"
+        sudo scutil --set LocalHostName "Arlos-Mac-${yearmonth}"
+      ```
 * `git clone https://github.com/ArloL/dotfiles.git ~/.dotfiles`
 * `~/.dotfiles/install-macos.sh`
 * `git push` to setup github credentials
