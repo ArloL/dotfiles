@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1747750494304,
+  "date": 1754306545541,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -186,6 +186,57 @@
             }
           },
           "excluded": {}
+        },
+        {
+          "pattern": "accounts.google.com",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "accounts.youtube.com": {},
+            "accounts.google.de": {}
+          }
+        },
+        {
+          "pattern": "www.youtube.com",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "accounts.google.com": {}
+          }
         }
       ],
       "mac": {
