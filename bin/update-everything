@@ -25,39 +25,9 @@ if [ -d /Applications/Chromium.app ]; then
     xattr -d -r com.apple.quarantine /Applications/Chromium.app
 fi
 
-if [ -d /Library/Java/JavaVirtualMachines/graalvm-21.jdk ]; then
-    xattr -d -r com.apple.quarantine /Library/Java/JavaVirtualMachines/graalvm-21.jdk
-fi
-
 # gem
 if hash gem 2>/dev/null; then
     gem update
-fi
-
-# nix
-if [ -d /nix ]; then
-    nix-channel --update
-    nix-env -u
-    nix-collect-garbage
-fi
-
-# MacPorts
-if hash port 2>/dev/null; then
-    sudo port selfupdate
-    sudo port upgrade outdated || true
-    sudo port uninstall inactive || true
-    sudo port uninstall rleaves || true
-    sudo port reclaim || true
-fi
-
-# vagrant
-if hash vagrant 2>/dev/null; then
-    vagrant box list --machine-readable \
-        | grep box-name \
-        | cut -d, -f4 \
-        | uniq \
-        | xargs -L1 vagrant box update --box
-    vagrant box prune --force --keep-active-boxes
 fi
 
 # docker
@@ -66,18 +36,6 @@ if hash docker 2>/dev/null; then
         docker system prune --filter "until=240h" --force
         docker volume prune --force
     fi
-fi
-
-if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
-    set +o nounset
-    set +o xtrace
-    . "$HOME/.sdkman/bin/sdkman-init.sh"
-    sdk selfupdate
-    sdk update
-fi
-
-if hash rbenv 2>/dev/null; then
-    rbenv rehash
 fi
 
 if hash direnv 2>/dev/null; then
