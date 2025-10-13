@@ -47,6 +47,7 @@
 /Users/aokeeffe/Library/Application Support/rancher-desktop/lima
 /Users/aokeeffe/Library/Application Support/Signal/update-cache
 /Users/aokeeffe/Library/CloudStorage
+/Users/aokeeffe/Library/Containers/com.apple.findmy.FindMyWidgetItems
 /Users/aokeeffe/Library/Containers/com.docker.docker/Data/vms/0/data
 /Users/aokeeffe/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService
 /Users/aokeeffe/Library/Containers/com.microsoft.errorreporting
