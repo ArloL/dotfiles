@@ -1,7 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
 	"[java]": {
 		"editor.foldingImportsByDefault": true,
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[markdown]": {
 		"editor.unicodeHighlight.ambiguousCharacters": false,
@@ -12,6 +18,8 @@
 	"[yaml]": {
 		"editor.autoIndent": "advanced"
 	},
+	"chat.commandCenter.enabled": false,
+	"chat.disableAIFeatures": true,
 	"debug.console.fontSize": 16,
 	"diffEditor.renderSideBySide": false,
 	"editor.fontFamily": "Source Code Pro",
@@ -58,11 +66,4 @@
 	"workbench.preferredLightColorTheme": "Solarized Light",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"chat.commandCenter.enabled": false,
 }
