@@ -1,6 +1,4 @@
 {
-  "version": "1.9.2",
-  "date": 1761398380694,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -406,6 +404,17 @@
     "ui": {
       "expandPreferences": false,
       "popupDefaultTab": "isolation-global"
+    }
+  },
+  "statistics": {
+    "startTime": "2025-10-25T13:22:43.649Z",
+    "containersDeleted": 0,
+    "cookiesDeleted": 0,
+    "cacheDeleted": 0,
+    "deletesHistory": {
+      "containersDeleted": 0,
+      "cookiesDeleted": 0,
+      "urlsDeleted": 0
     }
   }
 }
