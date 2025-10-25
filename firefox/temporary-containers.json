@@ -1,6 +1,6 @@
 {
   "version": "1.9.2",
-  "date": 1754306545541,
+  "date": 1761398380694,
   "preferences": {
     "automaticMode": {
       "active": true,
@@ -44,7 +44,9 @@
           "secure.kps-payment.de": {},
           "*.login.microsoftonline.com": {},
           "id.bund.de": {},
-          "threedssvc.pay1.de": {}
+          "threedssvc.pay1.de": {},
+          "accounts.spotify.com": {},
+          "challenge.spotify.com": {}
         },
         "excludedContainers": []
       },
@@ -188,7 +190,7 @@
           "excluded": {}
         },
         {
-          "pattern": "accounts.google.com",
+          "pattern": "*.google.com",
           "always": {
             "action": "disabled",
             "allowedInPermanent": false,
@@ -209,8 +211,9 @@
             }
           },
           "excluded": {
-            "accounts.youtube.com": {},
-            "accounts.google.de": {}
+            "*.google.com": {},
+            "*.google.de": {},
+            "*.youtube.com": {}
           }
         },
         {
@@ -236,6 +239,56 @@
           },
           "excluded": {
             "accounts.google.com": {}
+          }
+        },
+        {
+          "pattern": "www.conrad.de",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "accounts.conrad.com": {}
+          }
+        },
+        {
+          "pattern": "*.spotify.com",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global"
+            },
+            "ctrlleft": {
+              "action": "global"
+            },
+            "left": {
+              "action": "global"
+            }
+          },
+          "excluded": {
+            "*.spotify.com": {}
           }
         }
       ],

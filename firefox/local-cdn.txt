@@ -1,7 +1,7 @@
 {
   "allowedDomainsGoogleFonts": {},
   "allowlistedDomains": {},
-  "amountInjected": 902,
+  "amountInjected": 1864,
   "badgeDefaultBackgroundColor": "#666666",
   "badgeDefaultTextColor": "#FFFFFF",
   "badgeHTMLFilterBackgroundColor": "#FF0000",
