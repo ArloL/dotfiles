@@ -108,13 +108,13 @@
         * Advanced
             * Show week numbers: enabled
 * https://github.com/tomislav/osx-terminal.app-colors-solarized/
-    * Download `Solarized Light.terminal`
+    * Download `Solarized Dark.terminal`
 * Terminal
     * Settings…
         * New tabs open with: Default Profile
         * Profiles
-            * … -> Import -> `Solarized Light.terminal`
-            * Solarized Light -> Default
+            * … -> Import -> `Solarized Dark.terminal`
+            * Solarized Dark -> Default
 * Touch ID for sudo
     * `sudo nano /etc/pam.d/sudo`
     * `auth sufficient pam_tid.so`
