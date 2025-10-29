@@ -61,7 +61,7 @@
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.autoDetectColorScheme": true,
 	"window.restoreWindows": "none",
-	"workbench.colorTheme": "Solarized Light",
+	"workbench.colorTheme": "Solarized Dark",
 	"workbench.preferredDarkColorTheme": "Solarized Dark",
 	"workbench.preferredLightColorTheme": "Solarized Light",
 	"workbench.settings.enableNaturalLanguageSearch": false,
