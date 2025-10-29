@@ -1,4 +1,4 @@
 font-family = "Source Code Pro"
-theme = "dark:Builtin Solarized Dark,light:Builtin Solarized Light"
+theme = "Builtin Solarized Dark"
 font-size = 16
 font-thicken = true
