@@ -3,7 +3,7 @@ name: Check actions
 on:
   push:
   schedule:
-  - cron: '40 22 10 * *'
+  - cron: "40 22 10 * *"
 permissions: {}
 
 jobs:
@@ -68,5 +68,5 @@ jobs:
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@f443b600d91635bebf5b0d9ebc620189c0d6fba5 # v4.30.8
       with:
-        sarif_file: results.sarif
         category: zizmor
+        sarif_file: results.sarif

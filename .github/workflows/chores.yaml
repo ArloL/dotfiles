@@ -6,7 +6,7 @@ on:
     types:
     - chores
   schedule:
-  - cron: '39 11 2 * *'
+  - cron: "39 11 2 * *"
 permissions: {}
 concurrency: chores
 
@@ -59,7 +59,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
       with:
-        commit-message: "chore: automated changes by chorito"
-        branch: "chorito/patch"
-        title: "chore: automated changes by chorito"
         body: "Automated changes by [chorito](https://github.com/ArloL/chorito)"
+        branch: chorito/patch
+        commit-message: "chore: automated changes by chorito"
+        title: "chore: automated changes by chorito"
