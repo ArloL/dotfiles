@@ -222,7 +222,7 @@
           "excludedContainers": []
         },
         {
-          "pattern": "www.youtube.com",
+          "pattern": "*.youtube.com",
           "always": {
             "action": "disabled",
             "allowedInPermanent": false,
@@ -243,7 +243,8 @@
             }
           },
           "excluded": [
-            "accounts.google.com"
+            "accounts.google.com",
+            "youtu.be"
           ],
           "excludedContainers": []
         },
@@ -354,6 +355,35 @@
             "www.google.de"
           ],
           "excludedContainers": []
+        },
+        {
+          "pattern": "youtu.be",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global",
+              "container": "default"
+            },
+            "ctrlleft": {
+              "action": "global",
+              "container": "default"
+            },
+            "left": {
+              "action": "global",
+              "container": "default"
+            }
+          },
+          "excluded": [
+            "*.youtube.com"
+          ],
+          "excludedContainers": []
         }
       ],
       "mac": {
@@ -406,9 +436,21 @@
         ],
         "*.youtube.com": [
           {
+            "name": "wide",
+            "value": "1",
+            "domain": ".youtube.com",
+            "url": "https://www.youtube.com/",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "false",
+            "path": "/",
+            "sameSite": "",
+            "secure": "false"
+          },
+          {
             "name": "SOCS",
-            "value": "CAISEwgDEgk4MzE1NjQ2OTUaAmVuIAEaBgiAv9TIBg",
-            "domain": "",
+            "value": "CAESEwgDEgk4MzE1NjQ2OTUaAmVuIAEaBgiAv9TIBg",
+            "domain": ".youtube.com",
             "url": "https://www.youtube.com/",
             "expirationDate": "",
             "firstPartyDomain": "",
@@ -426,6 +468,12 @@
         "www.kraftfuttermischwerk.de": [
           {
             "code": "localStorage.setItem('jetpack_post_subscribe_modal_dismissed', Date.now().toString());",
+            "runAt": "document_start"
+          }
+        ],
+        "www.youtube.com": [
+          {
+            "code": "localStorage.setItem('yt-player-sticky-caption', JSON.stringify({data:'false',expiration:Date.now()+2592000000,creation:Date.now()}));",
             "runAt": "document_start"
           }
         ]
