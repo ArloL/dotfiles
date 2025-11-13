@@ -1,5 +1,5 @@
 {
-  "timeStamp": 1761398416053,
+  "timeStamp": 1763068402272,
   "version": "1.67.0",
   "userSettings": {
     "cloudStorageEnabled": true,
@@ -37,10 +37,11 @@
   "hiddenSettings": {},
   "whitelist": [
     "chrome-extension-scheme",
-    "moz-extension-scheme"
+    "moz-extension-scheme",
+    "www.asket.com"
   ],
   "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
   "urlFilteringString": "",
   "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-csp-reports: * true",
-  "userFilters": "# Experimenting with using LocalCDN instead so I don't have to mess with this\n#*$font,third-party,domain=~example.com|~other.example.net|~different.example.org|~google.de|~genialokal.de\n\n! Aug 4, 2025 https://trello.com\ntrello.com###island-nav"
+  "userFilters": "# Experimenting with using LocalCDN instead so I don't have to mess with this\n#*$font,third-party,domain=~example.com|~other.example.net|~different.example.org|~google.de|~genialokal.de\n\n! Aug 4, 2025 https://trello.com\ntrello.com###island-nav\n\n! Nov 2, 2025 https://www.youtube.com\nwww.youtube.com##a.ytp-suggestion-set"
 }

@@ -37,15 +37,15 @@
             "container": "default"
           }
         },
-        "excluded": {
-          "login.microsoftonline.com": {},
-          "secure.kps-payment.de": {},
-          "*.login.microsoftonline.com": {},
-          "id.bund.de": {},
-          "threedssvc.pay1.de": {},
-          "accounts.spotify.com": {},
-          "challenge.spotify.com": {}
-        },
+        "excluded": [
+          "login.microsoftonline.com",
+          "secure.kps-payment.de",
+          "*.login.microsoftonline.com",
+          "id.bund.de",
+          "threedssvc.pay1.de",
+          "accounts.spotify.com",
+          "challenge.spotify.com"
+        ],
         "excludedContainers": []
       },
       "domain": [
@@ -70,7 +70,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "secure.kps-payment.de",
@@ -93,7 +94,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "*.login.microsoftonline.com",
@@ -116,7 +118,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "id.bund.de",
@@ -139,7 +142,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "/^moz-extension:\\/\\/[a-z0-9-]+\\/delayed\\.html.*/",
@@ -162,7 +166,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "threedssvc.pay1.de",
@@ -185,7 +190,8 @@
               "action": "global"
             }
           },
-          "excluded": {}
+          "excluded": [],
+          "excludedContainers": []
         },
         {
           "pattern": "*.google.com",
@@ -208,11 +214,12 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "*.google.com": {},
-            "*.google.de": {},
-            "*.youtube.com": {}
-          }
+          "excluded": [
+            "*.google.com",
+            "*.google.de",
+            "*.youtube.com"
+          ],
+          "excludedContainers": []
         },
         {
           "pattern": "www.youtube.com",
@@ -235,9 +242,10 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "accounts.google.com": {}
-          }
+          "excluded": [
+            "accounts.google.com"
+          ],
+          "excludedContainers": []
         },
         {
           "pattern": "www.conrad.de",
@@ -260,9 +268,10 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "accounts.conrad.com": {}
-          }
+          "excluded": [
+            "accounts.conrad.com"
+          ],
+          "excludedContainers": []
         },
         {
           "pattern": "*.spotify.com",
@@ -285,9 +294,66 @@
               "action": "global"
             }
           },
-          "excluded": {
-            "*.spotify.com": {}
-          }
+          "excluded": [
+            "*.spotify.com"
+          ],
+          "excludedContainers": []
+        },
+        {
+          "pattern": "www.paypal.com",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global",
+              "container": "default"
+            },
+            "ctrlleft": {
+              "action": "global",
+              "container": "default"
+            },
+            "left": {
+              "action": "global",
+              "container": "default"
+            }
+          },
+          "excluded": [],
+          "excludedContainers": []
+        },
+        {
+          "pattern": "maps.app.goo.gl",
+          "always": {
+            "action": "disabled",
+            "allowedInPermanent": false,
+            "allowedInTemporary": false
+          },
+          "navigation": {
+            "action": "global"
+          },
+          "mouseClick": {
+            "middle": {
+              "action": "global",
+              "container": "default"
+            },
+            "ctrlleft": {
+              "action": "global",
+              "container": "default"
+            },
+            "left": {
+              "action": "global",
+              "container": "default"
+            }
+          },
+          "excluded": [
+            "www.google.de"
+          ],
+          "excludedContainers": []
         }
       ],
       "mac": {
@@ -324,44 +390,6 @@
     ],
     "cookies": {
       "domain": {
-        "*.youtube.com": [
-          {
-            "domain": ".youtube.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "PREF",
-            "path": "/",
-            "sameSite": "",
-            "secure": "true",
-            "url": "https://www.youtube.com/",
-            "value": "tz=Europe.Berlin&f4=4000000&f7=100&f5=30000&f6=400"
-          },
-          {
-            "domain": ".youtube.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "",
-            "name": "wide",
-            "path": "/",
-            "sameSite": "no_restriction",
-            "secure": "false",
-            "url": "https://www.youtube.com/",
-            "value": "1"
-          },
-          {
-            "domain": ".youtube.com",
-            "expirationDate": "",
-            "firstPartyDomain": "",
-            "httpOnly": "false",
-            "name": "SOCS",
-            "path": "/",
-            "sameSite": "lax",
-            "secure": "",
-            "url": "https://www.youtube.com/",
-            "value": "CAESEwgDEgk3NDA5ODczMTEaAmVuIAEaBgiAk6K_Bg"
-          }
-        ],
         "*.woki.de": [
           {
             "domain": "www.woki.de",
@@ -374,6 +402,20 @@
             "secure": "false",
             "url": "https://www.woki.de/",
             "value": "%7B%22cpConfig%22%3Atrue%2C%22basicCookie%22%3Atrue%2C%22cpIt%22%3Atrue%2C%22scrollContent%22%3Atrue%2C%22klaro%22%3Atrue%2C%22youtube%22%3Afalse%2C%22googleMaps%22%3Afalse%2C%22googleRecaptcha%22%3Afalse%2C%22googleAnalytics%22%3Afalse%7D"
+          }
+        ],
+        "*.youtube.com": [
+          {
+            "name": "SOCS",
+            "value": "CAISEwgDEgk4MzE1NjQ2OTUaAmVuIAEaBgiAv9TIBg",
+            "domain": "",
+            "url": "https://www.youtube.com/",
+            "expirationDate": "",
+            "firstPartyDomain": "",
+            "httpOnly": "false",
+            "path": "/",
+            "sameSite": "lax",
+            "secure": "true"
           }
         ]
       }
