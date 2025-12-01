@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "minimumReleaseAge": "4 days",
+  "minimumReleaseAge": "7 days",
   "schedule": ["on the 20th day of the month"],
   "vulnerabilityAlerts": {
     "schedule": ["at any time"],
