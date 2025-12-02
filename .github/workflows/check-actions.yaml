@@ -70,3 +70,11 @@ jobs:
       with:
         category: zizmor
         sarif_file: results.sarif
+  required-status-check:
+    name: check-actions.required-status-check
+    needs:
+    - actionlint
+    - zizmor
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Use this job as the required status check of this workflow"
