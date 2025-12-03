@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+#set -o xtrace
+
+# --- Exit early if no unpushed commits ---
+# Handle the case where the current branch has no upstream yet
+if git rev-parse --abbrev-ref "@{u}" >/dev/null 2>&1; then
+  AHEAD_COUNT=$(git rev-list --count "@{u}"..HEAD)
+else
+  # No upstream → check if there are *any* commits in repo vs. working tree
+  AHEAD_COUNT=$(git rev-list --count HEAD)
+fi
+
+if [ "$AHEAD_COUNT" -eq 0 ]; then
+  echo "No commits to push. Exiting."
+  exit 0
+fi
+
+DESC="${1:-}"
+
+# Prompt if no description provided
+if [ -z "$DESC" ]; then
+  read -rp "Describe the change (few words): " DESC
+fi
+
+# Normalize description → branch-friendly
+BRANCH_NAME="$(echo "$DESC" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9._-]//g')"
+PR_TITLE="$DESC"
+
+# 1. Create branch
+git checkout -b "$BRANCH_NAME"
+
+# 2. Push branch
+git push -u origin "$BRANCH_NAME"
+
+# 3. Create PR
+gh pr create \
+  --base "main" \
+  --head "$BRANCH_NAME" \
+  --title "$PR_TITLE" \
+  --body ""
+
+pr_url=$(gh pr view "$BRANCH_NAME" --json url --jq '.url')
+echo "PR created: $pr_url"
+
+# 4. Enable auto-merge
+gh pr merge --auto --rebase "$pr_url"
+
+# 5. switch back to main branch
+git switch main
+
+# 6. delete local branch
+git branch -D "$BRANCH_NAME"
