@@ -38,16 +38,11 @@ git push -u origin "$BRANCH_NAME"
 
 # 3. Create PR
 gh pr create \
-  --base "main" \
-  --head "$BRANCH_NAME" \
   --title "$PR_TITLE" \
   --body ""
 
-pr_url=$(gh pr view "$BRANCH_NAME" --json url --jq '.url')
-echo "PR created: $pr_url"
-
 # 4. Enable auto-merge
-gh pr merge --auto --rebase "$pr_url"
+gh pr merge --auto --rebase
 
 # 5. switch back to main branch
 git switch main
