@@ -75,6 +75,15 @@ jobs:
     needs:
     - actionlint
     - zizmor
+    # GitHub Actions skips this job when any of the dependents fail. And skips
+    # are considered success in their weird logic. So we always run it and fail
+    # ourselves if necessary
+    if: always()
     runs-on: ubuntu-latest
     steps:
     - run: echo "Use this job as the required status check of this workflow"
+    - name: Check that all jobs were successful
+      env:
+        RESULTS: ${{ toJSON(needs) }}
+      run: |
+        echo "$RESULTS" | jq -e 'all(.result == "success")' || exit 1
