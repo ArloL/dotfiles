@@ -73,4 +73,21 @@ setupHome() {
     createSymlinks "${scriptPath}" "${HOME}" "${backupDir}" 1 dotfiles[@]
 }
 
+setupBin() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/bin"
+
+    # list of files/folders to symlink in homedir
+    local binfiles=("update-everything" "base64-encode-stdin.sh" "yarn-link"  "git-push-main")
+
+    mkdir -p "${HOME}/bin"
+
+    # setup symlinks in homedir/bin
+    createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
+}
+
 setupHome
+setupBin
