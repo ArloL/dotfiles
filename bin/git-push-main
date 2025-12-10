@@ -5,6 +5,10 @@ set -o nounset
 set -o pipefail
 #set -o xtrace
 
+# Check that we are logged in
+hostname=$(git remote get-url origin | sed 's|^.*://||; s|^.*@||; s|[:/].*||')
+gh auth status --active --hostname "${hostname}" > /dev/null
+
 # --- Exit early if no unpushed commits ---
 # Handle the case where the current branch has no upstream yet
 if git rev-parse --abbrev-ref "@{u}" >/dev/null 2>&1; then
