@@ -11,4 +11,4 @@ elif [ "${OS}" = "Darwin" ]; then
   	platform=macos
 fi
 
-sh "$(dirname "$0")/install-${platform}.sh"
+bash "$(dirname "$0")/install-${platform}.sh"
