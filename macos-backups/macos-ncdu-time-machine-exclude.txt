@@ -19,7 +19,9 @@
 #/Users/aokeeffe/.gradle
 /Users/aokeeffe/.lima
 /Users/aokeeffe/.local/share/containers/podman
+/Users/aokeeffe/.local/share/mise
 /Users/aokeeffe/.local/share/NuGet/http-cache
+/Users/aokeeffe/.local/share/uv
 /Users/aokeeffe/.m2/repository
 /Users/aokeeffe/.m2/wrapper
 /Users/aokeeffe/.npm/_cacache
