@@ -1,0 +1,84 @@
+.DocumentRevisions-V100
+.MobileBackups
+.MobileBackups.trash
+.Spotlight-V100
+.TemporaryItems
+.Trash
+.Trashes
+.dbfseventsd
+.dropbox
+.dropbox.cache
+.fseventsd
+.hotfiles.btree
+.vol
+Backups.backupdb
+Cache
+Caches
+DerivedData
+node_modules
+Logs
+*/iTunes/iTunes Media/Downloads
+*/iTunes/iTunes Media/Podcasts
+*/iTunes/Album Artwork
+*/iTunes/Previous iTunes Libraries
+*/Library/Application Support/CrashReporter
+*/Library/Application Support/Dropbox
+*/Library/Application Support/Google
+*/Library/Application Support/MobileSync/Backup
+*/Library/Application Support/com.apple.LaunchServicesTemplateApp.dv
+*/Library/Biome
+*/Library/Caches
+*/Library/CloudStorage
+*/Library/Containers/com.apple.AMPArtworkAgent
+*/Library/Containers/com.apple.mail/Data/Library/Mail Downloads
+*/Library/Containers/com.apple.mail/Data/DataVaults
+*/Library/Containers/com.apple.Maps
+*/Library/Developer
+*/Library/Google/GoogleSoftwareUpdate
+*/Library/Group Containers/group.fm.overcast.overcast
+*/Library/Group Containers/UBF8T346G9.Office
+*/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite
+*/Library/Group Containers/VJXTL73S8G.com.algoriddim.userdata
+*/Library/Metadata/Assets/com.apple.MobileAsset.SpotlightResources.plist
+*/Library/Metadata/CoreSpotlight
+*/Library/Mobile Documents
+*/Library/Mirrors
+*/Library/PubSub/Database
+*/Library/PubSub/Downloads
+*/Library/PubSub/Feeds
+*/Library/Safari/Favicon Cache
+*/Library/Safari/Icons.db
+*/Library/Safari/Touch Icons Cache
+*/Library/Safari/WebpageIcons.db
+*/Library/Safari/HistoryIndex.sk
+*/Library/VoiceTrigger/SAT
+*/MailData/AvailableFeeds
+*/MailData/BackingStoreUpdateJournal
+*/MailData/Envelope Index
+*/MailData/Envelope Index-journal
+*/MailData/Envelope Index-shm
+*/MailData/Envelope Index-wal
+/.DS_Store
+/.VolumeIcon.icns
+/.fseventsd
+/.vol
+/.file
+/System
+/bin
+/cores
+/dev
+/etc
+/home
+/macOS Install Data
+/mnt
+/net
+/private
+/sbin
+/tmp
+/usr
+/var
+/Library
+Stuff/Recordings
+.timemachine
+/Applications
+Daten202203/Arq
