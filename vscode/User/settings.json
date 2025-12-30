@@ -15,6 +15,9 @@
 		"editor.wordWrap": "bounded",
 		"files.trimTrailingWhitespace": false,
 	},
+	"[typescript]": {
+		"typescript.updateImportsOnFileMove.enabled": "always",
+	},
 	"[yaml]": {
 		"editor.autoIndent": "advanced"
 	},
