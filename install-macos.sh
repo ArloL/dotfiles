@@ -130,7 +130,26 @@ setupSdkman() {
     fi
 }
 
+setupEclipse() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local eclipseDir="${HOME}/.eclipse/org.eclipse.oomph.setup/setups"
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/eclipse"
+
+    # the files to symlink
+    local eclipseFiles=("user.setup")
+
+    mkdir -p "${eclipseDir}"
+
+    # setup symlinks for eclipse
+    createSymlinks "${scriptPath}/eclipse" "${eclipseDir}" "${backupDir}" 0 eclipseFiles[@]
+}
+
 setupHome
 setupBin
 setupVSCode
 setupSdkman
+setupEclipse
