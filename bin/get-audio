@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <url>" >&2
+    exit 1
+fi
+
+url="$1"
+
+# Base options for best audio quality
+opts=(
+    --extract-audio
+    --audio-quality 0
+    --audio-format best
+    --format "bestaudio[ext=m4a]/bestaudio[ext=aac]/bestaudio[ext=mp3]/bestaudio"
+    --output "%(title)s.%(ext)s"
+)
+
+# Add SoundCloud-specific cookie handling
+if [[ "$url" =~ soundcloud\.com ]]; then
+    opts+=(--cookies-from-browser "firefox::SoundCloud")
+fi
+
+yt-dlp "${opts[@]}" "$url"
