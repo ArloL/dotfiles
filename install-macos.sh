@@ -148,8 +148,27 @@ setupEclipse() {
     createSymlinks "${scriptPath}/eclipse" "${eclipseDir}" "${backupDir}" 0 eclipseFiles[@]
 }
 
+setupClaude() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local claudeDir="${HOME}/.claude"
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/claude"
+
+    # the files to symlink
+    local claudeFiles=("settings.json")
+
+    mkdir -p "${claudeDir}"
+
+    # setup symlinks for claude
+    createSymlinks "${scriptPath}/claude" "${claudeDir}" "${backupDir}" 0 claudeFiles[@]
+}
+
 setupHome
 setupBin
 setupVSCode
 setupSdkman
 setupEclipse
+setupClaude
