@@ -1,13 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
 	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
+		"editor.defaultFormatter": "vscode.html-language-features",
 	},
 	"[java]": {
 		"editor.foldingImportsByDefault": true,
 	},
 	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
+		"editor.defaultFormatter": "vscode.json-language-features",
 	},
 	"[markdown]": {
 		"editor.unicodeHighlight.ambiguousCharacters": false,
@@ -19,7 +19,7 @@
 		"typescript.updateImportsOnFileMove.enabled": "always",
 	},
 	"[yaml]": {
-		"editor.autoIndent": "advanced"
+		"editor.autoIndent": "advanced",
 	},
 	"chat.commandCenter.enabled": false,
 	"chat.disableAIFeatures": true,
@@ -65,7 +65,7 @@
 	"redhat.telemetry.enabled": false,
 	"scm.showHistoryGraph": false,
 	"search.exclude": {
-		"**/.yarn": true
+		"**/.yarn": true,
 	},
 	"shellcheck.exclude": [
 		"1091"
