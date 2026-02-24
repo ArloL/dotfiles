@@ -18,6 +18,7 @@
 	adog = log --all --decorate --oneline --graph
     changes = log --patch --find-renames --follow --stat --
     puschel = push --force-with-lease
+    stashy = stash --include-untracked --keep-index
 [help]
     autocorrect = 25
 [fetch]
