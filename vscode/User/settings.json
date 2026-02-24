@@ -30,7 +30,9 @@
 	"editor.fontFamily": "Source Code Pro",
 	"editor.fontSize": 16,
 	"editor.formatOnType": true,
-	"editor.rulers": [80],
+	"editor.rulers": [
+		80
+	],
 	"editor.suggestSelection": "first",
 	"editor.unicodeHighlight.ambiguousCharacters": true,
 	"editor.wordWrap": "bounded",
