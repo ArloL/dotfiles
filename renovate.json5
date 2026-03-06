@@ -1,0 +1,25 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "addLabels": [
+        "{{manager}}",
+    ],
+    "extends": [
+        "config:recommended",
+    ],
+    "labels": [
+        "dependencies",
+    ],
+    "minimumReleaseAge": "7 days",
+    "schedule": [
+        "on the 20th day of the month",
+    ],
+    "vulnerabilityAlerts": {
+        "addLabels": [
+            "security",
+        ],
+        "minimumReleaseAge": "0 days",
+        "schedule": [
+            "at any time",
+        ],
+    },
+}
