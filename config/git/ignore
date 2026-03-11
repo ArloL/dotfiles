@@ -76,6 +76,10 @@ $RECYCLE.BIN/
 # https://mise.jdx.dev/
 mise.local.toml
 
-~$*.xlsx
+# Excel temporary
+~$*.xls*
 
 **/.claude/settings.local.json
+
+# LibreOffice locks
+.~lock.*#
