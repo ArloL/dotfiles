@@ -3,13 +3,13 @@
     "commit": "",
     "pr": ""
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.config/claude/statusline-command.sh"
+  },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
-  "voiceEnabled": false,
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.config/claude/statusline-command.sh"
-  }
+  "voiceEnabled": false
 }
