@@ -3,14 +3,14 @@
     "commit": "",
     "pr": ""
   },
-  "autoUpdatesChannel": "stable",
-  "effortLevel": "medium",
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true
-  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
   },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "autoUpdatesChannel": "stable",
   "voiceEnabled": false
 }
