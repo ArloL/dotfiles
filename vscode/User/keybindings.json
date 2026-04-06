@@ -1,3 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b\r"
+        },
+        "when": "terminalFocus"
+    }
 ]
