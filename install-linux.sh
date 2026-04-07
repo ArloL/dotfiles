@@ -89,5 +89,24 @@ setupBin() {
     createSymlinks "${scriptPath}/bin" "${HOME}/bin" "${backupDir}" 0 binfiles[@]
 }
 
+setupClaude() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    local claudeDir="${HOME}/.claude"
+
+    # backup directory
+    local backupDir="${HOME}/dotfiles_backup/claude"
+
+    # the files to symlink
+    local claudeFiles=("settings.json" "CLAUDE.md")
+
+    mkdir -p "${claudeDir}"
+
+    # setup symlinks for claude
+    createSymlinks "${scriptPath}/claude" "${claudeDir}" "${backupDir}" 0 claudeFiles[@]
+}
+
 setupHome
 setupBin
+setupClaude
