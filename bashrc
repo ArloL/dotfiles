@@ -13,6 +13,7 @@ fi
 # Interactive setup — runs whenever this shell is interactive
 case $- in
     *i*)
+        . "${XDG_CONFIG_HOME}/bash/paths-interactive"
         . "${XDG_CONFIG_HOME}/bash/aliases"
         . "${XDG_CONFIG_HOME}/bash/completions"
         . "${XDG_CONFIG_HOME}/bash/functions"
