@@ -1,0 +1,2 @@
+#!/bin/sh
+open -na ghostty --args --working-directory="$(pwd)"
