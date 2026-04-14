@@ -102,3 +102,27 @@ if hash nnn 2>/dev/null; then
     }
 
 fi
+
+random_day() {
+    echo $((RANDOM % 28 + 1))  # 1–28
+}
+
+random_hour() {
+    echo $((RANDOM % 21 + 3))  # 3–23
+}
+
+random_minute() {
+    echo $((RANDOM % 51 + 5))  # 5–55
+}
+
+random_cron() {
+    minute=$((RANDOM % 51 + 5))
+    hour=$((RANDOM % 21 + 3))
+    day=$((RANDOM % 28 + 1))
+
+    echo "$minute $hour $day * *"
+}
+
+random_port() {
+  echo $((RANDOM % 16384 + 49152))  # 49152–65535
+}
