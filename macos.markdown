@@ -48,6 +48,9 @@
         * Require password after screen saver begins or display is turned off: Immediately
     * Keyboard
         * Keyboard Shortcuts
+            * Input Sources
+                * Disable: Select the previous input source
+                * Disable: Select next source in Input menu
             * Modifier Keys
                 * Caps Lock key: Escape
     * Trackpad
