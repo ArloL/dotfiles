@@ -40,6 +40,7 @@
 /Users/aokeeffe/Downloads
 /Users/aokeeffe/Library/Android
 /Users/aokeeffe/Library/Application Support/Caches
+/Users/aokeeffe/Library/Application Support/Claude/vm_bundles
 /Users/aokeeffe/Library/Application Support/Code/Cache
 /Users/aokeeffe/Library/Application Support/Code/CachedData
 /Users/aokeeffe/Library/Application Support/Code/CachedExtensionVSIXs
