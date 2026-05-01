@@ -34,6 +34,11 @@
 		80
 	],
 	"editor.suggestSelection": "first",
+	"editor.unicodeHighlight.allowedCharacters": {
+		"ä": true,
+		"ö": true,
+		"ü": true,
+	},
 	"editor.unicodeHighlight.ambiguousCharacters": true,
 	"editor.wordWrap": "bounded",
 	"editor.wordWrapColumn": 80,
