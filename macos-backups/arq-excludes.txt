@@ -21,6 +21,7 @@ Logs
 */iTunes/iTunes Media/Podcasts
 */iTunes/Album Artwork
 */iTunes/Previous iTunes Libraries
+*/Library/Application Support/Claude/vm_bundles
 */Library/Application Support/CrashReporter
 */Library/Application Support/Dropbox
 */Library/Application Support/Google
