@@ -11,6 +11,7 @@
     "typescript-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
+"awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
   "voiceEnabled": false
 }
