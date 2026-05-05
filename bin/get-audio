@@ -14,7 +14,7 @@ opts=(
     --extract-audio
     --audio-quality 0
     --audio-format best
-    --format "bestaudio[ext=m4a]/bestaudio[ext=aac]/bestaudio[ext=mp3]/bestaudio"
+    --format "bestaudio[ext=m4a]/bestaudio[ext=aac]/bestaudio[ext=mp3]/bestaudio/0"
     --output "%(title)s.%(ext)s"
 )
 
