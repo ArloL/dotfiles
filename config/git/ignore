@@ -83,3 +83,6 @@ mise.local.toml
 
 # LibreOffice locks
 .~lock.*#
+
+# code.claude.com
+CLAUDE.local.md
