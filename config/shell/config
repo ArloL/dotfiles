@@ -63,6 +63,4 @@ if [ -d "${HOME}/.sdkman" ]; then
     [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ] && . "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
-export GOPATH="${HOME}/Developer/go"
-
 . "${HOME}"/.config/shell/config.d/*.config

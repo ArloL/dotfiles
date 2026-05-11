@@ -70,7 +70,8 @@ fi
 
 # go
 if hash go 2>/dev/null; then
-    PATH="${PATH}:$(go env GOPATH)/bin"
+    export GOPATH="${HOME}/Developer/go"
+    PATH="${PATH}:${GOPATH}/bin"
     export PATH
 fi
 
