@@ -1,7 +1,7 @@
 [tools]
 java = "temurin-26.0.0"
 node = "24.15.0"
-python = "3.14.4"
+python = "3.14.5"
 ruby = "4.0.4"
 
 [settings]
