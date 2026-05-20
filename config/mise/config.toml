@@ -2,7 +2,7 @@
 java = "temurin-26.0.0"
 node = "24.14.1"
 python = "3.14.4"
-ruby = "4.0.3"
+ruby = "4.0.4"
 
 [settings]
 idiomatic_version_file_enable_tools = ["java", "ruby", "node", "python"]
