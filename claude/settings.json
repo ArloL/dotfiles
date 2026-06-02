@@ -3,6 +3,7 @@
     "commit": "",
     "pr": ""
   },
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
