@@ -8,7 +8,9 @@
     "command": "bash ~/.config/claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
 "awaySummaryEnabled": false,
