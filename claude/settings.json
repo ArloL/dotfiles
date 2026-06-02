@@ -14,7 +14,7 @@
     "gopls-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
-"awaySummaryEnabled": false,
+  "awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
   "voiceEnabled": false
 }
