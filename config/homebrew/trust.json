@@ -1,5 +1,8 @@
 {
   "trustedtaps": [
     "arlol/tap"
+  ],
+  "trustedformulae": [
+    "anomalyco/tap/opencode"
   ]
 }
