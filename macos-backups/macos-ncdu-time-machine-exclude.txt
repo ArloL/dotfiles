@@ -39,11 +39,14 @@
 /Users/aokeeffe/Developer
 /Users/aokeeffe/Downloads
 /Users/aokeeffe/Library/Android
+/Users/aokeeffe/Library/Application Support/AnkiProgramFiles/cache
+/Users/aokeeffe/Library/Application Support/AnkiProgramFiles/.venv
 /Users/aokeeffe/Library/Application Support/Caches
 /Users/aokeeffe/Library/Application Support/Claude/vm_bundles
 /Users/aokeeffe/Library/Application Support/Code/Cache
 /Users/aokeeffe/Library/Application Support/Code/CachedData
 /Users/aokeeffe/Library/Application Support/Code/CachedExtensionVSIXs
+/Users/aokeeffe/Library/Application Support/com.pais.handy/models
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Code Cache
 /Users/aokeeffe/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
