@@ -13,7 +13,7 @@ git push origin main
 # Homebrew
 if hash brew 2>/dev/null; then
     brew update
-    brew --no-ask upgrade
+    brew upgrade --no-ask
     brew autoremove
     brew cleanup
 fi
