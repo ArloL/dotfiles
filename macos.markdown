@@ -201,9 +201,9 @@
     * `ln -s ~/.local/share/mise ~/.asdf`
 * Java Development?
     * `brew install maven openjdk`
-    * `mise use -g java@temurin-21`
-    * `sudo mkdir /Library/Java/JavaVirtualMachines/temurin-21`
-    * `sudo ln -s ~/.local/share/mise/installs/java/temurin-21/Contents /Library/Java/JavaVirtualMachines/temurin-21/Contents`
+    * `mise use -g java@temurin-26.0.0`
+    * `sudo mkdir /Library/Java/JavaVirtualMachines/temurin-26`
+    * `sudo ln -s ~/.local/share/mise/installs/java/temurin-26/Contents /Library/Java/JavaVirtualMachines/temurin-26/Contents`
     * `sudo mkdir /Library/Java/JavaVirtualMachines/temurin-latest`
     * `sudo ln -s ~/.local/share/mise/installs/java/temurin-latest/Contents /Library/Java/JavaVirtualMachines/temurin-latest/Contents`
 * JavaScript Development?
