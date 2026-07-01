@@ -1,5 +1,5 @@
 {
-    "version": "2.0.130.1",
+    "version": "2.0.133.1",
     "settings": {
         "blur": 0,
         "brightness": 100,
@@ -53,6 +53,30 @@
         "executescript": false,
         "expanddescription": false,
         "filter": "none",
+        "griditemsperrow": {
+            "channel": {
+                "shorts": {
+                    "apply": false,
+                    "count": 5
+                },
+                "videos": {
+                    "apply": false,
+                    "count": 4
+                }
+            },
+            "posts": {
+                "apply": false,
+                "count": 4
+            },
+            "shorts": {
+                "apply": false,
+                "count": 8
+            },
+            "videos": {
+                "apply": false,
+                "count": 4
+            }
+        },
         "hidecardsendscreens": true,
         "hidechat": true,
         "hidecomments": true,
@@ -62,7 +86,6 @@
         "ignorepopupplayer": true,
         "localecode": "en_US",
         "localedir": "ltr",
-        "message": false,
         "miniplayer": false,
         "miniplayerposition": "_top-left",
         "miniplayersize": "_400x225",
@@ -70,7 +93,6 @@
         "overridespeeds": false,
         "pauseforegroundtab": false,
         "pausevideos": false,
-        "popuplayersize": "640x360",
         "qualityembeds": "hd1440",
         "qualityembedsfullscreen": "hd1080",
         "qualityplaylists": "hd1440",
@@ -92,6 +114,7 @@
         "volume": 50,
         "volumemultiplier": 3,
         "volumevariation": 5,
+        "whatsnew": false,
         "wideplayer": false,
         "wideplayerviewport": false
     }
