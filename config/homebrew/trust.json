@@ -3,6 +3,7 @@
     "arlol/tap"
   ],
   "trustedformulae": [
-    "anomalyco/tap/opencode"
+    "anomalyco/tap/opencode",
+    "arlol/tap/drifty"
   ]
 }
