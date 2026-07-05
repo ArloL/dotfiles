@@ -64,5 +64,5 @@ if [ -d "${HOME}/.sdkman" ]; then
 fi
 
 for f in "${HOME}/.config/shell/config.d/"*.config; do
-    . "$f"
+  [ -e "$f" ] && . "$f"
 done
