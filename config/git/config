@@ -23,3 +23,5 @@
     autocorrect = 25
 [fetch]
 	prune = true
+[rerere]
+    enabled = true
