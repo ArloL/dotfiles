@@ -1,2 +1,4 @@
 containers.conf
 podman/
+podman-connections.json
+podman-connections.json.lock
