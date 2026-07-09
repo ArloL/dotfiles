@@ -1,9 +1,11 @@
 {
   "trustedtaps": [
-    "arlol/tap"
+    "arlol/tap",
+    "libkrun/krun"
   ],
   "trustedformulae": [
     "anomalyco/tap/opencode",
-    "arlol/tap/drifty"
+    "arlol/tap/chorito",
+    "arlol/tap/menubar-scripts"
   ]
 }
