@@ -3,3 +3,4 @@ podman/
 podman-connections.json
 podman-connections.json.lock
 networks/
+auth.json
