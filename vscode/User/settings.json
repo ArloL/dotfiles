@@ -43,7 +43,7 @@
 	"editor.wordWrap": "bounded",
 	"editor.wordWrapColumn": 80,
 	"editor.wrappingIndent": "deepIndent",
-	"explorer.openEditors.visible": 0,
+	"explorer.openEditors.minVisible": 0,
 	"files.autoSave": "afterDelay",
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
