@@ -157,8 +157,8 @@ setupClaude() {
     # backup directory
     local backupDir="${HOME}/dotfiles_backup/claude"
 
-    # the files to symlink
-    local claudeFiles=("settings.json" "CLAUDE.md")
+    # the files/folders to symlink
+    local claudeFiles=("settings.json" "CLAUDE.md" "skills")
 
     mkdir -p "${claudeDir}"
 
