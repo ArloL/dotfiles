@@ -3,18 +3,31 @@
     "commit": "",
     "pr": ""
   },
-  "model": "opus",
+  "model": "claude-opus-5",
+  "deniedMcpServers": [
+    {
+      "serverUrl": "https://gmailmcp.googleapis.com/*"
+    },
+    {
+      "serverUrl": "https://calendarmcp.googleapis.com/*"
+    },
+    {
+      "serverUrl": "https://drivemcp.googleapis.com/*"
+    }
+  ],
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "clangd-lsp@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": false,
+    "clangd-lsp@claude-plugins-official": false,
+    "gopls-lsp@claude-plugins-official": false
   },
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
-  "voiceEnabled": false
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": false,
+  "tui": "fullscreen"
 }
