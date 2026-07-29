@@ -31,7 +31,7 @@
 	"editor.fontSize": 16,
 	"editor.formatOnType": true,
 	"editor.rulers": [
-		80
+		90
 	],
 	"editor.suggestSelection": "first",
 	"editor.unicodeHighlight.allowedCharacters": {
@@ -41,7 +41,7 @@
 	},
 	"editor.unicodeHighlight.ambiguousCharacters": true,
 	"editor.wordWrap": "bounded",
-	"editor.wordWrapColumn": 80,
+	"editor.wordWrapColumn": 90,
 	"editor.wrappingIndent": "deepIndent",
 	"explorer.openEditors.minVisible": 0,
 	"files.autoSave": "afterDelay",
