@@ -33,5 +33,5 @@
   "effortLevel": "high",
   "model": "claude-opus-5",
   "theme": "dark",
-    "voiceEnabled": false
+  "voiceEnabled": false
 }
