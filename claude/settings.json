@@ -4,6 +4,10 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "claude-opus-5",
   "deniedMcpServers": [
     {
       "serverUrl": "https://gmailmcp.googleapis.com/*"
@@ -15,9 +19,6 @@
       "serverUrl": "https://drivemcp.googleapis.com/*"
     }
   ],
-  "permissions": {
-    "defaultMode": "auto"
-  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
@@ -25,13 +26,13 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": false,
     "clangd-lsp@claude-plugins-official": false,
-    "gopls-lsp@claude-plugins-official": false
+    "gopls-lsp@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": true
   },
-  "agentPushNotifEnabled": true,
-  "autoUpdatesChannel": "stable",
-  "awaySummaryEnabled": false,
   "effortLevel": "high",
-  "model": "claude-opus-5",
+  "awaySummaryEnabled": false,
+  "autoUpdatesChannel": "stable",
   "theme": "dark",
+  "agentPushNotifEnabled": true,
   "voiceEnabled": false
 }

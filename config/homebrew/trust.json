@@ -6,6 +6,7 @@
   "trustedformulae": [
     "anomalyco/tap/opencode",
     "arlol/tap/chorito",
-    "arlol/tap/menubar-scripts"
+    "arlol/tap/menubar-scripts",
+    "atlassian/acli/acli"
   ]
 }
