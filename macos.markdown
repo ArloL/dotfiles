@@ -209,4 +209,8 @@
 * JavaScript Development?
     * `brew install yarn`
     * `mise use --global node@22`
+* Finder Quick Actions
+    * `~/.dotfiles/macos-services/install-services.sh`
+    * run this again after installing apps, only the ones that are installed get a Quick Action
+    * add `--prune` to remove the Quick Actions of apps that were uninstalled
 * `update-everything`

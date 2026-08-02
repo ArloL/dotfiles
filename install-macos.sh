@@ -166,9 +166,18 @@ setupClaude() {
     createSymlinks "${scriptPath}/claude" "${claudeDir}" "${backupDir}" 0 claudeFiles[@]
 }
 
+setupServices() {
+    local scriptPath
+    scriptPath=$( cd "$( dirname "$0" )" && pwd )
+
+    # generates the Automator Quick Actions for the apps that are installed
+    "${scriptPath}/macos-services/install-services.sh"
+}
+
 setupHome
 setupBin
 setupVSCode
 setupSdkman
 setupEclipse
 setupClaude
+setupServices
