@@ -19,6 +19,19 @@
       "serverUrl": "https://drivemcp.googleapis.com/*"
     }
   ],
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "say --voice=Zarvox \"beep beep boop boop\"",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "bash ~/.config/claude/statusline-command.sh"
