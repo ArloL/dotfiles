@@ -20,7 +20,7 @@ opts=(
 
 # Add SoundCloud-specific cookie handling
 if [[ "$url" =~ soundcloud\.com ]]; then
-    opts+=(--cookies-from-browser "firefox::SoundCloud")
+    opts+=(--cookies-from-browser "firefox::soundcloud.com")
 fi
 
 yt-dlp "${opts[@]}" "$url"
