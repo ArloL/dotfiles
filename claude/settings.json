@@ -42,10 +42,20 @@
     "gopls-lsp@claude-plugins-official": false,
     "superpowers@claude-plugins-official": true
   },
+  "extraKnownMarketplaces": {
+    "vladikk-modularity": {
+      "source": {
+        "source": "github",
+        "repo": "vladikk/modularity"
+      }
+    }
+  },
   "effortLevel": "high",
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
   "theme": "dark",
+  "wheelScrollAccelerationEnabled": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false
+  "voiceEnabled": false,
+  "tui": "fullscreen"
 }
