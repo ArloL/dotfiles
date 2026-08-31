@@ -57,5 +57,8 @@
   "wheelScrollAccelerationEnabled": false,
   "agentPushNotifEnabled": true,
   "voiceEnabled": false,
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "env": {
+    "CLAUDE_CODE_DISABLE_MOUSE": "1"
+  }
 }
