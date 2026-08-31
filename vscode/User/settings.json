@@ -81,6 +81,7 @@
 	"telemetry.telemetryLevel": "off",
 	"terminal.integrated.fontSize": 16,
 	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.macOptionClickForcesSelection": true,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"window.autoDetectColorScheme": true,
 	"window.restoreWindows": "none",
