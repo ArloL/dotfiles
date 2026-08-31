@@ -59,6 +59,6 @@
   "voiceEnabled": false,
   "tui": "fullscreen",
   "env": {
-    "CLAUDE_CODE_DISABLE_MOUSE": "1"
+    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
   }
 }
