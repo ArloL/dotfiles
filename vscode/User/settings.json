@@ -90,4 +90,5 @@
 	"workbench.preferredLightColorTheme": "Solarized Light",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"workbench.startupEditor": "newUntitledFile",
+	"terminal.integrated.copyOnSelection": true,
 }
