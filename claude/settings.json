@@ -1,5 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
+  },
   "attribution": {
     "commit": "",
     "pr": ""
@@ -53,12 +56,9 @@
   "effortLevel": "high",
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "stable",
+  "tui": "fullscreen",
   "theme": "dark",
   "wheelScrollAccelerationEnabled": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false,
-  "tui": "fullscreen",
-  "env": {
-    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
-  }
+  "voiceEnabled": false
 }
