@@ -1,11 +1,13 @@
 {
   "trustedtaps": [
     "arlol/tap",
+    "laurentftech/ntfy-macos",
     "libkrun/krun"
   ],
   "trustedformulae": [
     "anomalyco/tap/opencode",
     "arlol/tap/chorito",
+    "arlol/tap/drifty",
     "arlol/tap/menubar-scripts",
     "atlassian/acli/acli"
   ]
