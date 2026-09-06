@@ -32,6 +32,12 @@ green can be a restart loop.
 
 Four files across two repos, one conclusion. Nobody assembles that by accident.
 
+The notes you gathered before writing are source material, not a draft. A
+brief that lists the code's constants, the console's controls and the platform's
+documentation is those three sources restated; a doc that keeps a fifth of it
+has kept too much. Read the notes for the facts that pass the test, then put the
+notes away.
+
 Passing this test is necessary and not sufficient. A fact can be composite,
 non-obvious and verified, and still be worth nothing — apply the second gate
 below before writing it down.
@@ -89,6 +95,11 @@ keep a sentence, say who is standing in this file and why they opened it.
 - A config line is read by the person about to change it.
 - A test is read by the person it just failed on.
 
+The file is about one subject, and the reader opened it for that subject. A
+fact about a neighbouring one — another caller of the same service, a sibling
+resource, a script in another repo that also uses it — is not for this file
+however non-obvious it is. It goes in that subject's doc, or nowhere.
+
 **One fact, one home.** When the same fact appears in two files, keep the copy
 where the reader who acts on it is standing and delete the other outright. Never
 leave a shortened restatement behind: two copies drift, and whoever finds one
@@ -105,6 +116,20 @@ example demonstrating that free text misses contract type, and a measurement of
 what the contract-type filter fails to remove, are separate claims that happen
 to share a term. Before deleting as a duplicate, state both conclusions. If they
 differ, keep both.
+
+## Use the Reader's Words
+
+Write in the reader's vocabulary from the first sentence to the last. A
+platform's term for something the reader knows under a plainer name is jargon,
+and the doc is not the place they learn it: Azure's "deployment" is a model, a
+"guardrail" is a content filter, a "workspace" is a project. Glossing the term
+once and then using it is still using it, and so is a parenthetical "(Azure
+calls these deployments)": if the reader never types the word, it does not
+appear. Where they must type or search for it, give it once in parentheses after
+the plain word and carry on in the plain word.
+
+The same applies to identifiers. A class name or constant belongs in the doc
+when the reader has to open it, not because it is where you found the fact.
 
 ## What a Guard Enforces Needs No Prose
 
@@ -144,8 +169,39 @@ The exception is a claim the reader can act against but cannot check: a setting
 they could revert with no failing test to stop them. There the evidence is the
 constraint, and it stays.
 
-Order: where decisions are made → what the code demands of whoever operates it
-→ what fails without saying so.
+A doc beside code has this shape, in this order: one paragraph saying what
+manages the thing and what does not (terraform, a console, a colleague by hand);
+one stating its current state with the date it was true; one paragraph per
+constraint the reader cannot look up, each a claim and then its consequence; one
+for what fails without saying so. Nothing else. Region, account, subscription,
+creation date and who created it are coordinates the console shows, and they are
+not the first paragraph. Four to six paragraphs and under 250 words is the usual
+size; a draft over 300 has kept source material, and the deletion pass has not
+been run on it. The state paragraph carries the values this repo's subject
+depends on, not everything the console lists.
+
+A finished one, for a CDN in front of an app whose repo holds the terraform:
+
+```markdown
+# Cloudflare
+
+The zone is managed in the Cloudflare dashboard by hand; terraform owns the
+origin and nothing in front of it.
+
+As of 2026-03-02 the cache rule bypasses `/api/*` and caches everything else
+for a day. Purging is manual.
+
+A deploy that changes a static asset without changing its name serves the old
+file for up to a day. The frontend build hashes filenames, so only `index.html`
+is exposed, and the rule sets it to no-store.
+
+The origin certificate expires 2027-03-01. Nothing renews or watches it, and
+Cloudflare serves a 526 with no entry in the app's logs.
+```
+
+Four paragraphs, ninety words, one subject. The dashboard's menu paths, the
+other zones on the account and the plan tier are all things the reader can see
+by logging in, and none of them are here.
 
 Plain declaratives in the doc itself. No bold lead-ins, no asides, no flourishes.
 
@@ -215,6 +271,10 @@ their head from prose. This is the one formatting choice with a real effect size
 behind it — same figures, table versus prose, 79.6 % against 69.7 %
 comprehension.
 
+The rows must pass the sentence test first. A table of constants, callers,
+deployments or settings copied from the code or the console is that source
+restated in a grid, and it goes however tidy it looks. Two rows is a sentence.
+
 Convert when an item carries three or more attributes, when the content is
 if-then conditions, or when it is a before-and-after. One column means it wanted
 to be a list. A cell needing more than two sentences means the table is the
@@ -263,7 +323,7 @@ at the first clause.
 
 ## Before Handing It Back
 
-Four checks, every time, on the draft you are about to return. Each one failed
+Five checks, every time, on the draft you are about to return. Each one failed
 in testing when it was left implicit.
 
 1. **The first paragraph.** Read its first sentence alone. If it sets a scene
@@ -276,13 +336,18 @@ in testing when it was left implicit.
    with: a drop needs justifying, and any heading left sitting over a single
    paragraph has gone one too far.
 4. **Your own insertions.** Read only what you added, against everything above.
+5. **The count.** Count the body's words. Over 250 means at least one paragraph
+   is source material; find which one and delete it, do not trim every paragraph
+   a little.
 
 ## Rules, Not Incidents
 
 State the durable rule and how the reader checks whether it applies today.
 Release-specific facts age into trivia within a sprint.
 
-**A measurement is not an incident.** Keep its date: it tells the reader how
+**A measurement is not an incident, if it informs a decision.** A figure the
+reader will weigh something against stays, dated; a figure that changes nothing
+they do is an anecdote and goes, however precise. Keep its date: it tells the reader how
 stale the number is and what to re-run. Stripping the date makes the figure
 unfalsifiable rather than durable. This rule targets facts that expire, not
 facts that were true when measured.
@@ -308,6 +373,18 @@ Steps belong to the repo that owns the scripts they run. Point at it in one
 sentence and stop. Duplicated procedure is the first thing to go out of date,
 and the reader who runs it is already in that repo.
 
+A setting made in a console has no script, and the temptation is to narrate the
+console instead. The doc states the setting by its effect and its current value,
+dated. The path to it, the control, and what the control looks like are the
+procedure, and the reader has the console.
+
+```markdown
+❌ Under Build → Guardrails the four harm sliders sit at Highest blocking; the
+   rows cannot be unticked and the Action dropdown is locked to Block.
+✅ The four harm categories block at high severity instead of medium. High is
+   the loosest threshold without Microsoft's approval.
+```
+
 ## Common Mistakes
 
 | Symptom | Fix |
@@ -327,6 +404,12 @@ and the reader who runs it is already in that repo.
 | A doc handed back with fewer headings than it started with | Check the too-few direction too |
 | A paragraph organised around a release or a date | Rewrite as the rule plus the check |
 | Steps copied from another repo | One-sentence pointer |
+| A console path, widget, or control state | Name the setting and its value |
+| The platform's word for a thing the reader has a plainer word for | The reader's word, throughout; a gloss does not license the term |
+| Region, subscription, creation date, who created it | Coordinates; the console shows them |
+| A fact about a neighbouring subject (another caller, a sibling resource, a script elsewhere) | That subject's doc, or nowhere |
+| A table of constants, callers or settings read off the code | Delete; it is the code |
+| The doc is a tidied copy of the notes you gathered | Notes are source material; keep a fifth at most |
 | Every paragraph a warning | Describe; keep only the silent failures |
 | Paragraph opens "That is…", "Their…", "Taken together…" | Name the subject in the opening words |
 | Skimming the first sentences conveys nothing | The openers are the defect, not the length |
