@@ -2,7 +2,6 @@ Adobe Digital Editions 4.5.app
 Adobe Digital Editions.app
 Arq.app
 BetterTouchTool.app
-Chromium.app
 DBeaver.app
 Disk Inventory X.app
 ESET Endpoint Security.app
