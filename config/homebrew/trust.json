@@ -9,6 +9,7 @@
     "arlol/tap/chorito",
     "arlol/tap/drifty",
     "arlol/tap/menubar-scripts",
-    "atlassian/acli/acli"
+    "atlassian/acli/acli",
+    "laurentftech/ntfy-macos/ntfy-macos"
   ]
 }
