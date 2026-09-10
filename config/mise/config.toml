@@ -1,10 +1,10 @@
 [tools]
-aws = { version = "latest", symlink_bins = "true" }
+aws = { version = "2.36.39", symlink_bins = "true" }
 "github:ArloL/drifty" = "latest"
 go = "1.26.6"
 java = "temurin-26.0.0"
 node = "24.19.0"
-pkl = "latest"
+pkl = "0.32.1"
 python = "3.14.7"
 ruby = "4.0.6"
 rust = "1.98.0"
