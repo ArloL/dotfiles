@@ -1,12 +1,16 @@
 name: Check actions
 
 on:
+  # push is limited to main: pull_request covers every branch that has one, and
+  # a fork's pushes never reach this repository. workflow_dispatch is there for
+  # a branch with no pull request open.
   push:
+    branches:
+    - main
   pull_request:
     branches:
     - main
-    types:
-    - reopened
+  workflow_dispatch:
   schedule:
   - cron: "40 22 10 * *"
 permissions: {}
