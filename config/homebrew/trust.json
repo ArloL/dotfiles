@@ -8,7 +8,10 @@
     "anomalyco/tap/opencode",
     "arlol/tap/chorito",
     "arlol/tap/drifty",
+    "arlol/tap/git-dora-lead-time-calculator",
     "arlol/tap/menubar-scripts",
+    "arlol/tap/newlinechecker",
+    "arlol/tap/wait-for-ports",
     "atlassian/acli/acli",
     "laurentftech/ntfy-macos/ntfy-macos"
   ]
