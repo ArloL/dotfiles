@@ -86,3 +86,6 @@ mise.local.toml
 
 # code.claude.com
 CLAUDE.local.md
+
+# drawio
+*.drawio.bkp
