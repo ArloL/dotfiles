@@ -4,6 +4,7 @@ set -o errexit
 set -o nounset
 
 input=$(cat)
+printf '%s' "$input" > ~/.claude/statusline-latest.json
 
 NOW=$(date +%s)
 
