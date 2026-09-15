@@ -1,3 +1,4 @@
 font-family = "Source Code Pro"
 font-size = 16
 font-thicken = true
+copy-on-select = clipboard
