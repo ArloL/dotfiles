@@ -55,7 +55,8 @@
     "clangd-lsp@claude-plugins-official": false,
     "gopls-lsp@claude-plugins-official": false,
     "superpowers@claude-plugins-official": true,
-    "elements-of-style@elements-of-style-dev": true
+    "elements-of-style@elements-of-style-dev": true,
+    "modularity@vladikk-modularity": true
   },
   "extraKnownMarketplaces": {
     "vladikk-modularity": {
