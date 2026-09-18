@@ -79,5 +79,6 @@
   "theme": "dark",
   "wheelScrollAccelerationEnabled": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false
+  "voiceEnabled": false,
+  "remoteControlAtStartup": true
 }
