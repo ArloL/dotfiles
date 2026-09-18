@@ -13,7 +13,7 @@ permissions: {}
 
 jobs:
   debug:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - name: Dump GitHub context
       env:
@@ -79,7 +79,7 @@ jobs:
     # are considered success in their weird logic. So we always run it and fail
     # ourselves if necessary
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - run: echo "Use this job as the required status check of this workflow"
     - name: Check that all jobs were successful
