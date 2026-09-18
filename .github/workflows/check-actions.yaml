@@ -17,7 +17,7 @@ permissions: {}
 
 jobs:
   debug:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - name: Dump GitHub context
       env:
@@ -46,13 +46,17 @@ jobs:
     - name: Dump environment variables
       run: set
   actionlint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: read
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         persist-credentials: false
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+      with:
+        cache: false
+        go-version: stable
     - name: run actionlint
       env:
         # renovate: datasource=go depName=actionlint.kjanat.dev
@@ -60,7 +64,7 @@ jobs:
       run: |
         go run "actionlint.kjanat.dev/cmd/actionlint@${ACTIONLINT_VERSION}"
   zizmor:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       actions: read
       contents: read
@@ -92,7 +96,7 @@ jobs:
     # are considered success in their weird logic. So we always run it and fail
     # ourselves if necessary
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - run: echo "Use this job as the required status check of this workflow"
     - name: Check that all jobs were successful

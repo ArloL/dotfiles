@@ -12,7 +12,7 @@ concurrency: chores
 
 jobs:
   debug:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
     - name: Dump GitHub context
       env:
@@ -42,7 +42,7 @@ jobs:
       run: set
   chores:
     name: Chores
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       actions: write
       contents: write
