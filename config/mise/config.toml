@@ -1,6 +1,5 @@
 [tools]
 aws = { version = "2.36.39", symlink_bins = "true" }
-"github:ArloL/drifty" = "latest"
 "github:Arlol/chorito" = "latest"
 "github:arlol/drifty" = "2609.0.146"
 go = "1.26.6"
