@@ -54,9 +54,11 @@ jobs:
       with:
         persist-credentials: false
     - name: run actionlint
+      env:
+        # renovate: datasource=go depName=actionlint.kjanat.dev
+        ACTIONLINT_VERSION: v1.17.0
       run: |
-        bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
-        ./actionlint
+        go run "actionlint.kjanat.dev/cmd/actionlint@${ACTIONLINT_VERSION}"
   zizmor:
     runs-on: ubuntu-latest
     permissions:
@@ -72,8 +74,10 @@ jobs:
     - name: Run zizmor 🌈
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # renovate: datasource=pypi depName=zizmor
+        ZIZMOR_VERSION: 1.30.1
       run: |
-        uvx zizmor --format sarif . > results.sarif
+        uvx --no-build "zizmor@${ZIZMOR_VERSION}" --format sarif . > results.sarif
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28 # v4.37.8
       with:
