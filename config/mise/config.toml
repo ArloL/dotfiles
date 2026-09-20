@@ -3,7 +3,7 @@ aws = { version = "2.36.44", symlink_bins = "true" }
 azure = { version = "2.90.0", dependency_prereleases = "allow", with = ["pip"] }
 "github:Arlol/chorito" = "2609.0.132"
 "github:arlol/drifty" = "2609.0.152"
-go = "1.26.6"
+go = "1.27.1"
 java = "temurin-26.0.0"
 node = "24.19.0"
 pkl = "0.32.1"
