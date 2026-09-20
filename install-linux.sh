@@ -25,15 +25,19 @@ createSymlinks() {
 
     for symlink in "${symlinks[@]}"; do
 
+        # "source:name" links source under a different name, "name" uses it as is
+        local linkSource="${symlink%%:*}"
+        local linkName="${symlink##*:}"
+
         if [ "${withDot}" -eq "1" ]; then
-            local fullLinkTarget="${targetDirectory}/.${symlink}"
+            local fullLinkTarget="${targetDirectory}/.${linkName}"
         else
-            local fullLinkTarget="${targetDirectory}/${symlink}"
+            local fullLinkTarget="${targetDirectory}/${linkName}"
         fi
 
         # continue if already a symlink
         if [ -h "${fullLinkTarget}" ]; then
-            echo "Skipping ${symlink}, symlink already exists"
+            echo "Skipping ${linkName}, symlink already exists"
             continue;
         fi
 
@@ -46,12 +50,12 @@ createSymlinks() {
                 mkdir -p "${backupDirectory}"
             fi
 
-            echo "Moving existing ${symlink} to ${backupDirectory}"
-                mv "${fullLinkTarget}" "${backupDirectory}/${symlink}"
+            echo "Moving existing ${linkName} to ${backupDirectory}"
+                mv "${fullLinkTarget}" "${backupDirectory}/${linkName}"
         fi
 
         echo "Creating symlink ${fullLinkTarget}."
-        ln -s "${sourceDirectory}/${symlink}" "${fullLinkTarget}"
+        ln -s "${sourceDirectory}/${linkSource}" "${fullLinkTarget}"
 
     done
 
@@ -99,7 +103,7 @@ setupClaude() {
     local backupDir="${HOME}/dotfiles_backup/claude"
 
     # the files to symlink
-    local claudeFiles=("settings.json" "CLAUDE.md")
+    local claudeFiles=("settings.json" "AGENTS.md:CLAUDE.md")
 
     mkdir -p "${claudeDir}"
 
