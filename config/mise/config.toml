@@ -9,7 +9,7 @@ node = "24.19.0"
 pkl = "0.32.1"
 python = "3.14.7"
 ruby = "4.0.6"
-rust = "1.98.0"
+rust = "1.98.1"
 
 [settings]
 idiomatic_version_file_enable_tools = ["java", "ruby", "node", "python"]
