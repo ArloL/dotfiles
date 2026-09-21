@@ -1,8 +1,8 @@
 [tools]
 aws = { version = "2.36.44", symlink_bins = "true" }
 azure = { version = "2.90.0", dependency_prereleases = "allow", with = ["pip"] }
+"github:ArloL/drifty" = "2609.0.170"
 "github:Arlol/chorito" = "2609.0.132"
-"github:arlol/drifty" = "2609.0.153"
 go = "1.27.1"
 java = "temurin-26.0.0"
 node = "24.21.0"
