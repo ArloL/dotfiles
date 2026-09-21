@@ -87,7 +87,7 @@
   "tui": "fullscreen",
   "theme": "dark",
   "wheelScrollAccelerationEnabled": false,
+  "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false,
-  "remoteControlAtStartup": true
+  "voiceEnabled": false
 }
