@@ -83,7 +83,7 @@
   },
   "effortLevel": "high",
   "awaySummaryEnabled": false,
-  "autoUpdatesChannel": "stable",
+  "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "theme": "dark",
   "wheelScrollAccelerationEnabled": false,
