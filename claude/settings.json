@@ -67,7 +67,7 @@
     "elements-of-style@elements-of-style-dev": true,
     "modularity@vladikk-modularity": true
   },
-"pluginConfigs": {
+  "pluginConfigs": {
     "agents-md@builtin": {
       "options": { "instructionFiles": "claude-md-and-agents-md" }
     }
@@ -87,6 +87,11 @@
     }
   },
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
