@@ -24,11 +24,14 @@ if hash gem 2>/dev/null; then
 fi
 
 # docker
-if hash docker 2>/dev/null; then
-    if docker info; then
-        docker system prune --filter "until=240h" --force
-        docker volume prune --force
-    fi
+if hash podman 2>/dev/null; then
+    container=podman
+elif hash docker 2>/dev/null; then
+    container=docker
+fi
+if [ -n "${container:-}" ] && "$container" info >/dev/null; then
+    "$container" system prune --filter "until=240h" --force
+    "$container" volume prune --force
 fi
 
 if hash direnv 2>/dev/null; then
