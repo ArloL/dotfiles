@@ -13,6 +13,8 @@
     "arlol/tap/newlinechecker",
     "arlol/tap/wait-for-ports",
     "atlassian/acli/acli",
-    "laurentftech/ntfy-macos/ntfy-macos"
+    "laurentftech/ntfy-macos/ntfy-macos",
+    "libkrun/krun/krunkit",
+    "libkrun/krun/libkrun"
   ]
 }
