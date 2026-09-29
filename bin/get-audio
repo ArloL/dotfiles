@@ -13,7 +13,7 @@ url="$1"
 opts=(
     --extract-audio
     --audio-quality 0
-    --audio-format best
+    --audio-format "mp3>mp3/aac>aac/wav>wav/m4a"
     --format "bestaudio[ext=m4a]/bestaudio[ext=aac]/bestaudio[ext=mp3]/bestaudio/0"
     --output "%(title)s.%(ext)s"
 )
