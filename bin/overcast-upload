@@ -1,0 +1,77 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["beautifulsoup4", "requests", "yt-dlp"]
+# ///
+"""Upload audio files to Overcast Premium, logged in via the Firefox container overcast.fm."""
+
+import re
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import requests
+from bs4 import BeautifulSoup
+from yt_dlp.cookies import extract_cookies_from_browser
+
+BASE = "https://overcast.fm"
+EXTENSIONS = {".mp3", ".m4a", ".m4b", ".aac", ".wav"}
+
+
+def die(msg):
+    sys.exit(f"overcast-upload: {msg}")
+
+
+# Mirrors filterFilename() on overcast.fm/uploads so the S3 key matches.
+def filter_filename(name):
+    name = re.sub(r'[,/"\r\n\x00-\x1f\x7f-\x9f￾￿]', "", name) or "Upload"
+    while name[:1] in (".", " "):
+        name = "Upload" + name if name[0] == "." and name.count(".") == 1 else name[1:]
+    return name
+
+
+def main():
+    if len(sys.argv) < 2:
+        sys.exit("Usage: overcast-upload <file>...")
+    files = [Path(a) for a in sys.argv[1:]]
+    for f in files:
+        if not f.is_file():
+            die(f"not a file: {f}")
+        if f.suffix.lower() not in EXTENSIONS:
+            die(f"Overcast only accepts {', '.join(sorted(EXTENSIONS))}: {f}")
+
+    session = requests.Session()
+    session.cookies.update(extract_cookies_from_browser("firefox", container="overcast.fm"))
+    page = session.get(f"{BASE}/uploads")
+    page.raise_for_status()
+    soup = BeautifulSoup(page.text, "html.parser")
+    form = soup.find("form", id="upload_form")
+    if not form:
+        die("no upload form: log in to Overcast Premium in the Firefox container overcast.fm")
+    fields = {i["name"]: i.get("value", "") for i in form.find_all("input") if i.get("name")}
+
+    if limits := soup.find(id="upload_file"):
+        max_bytes, free_bytes = int(limits["data-max-bytes"]), int(limits["data-free-bytes"])
+        for f in files:
+            if f.stat().st_size > max_bytes:
+                die(f"larger than {max_bytes} bytes: {f}")
+        if sum(f.stat().st_size for f in files) > free_bytes:
+            die(f"only {free_bytes} bytes free")
+
+    for f in files:
+        name = filter_filename(f.name)
+        with f.open("rb") as fh:
+            s3 = requests.post(form["action"], data=fields, files={"file": (name, fh)})
+        if s3.status_code != 201:
+            die(f"S3 upload failed with {s3.status_code}: {f}\n{s3.text}")
+        try:
+            key = ET.fromstring(s3.text).findtext("Key")
+        except ET.ParseError:
+            key = None
+        key = key or form["data-key-prefix"] + name
+        session.post(f"{BASE}/podcasts/upload_succeeded", files={"key": (None, key)}).raise_for_status()
+        print(f"uploaded {f}")
+
+
+if __name__ == "__main__":
+    main()
