@@ -88,7 +88,7 @@ setupBin() {
     local backupDir="${HOME}/dotfiles_backup/bin"
 
     # list of files/folders to symlink in homedir
-    local binfiles=("update-everything" "base64-encode-stdin.sh" "yarn-link"  "git-push-main" "get-audio" "ghostty")
+    local binfiles=("update-everything" "base64-encode-stdin.sh" "yarn-link"  "git-push-main" "get-audio" "overcast-upload" "ghostty")
 
     mkdir -p "${HOME}/bin"
     chflags hidden "${HOME}/bin"
