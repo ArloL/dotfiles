@@ -13,7 +13,9 @@ git push origin main
 # Homebrew
 if hash brew 2>/dev/null; then
     brew update
-    brew upgrade --no-ask
+    # quitting these mid-use loses work
+    HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1 \
+        brew upgrade --no-ask
     brew autoremove
     brew cleanup
 fi
