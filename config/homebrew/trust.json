@@ -16,5 +16,8 @@
     "laurentftech/ntfy-macos/ntfy-macos",
     "libkrun/krun/krunkit",
     "libkrun/krun/libkrun"
+  ],
+  "trustedcasks": [
+    "arlol/tap/breezy-app"
   ]
 }
