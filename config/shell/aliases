@@ -59,3 +59,5 @@ if [ -d "${HOME}/.dotfiles" ]; then
 fi
 
 alias dcup="docker compose up --detach && docker compose logs --follow"
+
+source "$XDG_CONFIG_HOME/shell/claude"

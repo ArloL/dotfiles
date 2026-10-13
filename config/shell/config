@@ -66,3 +66,6 @@ fi
 for f in "${HOME}/.config/shell/config.d/"*.config; do
   [ -e "$f" ] && . "$f"
 done
+
+# dash reads $ENV in interactive shells
+export ENV="$XDG_CONFIG_HOME/shell/claude"
