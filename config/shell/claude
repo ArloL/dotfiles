@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# `,c <prompt>` starts Claude Code with <prompt>. In bash and zsh the alias
+# turns the prompt into a comment, so it needs no quoting, and _c reads it
+# back from history. dash has no history, so quote what dash would interpret.
+if [ -n "$BASH_VERSION$ZSH_VERSION" ]; then
+    [ -n "$ZSH_VERSION" ] && setopt INTERACTIVE_COMMENTS
+    alias ,c='_c #'
+    _c() {
+        if [ -n "$ZSH_VERSION" ]; then
+            eval 'set -- "${history[$HISTCMD]}"'
+        else
+            set -- "$(history 1 | sed 's/^ *[0-9]* *//')"
+        fi
+        case $1 in
+            ',c '*) claude "${1#,c }" ;;
+            *) claude ;;
+        esac
+    }
+else
+    alias ,c=_c
+    _c() { claude ${1+"$*"}; }
+fi
