@@ -8,7 +8,7 @@ java = "temurin-26.0.0"
 node = "24.21.0"
 pkl = "0.32.1"
 python = "3.14.7"
-ruby = "4.0.6"
+ruby = "4.0.7"
 rust = "1.98.1"
 uv = "0.12.19"
 
