@@ -6,6 +6,7 @@ azure = { version = "2.91.0", dependency_prereleases = "allow", with = ["pip"] }
 go = "1.27.2"
 java = "temurin-26.0.0"
 node = "24.21.0"
+npm = "12.2.0"
 pkl = "0.32.1"
 python = "3.14.7"
 ruby = "4.0.7"
