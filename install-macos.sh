@@ -178,6 +178,22 @@ setupServices() {
     "${scriptPath}/macos-services/install-services.sh"
 }
 
+setupMusicIcon() {
+    local mediaDir="${HOME}/Music/Music/Media"
+    local dir
+    for dir in "${mediaDir}/Automatically Add to Music" "${mediaDir}/Automatically Add to Music.localized"; do
+        if [ -d "${dir}" ]; then
+            swift - "${HOME}/Music" "${dir}" <<'EOF'
+import AppKit
+let a = CommandLine.arguments
+NSWorkspace.shared.setIcon(NSWorkspace.shared.icon(forFile: a[1]), forFile: a[2], options: [])
+EOF
+            # type icon, creator MACS, like Finder sets it, so the Dock hides the file
+            xattr -wx com.apple.FinderInfo "69636F6E4D414353401000000000000000000000000000000000000000000000" "${dir}/"$'Icon\r'
+        fi
+    done
+}
+
 setupHome
 setupBin
 setupVSCode
@@ -185,3 +201,4 @@ setupSdkman
 setupEclipse
 setupClaude
 setupServices
+setupMusicIcon
