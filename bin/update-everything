@@ -20,6 +20,13 @@ if hash brew 2>/dev/null; then
     brew cleanup
 fi
 
+# mise
+if hash mise 2>/dev/null; then
+    # ruby's configure runs `ruby`; with auto-install the shim would recurse into installing the same ruby
+    MISE_NOT_FOUND_AUTO_INSTALL=false mise install
+    mise prune --yes
+fi
+
 # gem
 if hash gem 2>/dev/null; then
     gem update
