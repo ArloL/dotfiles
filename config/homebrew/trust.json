@@ -17,7 +17,8 @@
     "facebook/fb/idb-companion",
     "laurentftech/ntfy-macos/ntfy-macos",
     "libkrun/krun/krunkit",
-    "libkrun/krun/libkrun"
+    "libkrun/krun/libkrun",
+    "xcodesorg/made/xcodes"
   ],
   "trustedcasks": [
     "arlol/tap/breezy-app"
