@@ -13,9 +13,17 @@ git push origin main
 # Homebrew
 if hash brew 2>/dev/null; then
     brew update
+    # tapped formulae print as tap/name; services list uses name
+    outdated=$(brew outdated --formula --quiet | sed 's|.*/||')
     # quitting these mid-use loses work
     HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1 \
         brew upgrade --no-ask
+    # brew upgrade leaves running services on the old binary
+    for service in $(brew services list | awk '$2 == "started" { print $1 }'); do
+        if echo "$outdated" | grep -qx "$service"; then
+            brew services restart "$service"
+        fi
+    done
     brew autoremove
     brew cleanup
 fi
