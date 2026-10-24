@@ -1,5 +1,5 @@
 [tools]
-aws = { version = "2.38.0", symlink_bins = "true" }
+aws = { version = "2.38.1", symlink_bins = "true" }
 azure = { version = "2.91.0", dependency_prereleases = "allow", with = ["pip"], uvx_args = "--python 3.13" }
 "github:ArloL/drifty" = "2610.0.114"
 "github:Arlol/chorito" = "2610.0.108"
