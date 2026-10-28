@@ -70,11 +70,6 @@
     "elements-of-style@elements-of-style-dev": true,
     "modularity@vladikk-modularity": true
   },
-  "pluginConfigs": {
-    "agents-md@builtin": {
-      "options": { "instructionFiles": "claude-md-and-agents-md" }
-    }
-  },
   "extraKnownMarketplaces": {
     "vladikk-modularity": {
       "source": {
@@ -96,6 +91,13 @@
     }
   },
   "awaySummaryEnabled": false,
+  "pluginConfigs": {
+    "agents-md@builtin": {
+      "options": {
+        "instructionFiles": "claude-md-and-agents-md"
+      }
+    }
+  },
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "theme": "dark",
