@@ -8,7 +8,10 @@
     "pr": ""
   },
   "permissions": {
-    "defaultMode": "auto"
+    "defaultMode": "auto",
+    "allow": [
+      "Bash(git push --force-with-lease:*)"
+    ]
   },
   "model": "opus[1m]",
   "deniedMcpServers": [
