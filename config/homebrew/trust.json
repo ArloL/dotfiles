@@ -2,7 +2,8 @@
   "trustedtaps": [
     "arlol/tap",
     "laurentftech/ntfy-macos",
-    "libkrun/krun"
+    "libkrun/krun",
+    "meta/fb"
   ],
   "trustedformulae": [
     "anomalyco/tap/opencode",
