@@ -15,10 +15,10 @@
     "arlol/tap/wait-for-ports",
     "atlassian/acli/acli",
     "cameroncooke/axe/axe",
-    "facebook/fb/idb-companion",
     "laurentftech/ntfy-macos/ntfy-macos",
     "libkrun/krun/krunkit",
     "libkrun/krun/libkrun",
+    "meta/fb/idb-companion",
     "xcodesorg/made/xcodes"
   ],
   "trustedcasks": [
