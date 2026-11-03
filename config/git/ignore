@@ -89,3 +89,6 @@ CLAUDE.local.md
 
 # drawio
 *.drawio.bkp
+
+# claude staging dir for settings writes
+**/.claude/.cc-writes/
