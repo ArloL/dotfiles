@@ -1,18 +1,6 @@
 ---
 name: effective-debugging
 description: Use when anything fails or surprises you and the cause is not yet known — a reported bug, a failing or flaky test, a regression, a production incident, a slow or hanging process, a red CI job, a misbehaving tool or setup step, a probe's odd number — especially in code you did not write or no longer understand, and before reading code or guessing at a cause. Also use when a fix did not hold, when deciding whether to trust a repro, or when checking someone's root-cause claim.
-hooks:
-  PreToolUse:
-    - matcher: "Bash"
-      hooks:
-        - type: command
-          command: "python3 -I ~/.claude/skills/effective-debugging/hooks/waits.py"
-          onFailure: block
-  PostToolUse:
-    - matcher: "Bash"
-      hooks:
-        - type: command
-          command: "python3 -I ~/.claude/skills/effective-debugging/hooks/waits.py"
 ---
 
 # Effective Debugging
@@ -74,7 +62,7 @@ One row per hypothesis, one column per fact. ✓ means the hypothesis explains o
 - **Read the columns to steer.** A fact that few rows fit is a strong signal; one that all rows fit is weak. Follow the row the strongest signal points to, rather than testing every hypothesis.
 - **Read the rows to check.** A row of all ✓ is the candidate. It may be one cause or a combination; in a combination, each cause must be needed for some fact.
 - **Before any run of two minutes or more,** write the question it answers and check whether the answer is already in something you fetched or in the repo. If it is, don't run. A second wait for the same kind of answer means the question is wrong, not the run.
-- **Run anything long in the background,** with one command that ends when the work does, such as `gh run watch --exit-status`, through `run_in_background`. Don't block on it or poll it. `Monitor` stops after 30 minutes at most, so re-arm it for longer CI. Meanwhile work on what doesn't depend on the result, and read the result as soon as it ends.
+- **A long run is fine to block on** when it is the most useful next step and nothing else is worth doing meanwhile: then wait for it and read the result as it ends. Put it in the background only when there is work that doesn't depend on it, with one command that ends when the work does, such as `gh run watch --exit-status`, and read the result as soon as it arrives. Don't poll.
 
 If no row is all ✓, work through these, cheapest first, rebuilding the matrix after each:
 
