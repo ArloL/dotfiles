@@ -1,7 +1,0 @@
----
-type: llm
-focus: trace
-weight: 1
----
-
-The report's main explanation is this mechanism: A harness bug, not the app. The scenarios' driver sends the board's commands to WebKit as Meta, because Playwright's WebKit says it is on a Mac on every OS, but copy, cut and paste are bound by the OS, and off the Mac the OS answers Ctrl alone. On the Linux runner, Meta+C copied nothing. The fix sends ⌘C, ⌘X and ⌘V to a desktop browser off the Mac as Ctrl.
