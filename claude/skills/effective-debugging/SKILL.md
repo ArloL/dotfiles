@@ -62,6 +62,7 @@ One row per hypothesis, one column per fact. ✓ means the hypothesis explains o
 - **Read the columns to steer.** A fact that few rows fit is a strong signal; one that all rows fit is weak. Follow the row the strongest signal points to, rather than testing every hypothesis.
 - **Read the rows to check.** A row of all ✓ is the candidate. It may be one cause or a combination; in a combination, each cause must be needed for some fact.
 - **Before a costly search,** such as a bisect or a long rerun, apply the constraints you already hold.
+- **Run anything long in the background,** with one command that ends when the work does, such as `gh run watch --exit-status`, through `run_in_background`. Don't block on it or poll it. `Monitor` stops after 30 minutes at most, so re-arm it for longer CI. Meanwhile work on what doesn't depend on the result, and read the result as soon as it ends.
 
 If no row is all ✓, work through these, cheapest first, rebuilding the matrix after each:
 
