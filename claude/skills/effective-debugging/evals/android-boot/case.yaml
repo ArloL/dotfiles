@@ -1,4 +1,0 @@
-schema_version: "1.1"
-name: android-boot
-expected_outcome: |
-  #170 cached the emulator's AVD with its snapshot. Each runner's adb generates its own key, and the cached AVD trusts only the key of the runner that packed it, so every other runner is refused as unauthorized, from the snapshot and from a cold boot alike. The fix packs the adb key into the cache with the AVD and restores it with the AVD.

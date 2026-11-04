@@ -1,4 +1,0 @@
-schema_version: "1.1"
-name: page-not-answering
-expected_outcome: |
-  A harness protocol problem. The scenarios' agent sent a function to a poll that the page never read, and the page, which asks once at a time, asked nothing more until its open poll ran out about 10 s later, so the step timed out at 15 s. The fix sends the function again when the poll it went on never reached the page, and drops a page's older polls when it asks again.
