@@ -1,6 +1,12 @@
 ---
 name: effective-debugging
 description: Use when anything fails or surprises you and the cause is not yet known — a reported bug, a failing or flaky test, a regression, a production incident, a slow or hanging process, a red CI job, a misbehaving tool or setup step, a probe's odd number — especially in code you did not write or no longer understand, and before reading code or guessing at a cause. Also use when a fix did not hold, when deciding whether to trust a repro, or when checking someone's root-cause claim.
+hooks:
+  PreToolUse:
+    - matcher: "Bash|Monitor"
+      hooks:
+        - type: command
+          command: "python3 -I ~/.claude/skills/effective-debugging/hooks/pre_run.py"
 ---
 
 # Effective Debugging
