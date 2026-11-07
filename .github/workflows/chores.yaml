@@ -13,6 +13,7 @@ concurrency: chores
 jobs:
   debug:
     runs-on: ubuntu-slim
+    timeout-minutes: 5
     steps:
     - name: Dump GitHub context
       env:
@@ -43,10 +44,13 @@ jobs:
   chores:
     name: Chores
     runs-on: ubuntu-slim
+    timeout-minutes: 10
     permissions:
       actions: write
       contents: write
       pull-requests: write
+    outputs:
+      held-back: ${{ steps.workflows.outputs.held-back }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -56,10 +60,53 @@ jobs:
       run: |
         /bin/bash -c "$(curl --proto '=https' --tlsv1.2 --fail --silent --show-error --location https://raw.githubusercontent.com/ArloL/chorito/HEAD/run-latest.sh)"
         git diff
+    - name: Hold back workflow changes
+      id: workflows
+      run: |
+        if [ -n "$(git status --porcelain -- .github/workflows)" ]; then
+          git restore --source=HEAD --staged --worktree -- .github/workflows
+          git clean -d --force -- .github/workflows
+          echo "held-back=true" >> "${GITHUB_OUTPUT}"
+        fi
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
       with:
-        body: "Automated changes by [chorito](https://github.com/ArloL/chorito)"
+        body: "Automated changes by [chorito](https://github.com/ArloL/chorito)${{ steps.workflows.outputs.held-back && '. Workflow changes are held back: `GITHUB_TOKEN` cannot push them, so run chorito locally.' || '' }}"
         branch: chorito/patch
         commit-message: "chore: automated changes by chorito"
         title: "chore: automated changes by chorito"
+  report:
+    name: Report
+    needs: chores
+    if: always()
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+    - name: Keep an issue open while Chores needs attention
+      env:
+        GH_TOKEN: ${{ github.token }}
+        GH_REPO: ${{ github.repository }}
+        RESULT: ${{ needs.chores.result }}
+        HELD_BACK: ${{ needs.chores.outputs.held-back }}
+        RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      run: |
+        title="Chores needs attention"
+        number="$(gh issue list --state open --limit 1000 --json number,title \
+          --jq "map(select(.title == \"${title}\")) | first | .number // empty")"
+        if [ "${RESULT}" = "failure" ]; then
+          body="Chores failed: ${RUN_URL}"
+        elif [ "${HELD_BACK}" = "true" ]; then
+          body="Chores held back workflow changes, since \`GITHUB_TOKEN\` cannot push them. Run chorito locally: ${RUN_URL}"
+        else
+          if [ "${RESULT}" = "success" ] && [ -n "${number}" ]; then
+            gh issue close "${number}" --comment "Chores passed: ${RUN_URL}"
+          fi
+          exit 0
+        fi
+        if [ -n "${number}" ]; then
+          gh issue comment "${number}" --body "${body}"
+        else
+          gh issue create --title "${title}" --body "${body}"
+        fi
