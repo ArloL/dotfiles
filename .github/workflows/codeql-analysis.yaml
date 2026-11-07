@@ -14,6 +14,7 @@ permissions: {}
 jobs:
   debug:
     runs-on: ubuntu-slim
+    timeout-minutes: 5
     steps:
     - name: Dump GitHub context
       env:
@@ -80,6 +81,7 @@ jobs:
     # ourselves if necessary
     if: always()
     runs-on: ubuntu-slim
+    timeout-minutes: 5
     steps:
     - run: echo "Use this job as the required status check of this workflow"
     - name: Check that all jobs were successful

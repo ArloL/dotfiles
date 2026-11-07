@@ -18,6 +18,7 @@ permissions: {}
 jobs:
   debug:
     runs-on: ubuntu-slim
+    timeout-minutes: 5
     steps:
     - name: Dump GitHub context
       env:
@@ -47,6 +48,7 @@ jobs:
       run: set
   actionlint:
     runs-on: ubuntu-slim
+    timeout-minutes: 10
     permissions:
       contents: read
     steps:
@@ -65,6 +67,7 @@ jobs:
         go run "actionlint.kjanat.dev/cmd/actionlint@${ACTIONLINT_VERSION}"
   zizmor:
     runs-on: ubuntu-slim
+    timeout-minutes: 10
     permissions:
       actions: read
       contents: read
@@ -97,6 +100,7 @@ jobs:
     # ourselves if necessary
     if: always()
     runs-on: ubuntu-slim
+    timeout-minutes: 5
     steps:
     - run: echo "Use this job as the required status check of this workflow"
     - name: Check that all jobs were successful
