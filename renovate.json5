@@ -11,6 +11,21 @@
         "dependencies",
     ],
     "minimumReleaseAge": "7 days",
+    "packageRules": [
+        {
+            "matchManagers": [
+                "mise",
+            ],
+            "matchPackageNames": [
+                "/^arlol\\//i",
+            ],
+            "minimumReleaseAge": "0 days",
+            "schedule": [
+                "at any time",
+            ],
+            "automerge": true,
+        },
+    ],
     "prConcurrentLimit": 10,
     "prHourlyLimit": 5,
     "schedule": [
