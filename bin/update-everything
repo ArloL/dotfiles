@@ -47,8 +47,10 @@ elif hash docker 2>/dev/null; then
     container=docker
 fi
 if [ -n "${container:-}" ] && "$container" info >/dev/null; then
-    "$container" system prune --filter "until=240h" --force
-    "$container" volume prune --force
+    # until= filters by build date, not last use; podman tracks no last use (podman#27209)
+    "$container" system prune --all --force
+    # podman 6 prunes only anonymous volumes without --all
+    "$container" volume prune --all --force
 fi
 
 if hash direnv 2>/dev/null; then
