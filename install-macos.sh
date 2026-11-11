@@ -194,6 +194,12 @@ EOF
     done
 }
 
+# hides the other Macs' Handoff apps from the Dock; Universal Control keeps working
+setupHandoff() {
+    defaults -currentHost write com.apple.coreservices.useractivityd \
+        ActivityReceivingAllowed -bool false
+}
+
 setupHome
 setupBin
 setupVSCode
@@ -202,3 +208,4 @@ setupEclipse
 setupClaude
 setupServices
 setupMusicIcon
+setupHandoff
