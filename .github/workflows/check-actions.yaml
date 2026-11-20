@@ -62,7 +62,7 @@ jobs:
     - name: run actionlint
       env:
         # renovate: datasource=go depName=actionlint.kjanat.dev
-        ACTIONLINT_VERSION: v1.17.0
+        ACTIONLINT_VERSION: v1.17.1
       run: |
         go run "actionlint.kjanat.dev/cmd/actionlint@${ACTIONLINT_VERSION}"
   zizmor:
