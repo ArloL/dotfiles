@@ -82,7 +82,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # renovate: datasource=pypi depName=zizmor
-        ZIZMOR_VERSION: 1.31.1
+        ZIZMOR_VERSION: 1.32.0
       run: |
         uvx --no-build "zizmor@${ZIZMOR_VERSION}" --format sarif . > results.sarif
     - name: Upload SARIF file
