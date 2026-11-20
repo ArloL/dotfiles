@@ -1,6 +1,6 @@
 [tools]
 aws = { version = "2.38.1", symlink_bins = "true" }
-azure = { version = "2.91.0", dependency_prereleases = "allow", with = ["pip"], uvx_args = "--python 3.13" }
+azure = { version = "2.92.0", dependency_prereleases = "allow", with = ["pip"], uvx_args = "--python 3.13" }
 "github:ArloL/drifty" = "2611.0.123"
 "github:Arlol/chorito" = "2611.0.118"
 go = "1.27.4"
