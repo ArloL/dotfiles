@@ -2,7 +2,7 @@
 aws = { version = "2.40.4", symlink_bins = "true" }
 azure = { version = "2.93.0", dependency_prereleases = "allow", with = ["pip"], uvx_args = "--python 3.13" }
 "github:ArloL/drifty" = "2611.0.137"
-"github:Arlol/chorito" = "2611.0.130"
+"github:Arlol/chorito" = "2611.0.131"
 go = "1.27.4"
 "go:actionlint.kjanat.dev/cmd/actionlint" = "1.17.0"
 java = "temurin-26.0.0"
