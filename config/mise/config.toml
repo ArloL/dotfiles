@@ -16,6 +16,3 @@ uv = "0.13.8"
 
 [settings]
 idiomatic_version_file_enable_tools = ["java", "ruby", "node", "python"]
-
-[settings.ruby]
-compile = true
