@@ -37,6 +37,8 @@ fi
 
 # gem
 if hash gem 2>/dev/null; then
+    # jdx/ruby#80: precompiled rubies ship binstubs gem update refuses to overwrite (minitest)
+    gem pristine --all --only-executables >/dev/null
     gem update
 fi
 
