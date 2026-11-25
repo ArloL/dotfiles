@@ -9,10 +9,9 @@ fi
 
 url="$1"
 
-# H.264/AAC in mp4 plays everywhere (QuickTime, iOS); caps YouTube at 1080p
+# Best quality in any codec; mkv holds them all and VLC plays it
 opts=(
-    --format-sort "vcodec:h264,res,acodec:m4a"
-    --merge-output-format mp4
+    --merge-output-format mkv
     --embed-metadata
     --embed-chapters
     --embed-thumbnail
