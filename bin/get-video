@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <url>" >&2
+    exit 1
+fi
+
+url="$1"
+
+# H.264/AAC in mp4 plays everywhere (QuickTime, iOS); caps YouTube at 1080p
+opts=(
+    --format-sort "vcodec:h264,res,acodec:m4a"
+    --merge-output-format mp4
+    --embed-metadata
+    --embed-chapters
+    --embed-thumbnail
+    --embed-subs
+    --sub-langs "en.*,de.*"
+    --output "%(title)s.%(ext)s"
+)
+
+yt-dlp "${opts[@]}" "$url"
